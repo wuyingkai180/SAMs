@@ -1,0 +1,37 @@
+{
+  "workdir": ".",
+  "structure": {
+    "opa_xyz": "OPA.xyz",
+    "solvent_xyz": "ketone.xyz",
+    "n_opa_atoms": null,
+    "n_solvent_atoms": null
+  },
+  "packmol": {
+    "box_length": 100.0,
+    "density_g_cm3": 0.82,
+    "solvent_molar_mass": 142.24,
+    "margin": 2.0,
+    "tolerance": 2.2,
+    "packmol_input": "packmol.inp",
+    "output_xyz": "opa_ketone_box.xyz"
+  },
+  "md": {
+    "input_xyz": "opa_ketone_box.xyz",
+    "output_traj": "md_300K.traj",
+    "output_xyz": "final_300K.xyz",
+    "temperature": 300.0,
+    "timestep_fs": 1.0,
+    "friction_per_fs": 0.01,
+    "n_steps": 100000,
+    "log_interval": 100,
+    "random_seed": 20260707
+  },
+  "analysis": {
+    "traj_file": "md_300K.traj",
+    "dt_fs": 1.0,
+    "save_interval": 100,
+    "output_csv": "opa_motion_force.csv",
+    "displacement_png": "opa_displacement.png",
+    "force_png": "opa_force.png"
+  }
+}
