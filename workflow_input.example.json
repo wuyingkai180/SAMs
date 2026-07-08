@@ -1,22 +1,64 @@
 {
   "workdir": ".",
   "structure": {
-    "opa_xyz": "OPA.xyz",
-    "solvent_xyz": "ketone.xyz",
-    "n_opa_atoms": null,
-    "n_solvent_atoms": null
+    "opa_file": "structures/opa.vasp",
+    "solvents": [
+      {
+        "name": "acetone",
+        "structure_file": "structures/Actone.vasp",
+        "density_g_cm3": 0.7845,
+        "molar_mass_g_mol": null,
+        "n_atoms": null,
+        "n_molecules": null
+      },
+      {
+        "name": "n-heptane",
+        "structure_file": "structures/n-heptane.vasp",
+        "density_g_cm3": 0.684,
+        "molar_mass_g_mol": null,
+        "n_atoms": null,
+        "n_molecules": null
+      },
+      {
+        "name": "prol",
+        "structure_file": "structures/prol.vasp",
+        "density_g_cm3": 1.35,
+        "molar_mass_g_mol": null,
+        "n_atoms": null,
+        "n_molecules": null
+      },
+      {
+        "name": "thf",
+        "structure_file": "structures/thf.vasp",
+        "density_g_cm3": 0.889,
+        "molar_mass_g_mol": null,
+        "n_atoms": null,
+        "n_molecules": null
+      },
+      {
+        "name": "toluene",
+        "structure_file": "structures/Toluene.vasp",
+        "density_g_cm3": 0.867,
+        "molar_mass_g_mol": null,
+        "n_atoms": null,
+        "n_molecules": null
+      }
+    ],
+    "n_opa_atoms": null
   },
   "packmol": {
     "box_length": 100.0,
-    "density_g_cm3": 0.82,
-    "solvent_molar_mass": 142.24,
     "margin": 2.0,
     "tolerance": 2.2,
-    "packmol_input": "packmol.inp",
-    "output_xyz": "opa_ketone_box.xyz"
+    "fixed_opa": true,
+    "opa_center": null,
+    "generated_structure_dir": "packmol_structures",
+    "output_dir": "packmol_systems",
+    "packmol_input_template": "{name}_packmol.inp",
+    "output_xyz_template": "{name}_opa_box.xyz"
   },
   "md": {
-    "input_xyz": "opa_ketone_box.xyz",
+    "input_xyz": "packmol_systems/acetone_opa_box.xyz",
     "output_traj": "md_300K.traj",
     "output_xyz": "final_300K.xyz",
     "temperature": 300.0,

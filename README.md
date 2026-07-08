@@ -1,120 +1,260 @@
-# OPA in ketone solvent MLIP-MD workflow
+# OPA Multi-Solvent MLIP-MD Workflow
 
-This project builds and analyzes an OPA + ketone solvent box for ASE-based
-MLIP molecular dynamics.
+This project builds and simulates five independent OPA + molecule systems:
 
-The main entry point is now:
+- `OPA + acetone`
+- `OPA + n-heptane`
+- `OPA + prol`
+- `OPA + thf`
+- `OPA + toluene`
 
-- `opa_ketone_workflow.py`
+`structures/opa.vasp` is inserted once per system. During Packmol modeling, OPA
+is moved to the center of a 100 x 100 x 100 Angstrom box and fixed. Each other
+molecule type is then packed around the fixed OPA according to its configured
+density.
 
-It contains the structure input, Packmol input generation, MD runner, and OPA
-motion/force analysis functions. The numbered scripts are thin wrappers kept
-for command-line use.
+## Project Layout
 
-## Required input files
+```text
+jupyter_copy_cell.py          # main self-contained Jupyter/backend workflow
+structures/                   # original input structures
+  opa.vasp
+  Actone.vasp
+  n-heptane.vasp
+  prol.vasp
+  thf.vasp
+  Toluene.vasp
+workflow_input.example.json   # editable example config
+requirements.txt              # local Python dependencies
+requirements-matlantis.txt    # Matlantis/PFP dependencies
+legacy_scripts/               # archived split-script version
+```
 
-Put these XYZ files in this directory:
+Generated files are written to `packmol_structures/`, `packmol_systems/`, and
+`results/`.
 
-- `OPA.xyz`
-- `ketone.xyz`
+## Files To Copy For Calculation
 
-The OPA atom count is read automatically from the first line of `OPA.xyz`.
+For a new Jupyter/Matlantis calculation directory, copy only these source files:
 
-## Jupyter usage
+```text
+jupyter_copy_cell.py
+structures/
+```
 
-Use the workflow from one Python file:
+`jupyter_copy_cell.py` is the self-contained notebook script. It does not need
+the archived split scripts in `legacy_scripts/`.
+
+## Environment
+
+Required for modeling and analysis:
+
+```text
+numpy
+pandas
+matplotlib
+ase
+packmol
+```
+
+Required for Matlantis/PFP MLIP-MD:
+
+```text
+pfp_api_client
+matlantis_features
+```
+
+On Matlantis, the bundled Jupyter script is configured to call:
 
 ```python
-from opa_ketone_workflow import *
+PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
+```
 
-config = WorkflowInput(
-    packmol=PackmolInput(
-        box_length=60.0,
-        density_g_cm3=0.82,
-        solvent_molar_mass=142.24,
-    ),
-    md=MDInput(
-        n_steps=1000,
-        log_interval=10,
-    ),
+Change this path only if Packmol is installed somewhere else.
+
+Check Packmol availability before a backend run:
+
+```bash
+which packmol
+packmol < packmol_systems/acetone_packmol.inp
+```
+
+If `which packmol` returns nothing but Packmol exists in another environment,
+set the absolute path in `jupyter_copy_cell.py`:
+
+```python
+PACKMOL_EXECUTABLE = "/path/to/packmol"
+```
+
+## Backend Script Workflow
+
+If Jupyter cannot call Packmol reliably, submit the whole script as a backend
+Python job instead:
+
+```bash
+python jupyter_copy_cell.py
+```
+
+For long jobs, run with unbuffered output and redirect the log:
+
+```bash
+python -u jupyter_copy_cell.py > backend_run.log 2>&1
+```
+
+The backend script uses the settings near the bottom of `jupyter_copy_cell.py`:
+
+```python
+RUN_PACKMOL = True
+RUN_MD = True
+RUN_ANALYSIS = True
+SKIP_EXISTING_PACKMOL = True
+SKIP_EXISTING_MD = True
+SYSTEM_NAMES = None
+CALCULATOR_KIND = "matlantis"
+MATLANTIS_MODEL_VERSION = "v9.0.0"
+MATLANTIS_CALC_MODE = "R2SCAN"
+```
+
+`SYSTEM_NAMES = None` runs all five systems. For a shorter test:
+
+```python
+SYSTEM_NAMES = ["acetone", "thf"]
+```
+
+## Jupyter Workflow
+
+Open Jupyter in the directory containing `jupyter_copy_cell.py` and the
+`structures/` folder, copy all of `jupyter_copy_cell.py` into one cell, then run
+it. The final line calls `main()` automatically:
+
+```python
+main()
+```
+
+Step 1 generates Packmol inputs:
+
+```python
+prepare_structure_input(config)
+save_config(config)
+packmol_inputs = write_packmol_inputs(config)
+```
+
+Step 2 runs Packmol after you uncomment:
+
+```python
+packed_xyz_files = run_packmol(config)
+```
+
+Step 3 creates one calculator:
+
+```python
+calc = create_matlantis_calculator(
+    model_version="v9.0.0",
+    calc_mode="R2SCAN",
 )
-
-prepare_structure_input(config)
-save_workflow_input(config)
-write_packmol_input(config)
 ```
 
-Run Packmol:
+or:
 
 ```python
-run_packmol(config)
+calc = create_pfp_calculator(calc_mode="PBE_U_PLUS_D3")
 ```
 
-Then define the MLIP calculator in the notebook:
+Step 4 runs all five systems sequentially:
 
 ```python
-# Example only. Replace with your actual calculator.
-# from mace.calculators import MACECalculator
-# calc = MACECalculator(model_paths="mace_model.model", device="cuda")
-
-atoms = run_mlip_md(config, calc)
+all_outputs = run_all_systems_md(
+    config,
+    calc,
+    results_dir="results",
+    analyze=True,
+    skip_existing=True,
+)
 ```
 
-Analyze the trajectory:
+For a quick test on selected systems:
 
 ```python
-df = analyze_opa_motion(config)
-plot_opa_motion(config, df)
-df.head()
+all_outputs = run_all_systems_md(
+    config,
+    calc,
+    system_names=["acetone", "thf"],
+    results_dir="results",
+    analyze=True,
+    skip_existing=True,
+)
 ```
 
-## Structured input file
+## Generated Structure
 
-Running:
+After generating Packmol inputs:
 
-```bash
-python opa_ketone_workflow.py
+```text
+workflow_input.json
+structures/
+  opa.vasp
+  Actone.vasp
+  n-heptane.vasp
+  prol.vasp
+  thf.vasp
+  Toluene.vasp
+packmol_structures/
+  opa_fixed.xyz
+  Actone.xyz
+  n-heptane.xyz
+  prol.xyz
+  thf.xyz
+  Toluene.xyz
+packmol_systems/
+  acetone_packmol.inp
+  n-heptane_packmol.inp
+  prol_packmol.inp
+  thf_packmol.inp
+  toluene_packmol.inp
 ```
 
-creates:
+After running Packmol:
 
-- `workflow_input.json`
-- `packmol.inp`
-
-You can also start from `workflow_input.example.json`.
-
-You can edit `workflow_input.json` and load it in Jupyter:
-
-```python
-from opa_ketone_workflow import *
-
-config = load_workflow_input("workflow_input.json")
-prepare_structure_input(config)
+```text
+packmol_systems/
+  acetone_opa_box.xyz
+  n-heptane_opa_box.xyz
+  prol_opa_box.xyz
+  thf_opa_box.xyz
+  toluene_opa_box.xyz
 ```
 
-## Command-line workflow
+After running all MD jobs:
 
-The original numbered workflow still works:
-
-```bash
-python 01_make_packmol_input.py
-bash 02_run_packmol.sh
-python 03_run_mlip_md.py
-python 04_analyze_opa_motion.py
+```text
+results/
+  summary.csv
+  acetone/
+    acetone_md_300K.traj
+    acetone_final_300K.xyz
+    acetone_opa_motion_force.csv
+    acetone_opa_displacement.png
+    acetone_opa_force.png
+  n-heptane/
+    n-heptane_md_300K.traj
+    n-heptane_final_300K.xyz
+    n-heptane_opa_motion_force.csv
+    n-heptane_opa_displacement.png
+    n-heptane_opa_force.png
+  prol/
+  thf/
+  toluene/
 ```
 
-Before running `03_run_mlip_md.py`, edit it and define `calc`.
+`results/summary.csv` contains per-system input/output paths, molecule counts,
+final OPA displacement, and OPA force statistics.
 
-## Outputs
+## Notes
 
-- `packmol.inp`: Packmol input file.
-- `opa_ketone_box.xyz`: packed OPA + solvent box.
-- `md_300K.traj`: ASE trajectory.
-- `final_300K.xyz`: final MD structure.
-- `opa_motion_force.csv`: OPA COM displacement and total net force.
-- `opa_displacement.png`: OPA COM displacement plot.
-- `opa_force.png`: total OPA force norm plot.
-
-The analyzed force is the total net force on OPA, not a decomposed vdW-only
-force. A 100 x 100 x 100 Angstrom box can be very large; test with a smaller
-box first.
+- The five systems are independent; the five molecule types are not mixed in
+  one box.
+- The density values are editable in `StructureInput.solvents`.
+- `skip_existing=True` lets you resume a batch run without repeating systems
+  that already have both trajectory and final XYZ files.
+- The analyzed force is the total net force on OPA, not a decomposed vdW-only
+  force.

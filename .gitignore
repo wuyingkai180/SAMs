@@ -1,0 +1,12 @@
+__pycache__/
+.mypy_cache/
+.ipynb_checkpoints/
+
+workflow_input.json
+packmol_structures/
+packmol_systems/
+results/
+
+*.traj
+*.log
+*.out
