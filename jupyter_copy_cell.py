@@ -19,6 +19,11 @@ import numpy as np
 
 
 AVOGADRO = 6.02214076e23
+# Calibrated from the Matlantis/PFP error for the 60 A acetone box:
+# 17,631 atoms produced 2,396,685 input neighbors. The estimate scales with
+# atom count and atom number density, which is the relevant risk for this API
+# limit. Keep the default guard below the server-side max_neighbors=1,700,001.
+PFP_NEIGHBOR_DENSITY_FACTOR = 1_663.847198
 ATOMIC_MASSES = {
     "H": 1.008,
     "C": 12.011,
@@ -38,6 +43,7 @@ class SolventInput:
     name: str
     structure_file: str
     density_g_cm3: float
+    box_length_a: float | None = None
     molar_mass_g_mol: float | None = None
     n_atoms: int | None = None
     n_molecules: int | None = None
@@ -188,6 +194,10 @@ def estimate_molecule_count(
     return int(round(n_mol * AVOGADRO))
 
 
+def get_solvent_box_length(config: WorkflowInput, solvent: SolventInput) -> float:
+    return solvent.box_length_a or config.packmol.box_length
+
+
 def save_xyz(
     path: str | Path,
     symbols: list[str],
@@ -242,7 +252,7 @@ def prepare_structure_input(config: WorkflowInput) -> WorkflowInput:
         solvent.n_atoms = len(symbols)
         solvent.molar_mass_g_mol = molecular_mass_g_mol(solvent_path)
         solvent.n_molecules = estimate_molecule_count(
-            config.packmol.box_length,
+            get_solvent_box_length(config, solvent),
             solvent.density_g_cm3,
             solvent.molar_mass_g_mol,
         )
@@ -257,13 +267,31 @@ def estimate_system_atom_count(config: WorkflowInput, solvent: SolventInput) -> 
     return int(config.structure.n_opa_atoms + solvent.n_atoms * solvent.n_molecules)
 
 
-def validate_md_system_sizes(config: WorkflowInput, max_atoms: int | None) -> None:
+def estimate_pfp_neighbor_count(config: WorkflowInput, solvent: SolventInput) -> int:
+    n_atoms = estimate_system_atom_count(config, solvent)
+    volume_a3 = get_solvent_box_length(config, solvent) ** 3
+    atom_density_a3 = n_atoms / volume_a3
+    return int(round(PFP_NEIGHBOR_DENSITY_FACTOR * n_atoms * atom_density_a3))
+
+
+def validate_md_system_sizes(
+    config: WorkflowInput,
+    max_atoms: int | None,
+    system_names: list[str] | None = None,
+) -> None:
     if max_atoms is None:
         return
 
     prepare_structure_input(config)
+    selected = (
+        {_safe_name(name).lower() for name in system_names}
+        if system_names is not None
+        else None
+    )
     too_large = []
     for solvent in config.structure.solvents:
+        if selected is not None and _safe_name(solvent.name).lower() not in selected:
+            continue
         n_atoms = estimate_system_atom_count(config, solvent)
         if n_atoms > max_atoms:
             too_large.append((solvent.name, n_atoms, solvent.n_molecules))
@@ -277,6 +305,45 @@ def validate_md_system_sizes(config: WorkflowInput, max_atoms: int | None) -> No
             "Estimated MD system exceeds MD_MAX_ATOMS before calling Matlantis/PFP.\n"
             + "\n".join(lines)
             + "\nReduce BOX_LENGTH_A or increase MD_MAX_ATOMS if your API plan supports it."
+        )
+
+
+def validate_mlip_neighbor_limit(
+    config: WorkflowInput,
+    max_neighbors: int | None,
+    system_names: list[str] | None = None,
+) -> None:
+    if max_neighbors is None:
+        return
+
+    prepare_structure_input(config)
+    selected = (
+        {_safe_name(name).lower() for name in system_names}
+        if system_names is not None
+        else None
+    )
+    too_large = []
+    for solvent in config.structure.solvents:
+        if selected is not None and _safe_name(solvent.name).lower() not in selected:
+            continue
+        n_atoms = estimate_system_atom_count(config, solvent)
+        neighbors = estimate_pfp_neighbor_count(config, solvent)
+        if neighbors > max_neighbors:
+            too_large.append((solvent.name, n_atoms, solvent.n_molecules, neighbors))
+
+    if too_large:
+        lines = [
+            (
+                f"{name}: estimated_neighbors={neighbors:,}, atoms={n_atoms:,}, "
+                f"solvent_molecules={n_molecules}"
+            )
+            for name, n_atoms, n_molecules, neighbors in too_large
+        ]
+        raise ValueError(
+            "Estimated MLIP neighbor count exceeds MD_MAX_ESTIMATED_NEIGHBORS before "
+            "calling Matlantis/PFP.\n"
+            + "\n".join(lines)
+            + "\nReduce BOX_LENGTH_A or set SYSTEM_NAMES to a smaller test subset."
         )
 
 
@@ -296,13 +363,14 @@ def _packmol_ref(config: WorkflowInput, path: str | Path) -> str:
 
 def write_packmol_input_for_solvent(config: WorkflowInput, solvent: SolventInput) -> Path:
     p = config.packmol
-    if p.margin <= 0 or p.margin * 2 >= p.box_length:
+    box_length = get_solvent_box_length(config, solvent)
+    if p.margin <= 0 or p.margin * 2 >= box_length:
         raise ValueError("Packmol margin must be positive and smaller than half the box length.")
 
     out_dir = _path(config.workdir, p.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    opa_center = p.opa_center or [p.box_length / 2.0] * 3
+    opa_center = p.opa_center or [box_length / 2.0] * 3
     opa_xyz = structure_to_packmol_xyz(
         config,
         config.structure.opa_file,
@@ -323,7 +391,7 @@ end structure
         opa_block = f"""
 structure {_packmol_ref(config, opa_xyz)}
   number 1
-  inside box {p.margin} {p.margin} {p.margin} {p.box_length - p.margin} {p.box_length - p.margin} {p.box_length - p.margin}
+  inside box {p.margin} {p.margin} {p.margin} {box_length - p.margin} {box_length - p.margin} {box_length - p.margin}
 end structure
 """.strip()
 
@@ -336,7 +404,7 @@ output {_packmol_ref(config, output_xyz)}
 
 structure {_packmol_ref(config, solvent_xyz)}
   number {solvent.n_molecules}
-  inside box {p.margin} {p.margin} {p.margin} {p.box_length - p.margin} {p.box_length - p.margin} {p.box_length - p.margin}
+  inside box {p.margin} {p.margin} {p.margin} {box_length - p.margin} {box_length - p.margin} {box_length - p.margin}
 end structure
 """.strip()
 
@@ -579,6 +647,7 @@ def configure_system_outputs(
 ) -> WorkflowInput:
     """Return a config copy with per-system input and output paths."""
     c = deepcopy(config)
+    c.packmol.box_length = get_solvent_box_length(config, solvent)
     name = _safe_name(solvent.name)
     system_dir = _path(c.workdir, results_dir) / name
     system_dir.mkdir(parents=True, exist_ok=True)
@@ -685,7 +754,10 @@ def run_all_systems_md(
 # =========================
 
 WORKDIR = "."
-BOX_LENGTH_A = 60.0
+BOX_LENGTH_A = 45.0
+SYSTEM_BOX_LENGTH_A = {
+    "prol": 40.0,
+}
 PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
 
 RUN_PACKMOL = True
@@ -694,6 +766,7 @@ RUN_ANALYSIS = True
 SKIP_EXISTING_PACKMOL = False
 SKIP_EXISTING_MD = True
 MD_MAX_ATOMS = 30000
+MD_MAX_ESTIMATED_NEIGHBORS = 1650000
 QUIET_PACKMOL = True
 
 # None means run all five systems. Example for testing: ["acetone", "thf"]
@@ -715,7 +788,7 @@ PFP_CALC_MODE = "PBE_U_PLUS_D3"
 
 
 def build_config() -> WorkflowInput:
-    return WorkflowInput(
+    config = WorkflowInput(
         workdir=WORKDIR,
         packmol=PackmolInput(
             box_length=BOX_LENGTH_A,
@@ -732,6 +805,10 @@ def build_config() -> WorkflowInput:
             friction_per_fs=MD_FRICTION_PER_FS,
         ),
     )
+    overrides = {_safe_name(name).lower(): box for name, box in SYSTEM_BOX_LENGTH_A.items()}
+    for solvent in config.structure.solvents:
+        solvent.box_length_a = overrides.get(_safe_name(solvent.name).lower())
+    return config
 
 
 def build_calculator():
@@ -751,7 +828,8 @@ def main() -> None:
     print("Preparing Packmol inputs...")
     prepare_structure_input(config)
     if RUN_MD:
-        validate_md_system_sizes(config, MD_MAX_ATOMS)
+        validate_md_system_sizes(config, MD_MAX_ATOMS, SYSTEM_NAMES)
+        validate_mlip_neighbor_limit(config, MD_MAX_ESTIMATED_NEIGHBORS, SYSTEM_NAMES)
     save_config(config)
     packmol_inputs = write_packmol_inputs(config)
 
@@ -759,13 +837,16 @@ def main() -> None:
     for path in packmol_inputs:
         print("  ", path)
 
-    print(f"\nMolecule counts for the {BOX_LENGTH_A:g} A box:")
+    print("\nMolecule counts by system:")
     for solvent in config.structure.solvents:
+        box_length = get_solvent_box_length(config, solvent)
         n_atoms_total = estimate_system_atom_count(config, solvent)
         print(
-            f"{solvent.name:10s}  density={solvent.density_g_cm3:g} g/cm3  "
+            f"{solvent.name:10s}  box={box_length:g} A  "
+            f"density={solvent.density_g_cm3:g} g/cm3  "
             f"M={solvent.molar_mass_g_mol:.3f} g/mol  N={solvent.n_molecules}  "
-            f"atoms={n_atoms_total}"
+            f"atoms={n_atoms_total}  "
+            f"estimated_neighbors={estimate_pfp_neighbor_count(config, solvent):,}"
         )
 
     if RUN_PACKMOL:
