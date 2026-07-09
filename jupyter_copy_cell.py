@@ -358,6 +358,7 @@ def run_packmol(
     executable: str = "packmol",
     *,
     skip_existing: bool = True,
+    quiet: bool = True,
 ) -> list[Path]:
     resolved_executable = shutil.which(executable) if not Path(executable).exists() else executable
     if resolved_executable is None:
@@ -376,8 +377,22 @@ def run_packmol(
             print(f"Skipping existing Packmol output: {output_xyz}")
             outputs.append(output_xyz)
             continue
+        log_path = inp.with_suffix(".log")
+        print(f"Running Packmol for {solvent.name}; log: {log_path}")
         with inp.open("rb") as stdin:
-            subprocess.run([resolved_executable], cwd=config.workdir, stdin=stdin, check=True)
+            if quiet:
+                with log_path.open("w", encoding="utf-8") as log:
+                    subprocess.run(
+                        [resolved_executable],
+                        cwd=config.workdir,
+                        stdin=stdin,
+                        stdout=log,
+                        stderr=subprocess.STDOUT,
+                        check=True,
+                    )
+            else:
+                subprocess.run([resolved_executable], cwd=config.workdir, stdin=stdin, check=True)
+        print(f"Packmol finished for {solvent.name}: {output_xyz}")
         outputs.append(output_xyz)
     return outputs
 
@@ -679,6 +694,7 @@ RUN_ANALYSIS = True
 SKIP_EXISTING_PACKMOL = False
 SKIP_EXISTING_MD = True
 MD_MAX_ATOMS = 30000
+QUIET_PACKMOL = True
 
 # None means run all five systems. Example for testing: ["acetone", "thf"]
 SYSTEM_NAMES = None
@@ -686,7 +702,7 @@ SYSTEM_NAMES = None
 RESULTS_DIR = "results"
 
 MD_N_STEPS = 100000
-MD_LOG_INTERVAL = 100
+MD_LOG_INTERVAL = 1000
 MD_TEMPERATURE_K = 300.0
 MD_TIMESTEP_FS = 1.0
 MD_FRICTION_PER_FS = 0.01
@@ -766,6 +782,7 @@ def main() -> None:
             config,
             executable=PACKMOL_EXECUTABLE,
             skip_existing=SKIP_EXISTING_PACKMOL,
+            quiet=QUIET_PACKMOL,
         )
         print("\nPacked XYZ files:")
         for path in packed_xyz_files:
