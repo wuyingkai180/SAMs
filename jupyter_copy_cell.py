@@ -1,6 +1,7 @@
 # Integrated Jupyter workflow.
 # Copy this whole file into one Jupyter cell.
-# Keep the notebook in the same directory as the structures/ folder.
+# Keep the notebook in the same directory as:
+#   opa.vasp, Actone.vasp, n-heptane.vasp, prol.vasp, thf.vasp, Toluene.vasp
 
 from __future__ import annotations
 
@@ -44,14 +45,14 @@ class SolventInput:
 
 @dataclass
 class StructureInput:
-    opa_file: str = "structures/opa.vasp"
+    opa_file: str = "opa.vasp"
     solvents: list[SolventInput] = field(
         default_factory=lambda: [
-            SolventInput("acetone", "structures/Actone.vasp", 0.7845),
-            SolventInput("n-heptane", "structures/n-heptane.vasp", 0.684),
-            SolventInput("prol", "structures/prol.vasp", 1.35),
-            SolventInput("thf", "structures/thf.vasp", 0.889),
-            SolventInput("toluene", "structures/Toluene.vasp", 0.867),
+            SolventInput("acetone", "Actone.vasp", 0.7845),
+            SolventInput("n-heptane", "n-heptane.vasp", 0.684),
+            SolventInput("prol", "prol.vasp", 1.35),
+            SolventInput("thf", "thf.vasp", 0.889),
+            SolventInput("toluene", "Toluene.vasp", 0.867),
         ]
     )
     n_opa_atoms: int | None = None
@@ -246,6 +247,37 @@ def prepare_structure_input(config: WorkflowInput) -> WorkflowInput:
             solvent.molar_mass_g_mol,
         )
     return config
+
+
+def estimate_system_atom_count(config: WorkflowInput, solvent: SolventInput) -> int:
+    if config.structure.n_opa_atoms is None:
+        prepare_structure_input(config)
+    if solvent.n_atoms is None or solvent.n_molecules is None:
+        raise ValueError(f"Solvent metadata is incomplete for {solvent.name}.")
+    return int(config.structure.n_opa_atoms + solvent.n_atoms * solvent.n_molecules)
+
+
+def validate_md_system_sizes(config: WorkflowInput, max_atoms: int | None) -> None:
+    if max_atoms is None:
+        return
+
+    prepare_structure_input(config)
+    too_large = []
+    for solvent in config.structure.solvents:
+        n_atoms = estimate_system_atom_count(config, solvent)
+        if n_atoms > max_atoms:
+            too_large.append((solvent.name, n_atoms, solvent.n_molecules))
+
+    if too_large:
+        lines = [
+            f"{name}: {n_atoms} atoms ({n_molecules} solvent molecules)"
+            for name, n_atoms, n_molecules in too_large
+        ]
+        raise ValueError(
+            "Estimated MD system exceeds MD_MAX_ATOMS before calling Matlantis/PFP.\n"
+            + "\n".join(lines)
+            + "\nReduce BOX_LENGTH_A or increase MD_MAX_ATOMS if your API plan supports it."
+        )
 
 
 def _packmol_path(config: WorkflowInput, solvent: SolventInput, template: str) -> Path:
@@ -514,19 +546,15 @@ def create_matlantis_calculator(
     model_version: str = "v9.0.0",
     calc_mode: str | Any = "R2SCAN",
 ):
-    """Create a Matlantis ASE calculator using matlantis_features."""
-    from matlantis_features.utils.calculators import pfp_estimator_fn
+    """Create a Matlantis/PFP ASE calculator for a specific model version."""
     from pfp_api_client.pfp.calculators.ase_calculator import ASECalculator
+    from pfp_api_client.pfp.estimator import Estimator
 
-    estimator_fn = pfp_estimator_fn(
+    estimator = Estimator(
         model_version=model_version,
         calc_mode=_resolve_estimator_calc_mode(calc_mode),
     )
-
-    try:
-        return ASECalculator(estimator_fn)
-    except TypeError:
-        return ASECalculator(estimator_fn=estimator_fn)
+    return ASECalculator(estimator)
 
 
 def configure_system_outputs(
@@ -642,14 +670,15 @@ def run_all_systems_md(
 # =========================
 
 WORKDIR = "."
-BOX_LENGTH_A = 100.0
+BOX_LENGTH_A = 60.0
 PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
 
 RUN_PACKMOL = True
 RUN_MD = True
 RUN_ANALYSIS = True
-SKIP_EXISTING_PACKMOL = True
+SKIP_EXISTING_PACKMOL = False
 SKIP_EXISTING_MD = True
+MD_MAX_ATOMS = 30000
 
 # None means run all five systems. Example for testing: ["acetone", "thf"]
 SYSTEM_NAMES = None
@@ -705,6 +734,8 @@ def main() -> None:
 
     print("Preparing Packmol inputs...")
     prepare_structure_input(config)
+    if RUN_MD:
+        validate_md_system_sizes(config, MD_MAX_ATOMS)
     save_config(config)
     packmol_inputs = write_packmol_inputs(config)
 
@@ -712,11 +743,13 @@ def main() -> None:
     for path in packmol_inputs:
         print("  ", path)
 
-    print("\nMolecule counts for the 100 A box:")
+    print(f"\nMolecule counts for the {BOX_LENGTH_A:g} A box:")
     for solvent in config.structure.solvents:
+        n_atoms_total = estimate_system_atom_count(config, solvent)
         print(
             f"{solvent.name:10s}  density={solvent.density_g_cm3:g} g/cm3  "
-            f"M={solvent.molar_mass_g_mol:.3f} g/mol  N={solvent.n_molecules}"
+            f"M={solvent.molar_mass_g_mol:.3f} g/mol  N={solvent.n_molecules}  "
+            f"atoms={n_atoms_total}"
         )
 
     if RUN_PACKMOL:
