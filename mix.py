@@ -65,42 +65,42 @@ class StructureInput:
             MixtureInput(
                 "thf_toluene",
                 [
-                    SolventInput("thf", "thf.vasp", 0.889, n_molecules=49, volume_fraction=0.05),
-                    SolventInput("toluene", "Toluene.vasp", 0.867, n_molecules=714, volume_fraction=0.95),
+                    SolventInput("thf", "thf.vasp", 0.889, n_molecules=10, volume_fraction=0.01),
+                    SolventInput("toluene", "Toluene.vasp", 0.867, n_molecules=744, volume_fraction=0.99),
                 ],
                 51.0,
             ),
             MixtureInput(
                 "prol_n-heptane",
                 [
-                    SolventInput("prol", "prol.vasp", 1.35, n_molecules=38, volume_fraction=0.05),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=424, volume_fraction=0.95),
+                    SolventInput("prol", "prol.vasp", 1.35, n_molecules=7, volume_fraction=0.01),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
                 ],
-                48.0,
+                47.0,
             ),
             MixtureInput(
                 "thf_n-heptane",
                 [
-                    SolventInput("thf", "thf.vasp", 0.889, n_molecules=40, volume_fraction=0.05),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=430, volume_fraction=0.95),
+                    SolventInput("thf", "thf.vasp", 0.889, n_molecules=8, volume_fraction=0.01),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
                 ],
-                48.0,
+                47.0,
             ),
             MixtureInput(
                 "toluene_n-heptane",
                 [
-                    SolventInput("toluene", "Toluene.vasp", 0.867, n_molecules=31, volume_fraction=0.05),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=432, volume_fraction=0.95),
+                    SolventInput("toluene", "Toluene.vasp", 0.867, n_molecules=6, volume_fraction=0.01),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
                 ],
-                48.0,
+                47.0,
             ),
             MixtureInput(
                 "acetone_n-heptane",
                 [
-                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=45, volume_fraction=0.05),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=432, volume_fraction=0.95),
+                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=8, volume_fraction=0.01),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
                 ],
-                48.0,
+                47.0,
             ),
         ]
     )
@@ -866,21 +866,19 @@ WORKDIR = "."
 BOX_LENGTH_A = 45.0
 SYSTEM_BOX_LENGTH_A = {
     "thf_toluene": 51.0,
-    "prol_n-heptane": 48.0,
-    "thf_n-heptane": 48.0,
-    "toluene_n-heptane": 48.0,
-    "acetone_n-heptane": 48.0,
+    "prol_n-heptane": 47.0,
+    "thf_n-heptane": 47.0,
+    "toluene_n-heptane": 47.0,
+    "acetone_n-heptane": 47.0,
 }
-# Integer counts preserve approximately 5:95 v/v while keeping the estimated
-# Matlantis/PFP neighbor count below MD_MAX_ESTIMATED_NEIGHBORS. The two
-# n-heptane-rich systems that exceed the guard at full nominal density are
-# slightly underfilled instead of weakening the API safety limit.
+# Integer counts preserve approximately 1:99 v/v while keeping the estimated
+# Matlantis/PFP neighbor count below MD_MAX_ESTIMATED_NEIGHBORS.
 SYSTEM_MOLECULE_COUNTS = {
-    "thf_toluene": {"thf": 49, "toluene": 714},
-    "prol_n-heptane": {"prol": 38, "n-heptane": 424},
-    "thf_n-heptane": {"thf": 40, "n-heptane": 430},
-    "toluene_n-heptane": {"toluene": 31, "n-heptane": 432},
-    "acetone_n-heptane": {"acetone": 45, "n-heptane": 432},
+    "thf_toluene": {"thf": 10, "toluene": 744},
+    "prol_n-heptane": {"prol": 7, "n-heptane": 423},
+    "thf_n-heptane": {"thf": 8, "n-heptane": 423},
+    "toluene_n-heptane": {"toluene": 6, "n-heptane": 423},
+    "acetone_n-heptane": {"acetone": 8, "n-heptane": 423},
 }
 PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
 
