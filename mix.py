@@ -63,44 +63,52 @@ class StructureInput:
     mixtures: list[MixtureInput] = field(
         default_factory=lambda: [
             MixtureInput(
-                "thf_toluene",
-                [
-                    SolventInput("thf", "thf.vasp", 0.889, n_molecules=10, volume_fraction=0.01),
-                    SolventInput("toluene", "Toluene.vasp", 0.867, n_molecules=744, volume_fraction=0.99),
-                ],
-                51.0,
-            ),
-            MixtureInput(
-                "prol_n-heptane",
-                [
-                    SolventInput("prol", "prol.vasp", 1.35, n_molecules=7, volume_fraction=0.01),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
-                ],
-                47.0,
-            ),
-            MixtureInput(
-                "thf_n-heptane",
-                [
-                    SolventInput("thf", "thf.vasp", 0.889, n_molecules=8, volume_fraction=0.01),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
-                ],
-                47.0,
-            ),
-            MixtureInput(
-                "toluene_n-heptane",
-                [
-                    SolventInput("toluene", "Toluene.vasp", 0.867, n_molecules=6, volume_fraction=0.01),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
-                ],
-                47.0,
-            ),
-            MixtureInput(
-                "acetone_n-heptane",
+                "acetone_1_n-heptane_99",
                 [
                     SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=8, volume_fraction=0.01),
                     SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
                 ],
                 47.0,
+            ),
+            MixtureInput(
+                "acetone_10_n-heptane_90",
+                [
+                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=90, volume_fraction=0.10),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=409, volume_fraction=0.90),
+                ],
+                48.0,
+            ),
+            MixtureInput(
+                "acetone_20_n-heptane_80",
+                [
+                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=180, volume_fraction=0.20),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=364, volume_fraction=0.80),
+                ],
+                48.0,
+            ),
+            MixtureInput(
+                "acetone_30_n-heptane_70",
+                [
+                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=287, volume_fraction=0.30),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=339, volume_fraction=0.70),
+                ],
+                49.0,
+            ),
+            MixtureInput(
+                "acetone_40_n-heptane_60",
+                [
+                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=383, volume_fraction=0.40),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=290, volume_fraction=0.60),
+                ],
+                49.0,
+            ),
+            MixtureInput(
+                "acetone_50_n-heptane_50",
+                [
+                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=508, volume_fraction=0.50),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=257, volume_fraction=0.50),
+                ],
+                50.0,
             ),
         ]
     )
@@ -865,20 +873,22 @@ def compare_mixture_opa_motion(
 WORKDIR = "."
 BOX_LENGTH_A = 45.0
 SYSTEM_BOX_LENGTH_A = {
-    "thf_toluene": 51.0,
-    "prol_n-heptane": 47.0,
-    "thf_n-heptane": 47.0,
-    "toluene_n-heptane": 47.0,
-    "acetone_n-heptane": 47.0,
+    "acetone_1_n-heptane_99": 47.0,
+    "acetone_10_n-heptane_90": 48.0,
+    "acetone_20_n-heptane_80": 48.0,
+    "acetone_30_n-heptane_70": 49.0,
+    "acetone_40_n-heptane_60": 49.0,
+    "acetone_50_n-heptane_50": 50.0,
 }
-# Integer counts preserve approximately 1:99 v/v while keeping the estimated
-# Matlantis/PFP neighbor count below MD_MAX_ESTIMATED_NEIGHBORS.
+# Integer counts preserve the requested acetone:n-heptane volume ratios while
+# keeping the estimated Matlantis/PFP neighbor count below the configured limit.
 SYSTEM_MOLECULE_COUNTS = {
-    "thf_toluene": {"thf": 10, "toluene": 744},
-    "prol_n-heptane": {"prol": 7, "n-heptane": 423},
-    "thf_n-heptane": {"thf": 8, "n-heptane": 423},
-    "toluene_n-heptane": {"toluene": 6, "n-heptane": 423},
-    "acetone_n-heptane": {"acetone": 8, "n-heptane": 423},
+    "acetone_1_n-heptane_99": {"acetone": 8, "n-heptane": 423},
+    "acetone_10_n-heptane_90": {"acetone": 90, "n-heptane": 409},
+    "acetone_20_n-heptane_80": {"acetone": 180, "n-heptane": 364},
+    "acetone_30_n-heptane_70": {"acetone": 287, "n-heptane": 339},
+    "acetone_40_n-heptane_60": {"acetone": 383, "n-heptane": 290},
+    "acetone_50_n-heptane_50": {"acetone": 508, "n-heptane": 257},
 }
 PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
 
@@ -891,7 +901,7 @@ MD_MAX_ATOMS = 30000
 MD_MAX_ESTIMATED_NEIGHBORS = 1650000
 QUIET_PACKMOL = True
 
-# None means run all five mixtures. Example: ["thf_toluene"]
+# None means run all six mixtures. Example: ["acetone_10_n-heptane_90"]
 SYSTEM_NAMES = None
 
 RESULTS_DIR = "results"
