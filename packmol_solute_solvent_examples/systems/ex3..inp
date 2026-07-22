@@ -1,0 +1,23 @@
+tolerance 2.2
+filetype xyz
+output systems/ex3..xyz
+
+structure source_xyz/ex3._solute_1.xyz
+  number 2
+  inside box 2.0 2.0 2.0 45.0 45.0 45.0
+end structure
+
+structure source_xyz/ex3._solvent_1.xyz
+  number 84
+  inside box 2.0 2.0 2.0 45.0 45.0 45.0
+end structure
+
+structure source_xyz/ex3._solvent_2.xyz
+  number 341
+  inside box 2.0 2.0 2.0 45.0 45.0 45.0
+end structure
+
+structure source_xyz/ex3._solvent_3.xyz
+  number 77
+  inside box 2.0 2.0 2.0 45.0 45.0 45.0
+end structure

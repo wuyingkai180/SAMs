@@ -1,11 +1,13 @@
-"""Build pure-solvent, binary, and ternary OPA systems with Packmol only."""
+"""Build pure-solvent, binary, and ternary solute/solvent systems with Packmol."""
 
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 import subprocess
+import sys
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
@@ -29,8 +31,9 @@ ATOMIC_MASSES = {
 
 
 @dataclass
-class ComponentInput:
-    name: str
+class SolventInput:
+    role: str
+    chemical_name: str
     structure_file: str
     density_g_cm3: float
     volume_fraction: float
@@ -40,22 +43,22 @@ class ComponentInput:
 
 
 @dataclass
-class MixtureInput:
+class SystemInput:
     name: str
     box_length_a: float
-    components: list[ComponentInput]
-    n_opa_molecules: int = 1
+    solvents: list[SolventInput]
+    n_solute_1_molecules: int = 1
 
 
 @dataclass
 class PackmolInput:
     margin: float = 2.0
     tolerance: float = 2.2
-    fixed_opa: bool = True
-    generated_structure_dir: str = "packmol_structures"
-    output_dir: str = "packmol_systems"
-    packmol_input_template: str = "{name}_packmol.inp"
-    output_xyz_template: str = "{name}_opa_box.xyz"
+    fixed_single_solute_1: bool = True
+    generated_structure_dir: str = "packmol_source_xyz"
+    output_dir: str = "packed_systems"
+    packmol_input_template: str = "{name}.inp"
+    output_xyz_template: str = "{name}.xyz"
 
 
 @dataclass
@@ -68,15 +71,17 @@ class RuntimeInput:
     max_estimated_neighbors: int | None = 1_650_000
 
 
-def _component(
-    name: str,
+def _solvent(
+    role: str,
+    chemical_name: str,
     structure_file: str,
     density: float,
     volume_fraction: float,
     n_molecules: int,
-) -> ComponentInput:
-    return ComponentInput(
-        name=name,
+) -> SolventInput:
+    return SolventInput(
+        role=role,
+        chemical_name=chemical_name,
         structure_file=structure_file,
         density_g_cm3=density,
         volume_fraction=volume_fraction,
@@ -87,27 +92,31 @@ def _component(
 @dataclass
 class WorkflowInput:
     workdir: str = "."
-    opa_file: str = "opa.vasp"
+    solute_1_file: str = "solute_1.vasp"
     packmol: PackmolInput = field(default_factory=PackmolInput)
     runtime: RuntimeInput = field(default_factory=RuntimeInput)
-    mixtures: list[MixtureInput] = field(default_factory=list)
-    n_opa_atoms: int | None = None
+    systems: list[SystemInput] = field(default_factory=list)
+    n_solute_1_atoms: int | None = None
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent if "__file__" in globals() else Path.cwd()
 
 
 # =========================
 # Editable configuration
 # =========================
 CONFIG = WorkflowInput(
-    workdir=".",
-    opa_file="opa.vasp",
+    # Input and output paths are resolved from the directory containing this script.
+    workdir=str(SCRIPT_DIR),
+    solute_1_file="solute_1.vasp",
     packmol=PackmolInput(
         margin=2.0,
         tolerance=2.2,
-        fixed_opa=True,
-        generated_structure_dir="packmol_structures",
-        output_dir="packmol_systems",
-        packmol_input_template="{name}_packmol.inp",
-        output_xyz_template="{name}_opa_box.xyz",
+        fixed_single_solute_1=True,
+        generated_structure_dir="source_xyz",
+        output_dir="systems",
+        packmol_input_template="{name}.inp",
+        output_xyz_template="{name}.xyz",
     ),
     runtime=RuntimeInput(
         # "packmol" uses the executable from the active environment/PATH.
@@ -119,32 +128,32 @@ CONFIG = WorkflowInput(
         max_atoms=30_000,
         max_estimated_neighbors=1_650_000,
     ),
-    mixtures=[
-        MixtureInput(
-            name="example_pure_n-heptane",
+    systems=[
+        SystemInput(
+            name="ex1",
             box_length_a=47.0,
-            n_opa_molecules=1,
-            components=[
-                _component("n-heptane", "n-heptane.vasp", 0.684, 1.00, 427),
+            n_solute_1_molecules=1,
+            solvents=[
+                _solvent("solvent_1", "n-heptane", "n-heptane.vasp", 0.684, 1.00, 427),
             ],
         ),
-        MixtureInput(
-            name="example_binary_acetone_10_n-heptane_90",
+        SystemInput(
+            name="ex2",
             box_length_a=48.0,
-            n_opa_molecules=1,
-            components=[
-                _component("acetone", "Actone.vasp", 0.7845, 0.10, 90),
-                _component("n-heptane", "n-heptane.vasp", 0.684, 0.90, 409),
+            n_solute_1_molecules=1,
+            solvents=[
+                _solvent("solvent_1", "acetone", "Actone.vasp", 0.7845, 0.10, 90),
+                _solvent("solvent_2", "n-heptane", "n-heptane.vasp", 0.684, 0.90, 409),
             ],
         ),
-        MixtureInput(
-            name="example_ternary_acetone_10_n-heptane_80_thf_10",
+        SystemInput(
+            name="ex3",
             box_length_a=47.0,
-            n_opa_molecules=2,
-            components=[
-                _component("acetone", "Actone.vasp", 0.7845, 0.10, 84),
-                _component("n-heptane", "n-heptane.vasp", 0.684, 0.80, 341),
-                _component("thf", "thf.vasp", 0.889, 0.10, 77),
+            n_solute_1_molecules=2,
+            solvents=[
+                _solvent("solvent_1", "acetone", "Actone.vasp", 0.7845, 0.10, 84),
+                _solvent("solvent_2", "n-heptane", "n-heptane.vasp", 0.684, 0.80, 341),
+                _solvent("solvent_3", "thf", "thf.vasp", 0.889, 0.10, 77),
             ],
         ),
     ],
@@ -157,7 +166,7 @@ def _path(workdir: str | Path, filename: str | Path) -> Path:
 
 
 def _safe_name(name: str) -> str:
-    return re.sub(r"[^A-Za-z0-9_.-]+", "_", name).strip("_")
+    return re.sub(r"[^A-Za-z0-9_.-]+", "_", name).strip("._-")
 
 
 def read_xyz_structure(xyz_file: str | Path) -> tuple[list[str], np.ndarray]:
@@ -245,15 +254,21 @@ def structure_to_packmol_xyz(
     *,
     center_at: list[float] | None = None,
     label: str | None = None,
+    output_stem: str | None = None,
 ) -> Path:
     source = _path(config.workdir, structure_file)
-    if source.suffix.lower() == ".xyz" and center_at is None:
+    if (
+        source.suffix.lower() == ".xyz"
+        and center_at is None
+        and label is None
+        and output_stem is None
+    ):
         return source
 
     output_dir = _path(config.workdir, config.packmol.generated_structure_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     suffix = f"_{label}" if label else ""
-    output = output_dir / f"{source.stem}{suffix}.xyz"
+    output = output_dir / f"{output_stem or source.stem}{suffix}.xyz"
 
     symbols, coords = read_structure(source)
     if center_at is not None:
@@ -262,51 +277,53 @@ def structure_to_packmol_xyz(
 
 
 def prepare_structures(config: WorkflowInput) -> WorkflowInput:
-    opa_path = _path(config.workdir, config.opa_file)
-    if not opa_path.exists():
-        raise FileNotFoundError(f"Missing OPA structure: {opa_path}")
-    opa_symbols, _ = read_structure(opa_path)
-    config.n_opa_atoms = len(opa_symbols)
+    solute_1_path = _path(config.workdir, config.solute_1_file)
+    if not solute_1_path.exists():
+        raise FileNotFoundError(f"Missing solute_1 structure: {solute_1_path}")
+    solute_1_symbols, _ = read_structure(solute_1_path)
+    config.n_solute_1_atoms = len(solute_1_symbols)
 
-    for mixture in config.mixtures:
-        if mixture.n_opa_molecules < 1:
-            raise ValueError(f"{mixture.name} must contain at least one OPA molecule.")
-        total_fraction = sum(c.volume_fraction for c in mixture.components)
+    for system in config.systems:
+        if system.n_solute_1_molecules < 1:
+            raise ValueError(f"{system.name} must contain at least one solute_1 molecule.")
+        total_fraction = sum(s.volume_fraction for s in system.solvents)
         if not np.isclose(total_fraction, 1.0):
-            raise ValueError(f"Volume fractions for {mixture.name} must sum to 1.0.")
-        for component in mixture.components:
-            component_path = _path(config.workdir, component.structure_file)
-            if not component_path.exists():
-                raise FileNotFoundError(f"Missing component structure: {component_path}")
-            symbols, _ = read_structure(component_path)
-            component.n_atoms = len(symbols)
-            component.molar_mass_g_mol = molecular_mass_g_mol(symbols)
+            raise ValueError(f"Solvent volume fractions for {system.name} must sum to 1.0.")
+        for solvent in system.solvents:
+            solvent_path = _path(config.workdir, solvent.structure_file)
+            if not solvent_path.exists():
+                raise FileNotFoundError(
+                    f"Missing {solvent.role} structure ({solvent.chemical_name}): {solvent_path}"
+                )
+            symbols, _ = read_structure(solvent_path)
+            solvent.n_atoms = len(symbols)
+            solvent.molar_mass_g_mol = molecular_mass_g_mol(symbols)
     return config
 
 
-def estimate_system_atom_count(config: WorkflowInput, mixture: MixtureInput) -> int:
-    if config.n_opa_atoms is None:
+def estimate_system_atom_count(config: WorkflowInput, system: SystemInput) -> int:
+    if config.n_solute_1_atoms is None:
         prepare_structures(config)
-    total_atoms = config.n_opa_atoms * mixture.n_opa_molecules
-    for component in mixture.components:
-        if component.n_atoms is None:
-            raise ValueError(f"Missing atom count for {component.name}.")
-        total_atoms += component.n_atoms * component.n_molecules
+    total_atoms = config.n_solute_1_atoms * system.n_solute_1_molecules
+    for solvent in system.solvents:
+        if solvent.n_atoms is None:
+            raise ValueError(f"Missing atom count for {solvent.role}.")
+        total_atoms += solvent.n_atoms * solvent.n_molecules
     return int(total_atoms)
 
 
-def estimate_neighbor_count(config: WorkflowInput, mixture: MixtureInput) -> int:
-    n_atoms = estimate_system_atom_count(config, mixture)
-    volume_a3 = mixture.box_length_a**3
+def estimate_neighbor_count(config: WorkflowInput, system: SystemInput) -> int:
+    n_atoms = estimate_system_atom_count(config, system)
+    volume_a3 = system.box_length_a**3
     return int(round(PFP_NEIGHBOR_DENSITY_FACTOR * n_atoms * (n_atoms / volume_a3)))
 
 
-def actual_volume_fraction(component: ComponentInput, mixture: MixtureInput) -> float:
+def actual_volume_fraction(solvent: SolventInput, system: SystemInput) -> float:
     volumes = [
         c.n_molecules * c.molar_mass_g_mol / c.density_g_cm3
-        for c in mixture.components
+        for c in system.solvents
     ]
-    index = mixture.components.index(component)
+    index = system.solvents.index(solvent)
     return float(volumes[index] / sum(volumes))
 
 
@@ -317,22 +334,22 @@ def validate_sizes(
 ) -> None:
     prepare_structures(config)
     failures = []
-    for mixture in config.mixtures:
-        atoms = estimate_system_atom_count(config, mixture)
-        neighbors = estimate_neighbor_count(config, mixture)
+    for system in config.systems:
+        atoms = estimate_system_atom_count(config, system)
+        neighbors = estimate_neighbor_count(config, system)
         if (max_atoms is not None and atoms > max_atoms) or (
             max_neighbors is not None and neighbors > max_neighbors
         ):
             failures.append(
-                f"{mixture.name}: atoms={atoms:,}, estimated_neighbors={neighbors:,}"
+                f"{system.name}: atoms={atoms:,}, estimated_neighbors={neighbors:,}"
             )
     if failures:
         raise ValueError("System size limit exceeded:\n" + "\n".join(failures))
 
 
-def _packmol_path(config: WorkflowInput, mixture: MixtureInput, template: str) -> Path:
+def _packmol_path(config: WorkflowInput, system: SystemInput, template: str) -> Path:
     return _path(config.workdir, config.packmol.output_dir) / template.format(
-        name=_safe_name(mixture.name)
+        name=_safe_name(system.name)
     )
 
 
@@ -344,9 +361,9 @@ def _packmol_ref(config: WorkflowInput, path: str | Path) -> str:
         return path.as_posix()
 
 
-def write_packmol_input(config: WorkflowInput, mixture: MixtureInput) -> Path:
+def write_packmol_input(config: WorkflowInput, system: SystemInput) -> Path:
     packmol = config.packmol
-    box_length = mixture.box_length_a
+    box_length = system.box_length_a
     if packmol.margin <= 0 or packmol.margin * 2 >= box_length:
         raise ValueError("Packmol margin must be positive and below half the box length.")
 
@@ -354,32 +371,39 @@ def write_packmol_input(config: WorkflowInput, mixture: MixtureInput) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     center = [box_length / 2.0] * 3
-    fix_single_opa = packmol.fixed_opa and mixture.n_opa_molecules == 1
-    opa_xyz = structure_to_packmol_xyz(
-        config,
-        config.opa_file,
-        center_at=center if fix_single_opa else None,
-        label=f"{_safe_name(mixture.name)}_fixed" if fix_single_opa else None,
+    fix_single_solute_1 = (
+        packmol.fixed_single_solute_1 and system.n_solute_1_molecules == 1
     )
-    output_xyz = _packmol_path(config, mixture, packmol.output_xyz_template)
+    solute_1_xyz = structure_to_packmol_xyz(
+        config,
+        config.solute_1_file,
+        center_at=center if fix_single_solute_1 else None,
+        label="fixed" if fix_single_solute_1 else None,
+        output_stem=f"{_safe_name(system.name)}_solute_1",
+    )
+    output_xyz = _packmol_path(config, system, packmol.output_xyz_template)
 
-    if fix_single_opa:
-        opa_block = f"""structure {_packmol_ref(config, opa_xyz)}
+    if fix_single_solute_1:
+        solute_1_block = f"""structure {_packmol_ref(config, solute_1_xyz)}
   number 1
   fixed 0. 0. 0. 0. 0. 0.
 end structure"""
     else:
-        opa_block = f"""structure {_packmol_ref(config, opa_xyz)}
-  number {mixture.n_opa_molecules}
+        solute_1_block = f"""structure {_packmol_ref(config, solute_1_xyz)}
+  number {system.n_solute_1_molecules}
   inside box {packmol.margin} {packmol.margin} {packmol.margin} {box_length - packmol.margin} {box_length - packmol.margin} {box_length - packmol.margin}
 end structure"""
 
-    component_blocks = []
-    for component in mixture.components:
-        component_xyz = structure_to_packmol_xyz(config, component.structure_file)
-        component_blocks.append(
-            f"""structure {_packmol_ref(config, component_xyz)}
-  number {component.n_molecules}
+    solvent_blocks = []
+    for solvent in system.solvents:
+        solvent_xyz = structure_to_packmol_xyz(
+            config,
+            solvent.structure_file,
+            output_stem=f"{_safe_name(system.name)}_{solvent.role}",
+        )
+        solvent_blocks.append(
+            f"""structure {_packmol_ref(config, solvent_xyz)}
+  number {solvent.n_molecules}
   inside box {packmol.margin} {packmol.margin} {packmol.margin} {box_length - packmol.margin} {box_length - packmol.margin} {box_length - packmol.margin}
 end structure"""
         )
@@ -389,18 +413,70 @@ end structure"""
             f"tolerance {packmol.tolerance}\n"
             f"filetype xyz\n"
             f"output {_packmol_ref(config, output_xyz)}",
-            opa_block,
-            *component_blocks,
+            solute_1_block,
+            *solvent_blocks,
         ]
     )
-    input_path = _packmol_path(config, mixture, packmol.packmol_input_template)
+    input_path = _packmol_path(config, system, packmol.packmol_input_template)
     input_path.write_text(content + "\n", encoding="utf-8")
     return input_path
 
 
 def write_packmol_inputs(config: WorkflowInput) -> list[Path]:
     prepare_structures(config)
-    return [write_packmol_input(config, mixture) for mixture in config.mixtures]
+    return [write_packmol_input(config, system) for system in config.systems]
+
+
+def resolve_packmol_executable(executable: str) -> str:
+    """Resolve Packmol from config, an environment variable, PATH, or Python env."""
+    requested = os.environ.get("PACKMOL_EXECUTABLE", executable)
+    requested_path = Path(requested).expanduser()
+    if requested_path.is_file():
+        return str(requested_path.resolve())
+
+    resolved = shutil.which(requested)
+    if resolved is not None:
+        return resolved
+
+    candidates = [
+        Path(sys.executable).resolve().parent / "packmol.exe",
+        Path(sys.prefix) / "Scripts" / "packmol.exe",
+        Path(sys.prefix) / "Library" / "bin" / "packmol.exe",
+        Path(sys.prefix) / "bin" / "packmol",
+    ]
+    for candidate in candidates:
+        if candidate.is_file():
+            return str(candidate.resolve())
+
+    checked = "\n".join(f"  {path}" for path in candidates)
+    raise FileNotFoundError(
+        f"Packmol executable was not found for {requested!r}.\n"
+        f"Python executable: {sys.executable}\n"
+        f"Also checked:\n{checked}\n"
+        "Run this script with the Python environment where Packmol is installed, "
+        "or set CONFIG.runtime.packmol_executable / PACKMOL_EXECUTABLE."
+    )
+
+
+def validate_packed_output(
+    config: WorkflowInput,
+    system: SystemInput,
+    output_xyz: str | Path,
+) -> None:
+    """Confirm that Packmol created an XYZ with the expected atom count."""
+    output_xyz = Path(output_xyz)
+    if not output_xyz.is_file():
+        raise FileNotFoundError(
+            f"Packmol finished without creating the expected output: {output_xyz}"
+        )
+    first_line = output_xyz.read_text(encoding="utf-8").splitlines()[0].strip()
+    actual_atoms = int(first_line)
+    expected_atoms = estimate_system_atom_count(config, system)
+    if actual_atoms != expected_atoms:
+        raise ValueError(
+            f"Packed XYZ atom-count mismatch for {system.name}: "
+            f"expected {expected_atoms}, found {actual_atoms}."
+        )
 
 
 def run_packmol(
@@ -410,24 +486,21 @@ def run_packmol(
     skip_existing: bool = False,
     quiet: bool = True,
 ) -> list[Path]:
-    resolved = executable if Path(executable).exists() else shutil.which(executable)
-    if resolved is None:
-        raise FileNotFoundError(
-            f"Packmol executable was not found: {executable!r}. "
-            "Set PACKMOL_EXECUTABLE to its absolute path."
-        )
+    resolved = resolve_packmol_executable(executable)
+    print(f"Resolved Packmol executable: {resolved}")
 
     outputs = []
-    for mixture in config.mixtures:
-        input_path = write_packmol_input(config, mixture)
-        output_xyz = _packmol_path(config, mixture, config.packmol.output_xyz_template)
+    for system in config.systems:
+        input_path = write_packmol_input(config, system)
+        output_xyz = _packmol_path(config, system, config.packmol.output_xyz_template)
         if skip_existing and output_xyz.exists():
+            validate_packed_output(config, system, output_xyz)
             print(f"Skipping existing Packmol output: {output_xyz}")
             outputs.append(output_xyz)
             continue
 
         log_path = input_path.with_suffix(".log")
-        print(f"Running Packmol for {mixture.name}; log: {log_path}")
+        print(f"Running Packmol for {system.name}; log: {log_path}")
         with input_path.open("rb") as stdin:
             if quiet:
                 with log_path.open("w", encoding="utf-8") as log:
@@ -443,7 +516,11 @@ def run_packmol(
                 subprocess.run(
                     [resolved], cwd=config.workdir, stdin=stdin, check=True
                 )
-        print(f"Packmol finished: {output_xyz}")
+        validate_packed_output(config, system, output_xyz)
+        print(
+            f"Packmol finished and verified: {output_xyz} "
+            f"({estimate_system_atom_count(config, system):,} atoms)"
+        )
         outputs.append(output_xyz)
     return outputs
 
@@ -455,22 +532,22 @@ def main(config: WorkflowInput) -> None:
         config.runtime.max_estimated_neighbors,
     )
 
-    config_path = _path(config.workdir, "packmol_config.json")
+    config_path = _path(config.workdir, "solute_solvent_packmol_config.json")
     config_path.write_text(json.dumps(asdict(config), indent=2), encoding="utf-8")
     input_paths = write_packmol_inputs(config)
 
-    print("Mixture settings:")
-    for mixture in config.mixtures:
+    print("Solute/solvent system settings:")
+    for system in config.systems:
         counts = ", ".join(
-            f"{c.name}={c.n_molecules} "
-            f"(actual_v={100 * actual_volume_fraction(c, mixture):.3f}%)"
-            for c in mixture.components
+            f"{s.role} [{s.chemical_name}]={s.n_molecules} "
+            f"(actual_v={100 * actual_volume_fraction(s, system):.3f}%)"
+            for s in system.solvents
         )
         print(
-            f"{mixture.name:50s} box={mixture.box_length_a:g} A  "
-            f"OPA={mixture.n_opa_molecules}  {counts}  "
-            f"atoms={estimate_system_atom_count(config, mixture):,}  "
-            f"estimated_neighbors={estimate_neighbor_count(config, mixture):,}"
+            f"{system.name:58s} box={system.box_length_a:g} A  "
+            f"solute_1={system.n_solute_1_molecules}  {counts}  "
+            f"atoms={estimate_system_atom_count(config, system):,}  "
+            f"estimated_neighbors={estimate_neighbor_count(config, system):,}"
         )
 
     print("\nGenerated Packmol inputs:")

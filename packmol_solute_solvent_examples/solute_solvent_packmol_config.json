@@ -1,0 +1,105 @@
+{
+  "workdir": "C:\\Users\\yingkaiwu\\Desktop\\opa_ketone_md_scripts\\packmol_solute_solvent_examples",
+  "solute_1_file": "solute_1.vasp",
+  "packmol": {
+    "margin": 2.0,
+    "tolerance": 2.2,
+    "fixed_single_solute_1": true,
+    "generated_structure_dir": "source_xyz",
+    "output_dir": "systems",
+    "packmol_input_template": "{name}.inp",
+    "output_xyz_template": "{name}.xyz"
+  },
+  "runtime": {
+    "packmol_executable": "packmol",
+    "run_packmol": false,
+    "skip_existing": false,
+    "quiet": true,
+    "max_atoms": 30000,
+    "max_estimated_neighbors": 1650000
+  },
+  "systems": [
+    {
+      "name": "ex1",
+      "box_length_a": 47.0,
+      "solvents": [
+        {
+          "role": "solvent_1",
+          "chemical_name": "n-heptane",
+          "structure_file": "n-heptane.vasp",
+          "density_g_cm3": 0.684,
+          "volume_fraction": 1.0,
+          "n_molecules": 427,
+          "molar_mass_g_mol": 100.20499999999991,
+          "n_atoms": 23
+        }
+      ],
+      "n_solute_1_molecules": 1
+    },
+    {
+      "name": "ex2",
+      "box_length_a": 48.0,
+      "solvents": [
+        {
+          "role": "solvent_1",
+          "chemical_name": "acetone",
+          "structure_file": "Actone.vasp",
+          "density_g_cm3": 0.7845,
+          "volume_fraction": 0.1,
+          "n_molecules": 90,
+          "molar_mass_g_mol": 58.08000000000002,
+          "n_atoms": 10
+        },
+        {
+          "role": "solvent_2",
+          "chemical_name": "n-heptane",
+          "structure_file": "n-heptane.vasp",
+          "density_g_cm3": 0.684,
+          "volume_fraction": 0.9,
+          "n_molecules": 409,
+          "molar_mass_g_mol": 100.20499999999991,
+          "n_atoms": 23
+        }
+      ],
+      "n_solute_1_molecules": 1
+    },
+    {
+      "name": "ex3",
+      "box_length_a": 47.0,
+      "solvents": [
+        {
+          "role": "solvent_1",
+          "chemical_name": "acetone",
+          "structure_file": "Actone.vasp",
+          "density_g_cm3": 0.7845,
+          "volume_fraction": 0.1,
+          "n_molecules": 84,
+          "molar_mass_g_mol": 58.08000000000002,
+          "n_atoms": 10
+        },
+        {
+          "role": "solvent_2",
+          "chemical_name": "n-heptane",
+          "structure_file": "n-heptane.vasp",
+          "density_g_cm3": 0.684,
+          "volume_fraction": 0.8,
+          "n_molecules": 341,
+          "molar_mass_g_mol": 100.20499999999991,
+          "n_atoms": 23
+        },
+        {
+          "role": "solvent_3",
+          "chemical_name": "thf",
+          "structure_file": "thf.vasp",
+          "density_g_cm3": 0.889,
+          "volume_fraction": 0.1,
+          "n_molecules": 77,
+          "molar_mass_g_mol": 72.10699999999999,
+          "n_atoms": 13
+        }
+      ],
+      "n_solute_1_molecules": 2
+    }
+  ],
+  "n_solute_1_atoms": 61
+}
