@@ -34,7 +34,7 @@
           "n_atoms": 23
         }
       ],
-      "n_solute_1_molecules": 1
+      "n_solute": 0
     },
     {
       "name": "ex2",
@@ -61,7 +61,7 @@
           "n_atoms": 23
         }
       ],
-      "n_solute_1_molecules": 1
+      "n_solute": 0
     },
     {
       "name": "ex3",
@@ -98,7 +98,7 @@
           "n_atoms": 13
         }
       ],
-      "n_solute_1_molecules": 2
+      "n_solute": 2
     }
   ],
   "n_solute_1_atoms": 61

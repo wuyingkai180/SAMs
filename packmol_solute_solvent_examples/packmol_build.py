@@ -47,7 +47,7 @@ class SystemInput:
     name: str
     box_length_a: float
     solvents: list[SolventInput]
-    n_solute_1_molecules: int = 1
+    n_solute: int = 1
 
 
 @dataclass
@@ -103,53 +103,53 @@ SCRIPT_DIR = Path(__file__).resolve().parent if "__file__" in globals() else Pat
 
 
 # =========================
-# Editable configuration
+# editable configuration
 # =========================
 CONFIG = WorkflowInput(
-    # Input and output paths are resolved from the directory containing this script.
+    # input and output paths are resolved from the directory containing this script.
     workdir=str(SCRIPT_DIR),
-    solute_1_file="solute_1.vasp",
+    solute_1_file="solute_1.vasp",  # solute molecular structure filename.
     packmol=PackmolInput(
         margin=2.0,
         tolerance=2.2,
         fixed_single_solute_1=True,
-        generated_structure_dir="source_xyz",
-        output_dir="systems",
+        generated_structure_dir="source_xyz",  # converted source-structure folder.
+        output_dir="systems",  # packed structure output folder.
         packmol_input_template="{name}.inp",
         output_xyz_template="{name}.xyz",
     ),
     runtime=RuntimeInput(
         # "packmol" uses the executable from the active environment/PATH.
-        # An absolute path such as "/home/jovyan/miniconda3/bin/packmol" also works.
+        # an absolute path such as "/home/jovyan/miniconda3/bin/packmol" also works.
         packmol_executable="packmol",
         run_packmol=True,
         skip_existing=False,
         quiet=True,
-        max_atoms=30_000,
-        max_estimated_neighbors=1_650_000,
+        max_atoms=30_000,  # max atoms in Matlantis is 30000
+        max_estimated_neighbors=1_650_000,  # max neighbors in Matlantis is 1650000
     ),
     systems=[
         SystemInput(
-            name="ex1",
-            box_length_a=47.0,
-            n_solute_1_molecules=1,
+            name="ex1",  # example 1: a single-phase pure solvent.
+            box_length_a=47.0,  # cubic box length in angstroms.
+            n_solute=0,  # number of solute molecules.
             solvents=[
-                _solvent("solvent_1", "n-heptane", "n-heptane.vasp", 0.684, 1.00, 427),
+                _solvent("solvent_1", "n-heptane", "n-heptane.vasp", 0.684, 1.00, 427), #last three values are the solvent density, volume fraction, and number of molecules
             ],
         ),
         SystemInput(
-            name="ex2",
+            name="ex2",  # example 2: a mixed-solvent system.
             box_length_a=48.0,
-            n_solute_1_molecules=1,
+            n_solute=0,  # number of solute molecules.
             solvents=[
                 _solvent("solvent_1", "acetone", "Actone.vasp", 0.7845, 0.10, 90),
                 _solvent("solvent_2", "n-heptane", "n-heptane.vasp", 0.684, 0.90, 409),
             ],
         ),
         SystemInput(
-            name="ex3",
+            name="ex3",  # example 3: mixed solvents with a small amount of solute.
             box_length_a=47.0,
-            n_solute_1_molecules=2,
+            n_solute=2,  # number of solute molecules.
             solvents=[
                 _solvent("solvent_1", "acetone", "Actone.vasp", 0.7845, 0.10, 84),
                 _solvent("solvent_2", "n-heptane", "n-heptane.vasp", 0.684, 0.80, 341),
@@ -277,15 +277,22 @@ def structure_to_packmol_xyz(
 
 
 def prepare_structures(config: WorkflowInput) -> WorkflowInput:
-    solute_1_path = _path(config.workdir, config.solute_1_file)
-    if not solute_1_path.exists():
-        raise FileNotFoundError(f"Missing solute_1 structure: {solute_1_path}")
-    solute_1_symbols, _ = read_structure(solute_1_path)
-    config.n_solute_1_atoms = len(solute_1_symbols)
+    for system in config.systems:
+        if system.n_solute < 0:
+            raise ValueError(
+                f"{system.name}.n_solute cannot be negative."
+            )
+
+    if any(system.n_solute > 0 for system in config.systems):
+        solute_1_path = _path(config.workdir, config.solute_1_file)
+        if not solute_1_path.exists():
+            raise FileNotFoundError(f"Missing solute_1 structure: {solute_1_path}")
+        solute_1_symbols, _ = read_structure(solute_1_path)
+        config.n_solute_1_atoms = len(solute_1_symbols)
+    else:
+        config.n_solute_1_atoms = 0
 
     for system in config.systems:
-        if system.n_solute_1_molecules < 1:
-            raise ValueError(f"{system.name} must contain at least one solute_1 molecule.")
         total_fraction = sum(s.volume_fraction for s in system.solvents)
         if not np.isclose(total_fraction, 1.0):
             raise ValueError(f"Solvent volume fractions for {system.name} must sum to 1.0.")
@@ -304,7 +311,7 @@ def prepare_structures(config: WorkflowInput) -> WorkflowInput:
 def estimate_system_atom_count(config: WorkflowInput, system: SystemInput) -> int:
     if config.n_solute_1_atoms is None:
         prepare_structures(config)
-    total_atoms = config.n_solute_1_atoms * system.n_solute_1_molecules
+    total_atoms = config.n_solute_1_atoms * system.n_solute
     for solvent in system.solvents:
         if solvent.n_atoms is None:
             raise ValueError(f"Missing atom count for {solvent.role}.")
@@ -370,27 +377,29 @@ def write_packmol_input(config: WorkflowInput, system: SystemInput) -> Path:
     output_dir = _path(config.workdir, packmol.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    center = [box_length / 2.0] * 3
-    fix_single_solute_1 = (
-        packmol.fixed_single_solute_1 and system.n_solute_1_molecules == 1
-    )
-    solute_1_xyz = structure_to_packmol_xyz(
-        config,
-        config.solute_1_file,
-        center_at=center if fix_single_solute_1 else None,
-        label="fixed" if fix_single_solute_1 else None,
-        output_stem=f"{_safe_name(system.name)}_solute_1",
-    )
     output_xyz = _packmol_path(config, system, packmol.output_xyz_template)
 
-    if fix_single_solute_1:
-        solute_1_block = f"""structure {_packmol_ref(config, solute_1_xyz)}
+    solute_1_block = None
+    if system.n_solute > 0:
+        center = [box_length / 2.0] * 3
+        fix_single_solute_1 = (
+            packmol.fixed_single_solute_1 and system.n_solute == 1
+        )
+        solute_1_xyz = structure_to_packmol_xyz(
+            config,
+            config.solute_1_file,
+            center_at=center if fix_single_solute_1 else None,
+            label="fixed" if fix_single_solute_1 else None,
+            output_stem=f"{_safe_name(system.name)}_solute_1",
+        )
+        if fix_single_solute_1:
+            solute_1_block = f"""structure {_packmol_ref(config, solute_1_xyz)}
   number 1
   fixed 0. 0. 0. 0. 0. 0.
 end structure"""
-    else:
-        solute_1_block = f"""structure {_packmol_ref(config, solute_1_xyz)}
-  number {system.n_solute_1_molecules}
+        else:
+            solute_1_block = f"""structure {_packmol_ref(config, solute_1_xyz)}
+  number {system.n_solute}
   inside box {packmol.margin} {packmol.margin} {packmol.margin} {box_length - packmol.margin} {box_length - packmol.margin} {box_length - packmol.margin}
 end structure"""
 
@@ -408,15 +417,15 @@ end structure"""
 end structure"""
         )
 
-    content = "\n\n".join(
-        [
-            f"tolerance {packmol.tolerance}\n"
-            f"filetype xyz\n"
-            f"output {_packmol_ref(config, output_xyz)}",
-            solute_1_block,
-            *solvent_blocks,
-        ]
-    )
+    blocks = [
+        f"tolerance {packmol.tolerance}\n"
+        f"filetype xyz\n"
+        f"output {_packmol_ref(config, output_xyz)}"
+    ]
+    if solute_1_block is not None:
+        blocks.append(solute_1_block)
+    blocks.extend(solvent_blocks)
+    content = "\n\n".join(blocks)
     input_path = _packmol_path(config, system, packmol.packmol_input_template)
     input_path.write_text(content + "\n", encoding="utf-8")
     return input_path
@@ -545,7 +554,7 @@ def main(config: WorkflowInput) -> None:
         )
         print(
             f"{system.name:58s} box={system.box_length_a:g} A  "
-            f"solute_1={system.n_solute_1_molecules}  {counts}  "
+            f"solute_1={system.n_solute}  {counts}  "
             f"atoms={estimate_system_atom_count(config, system):,}  "
             f"estimated_neighbors={estimate_neighbor_count(config, system):,}"
         )

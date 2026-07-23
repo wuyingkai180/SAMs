@@ -15,8 +15,8 @@ thf.vasp
 
 Running the script builds these three systems:
 
-- one `solute_1` molecule in pure `solvent_1`;
-- one `solute_1` molecule in 10:90 v/v `solvent_1`/`solvent_2`;
+- pure `solvent_1` without `solute_1`;
+- 10:90 v/v `solvent_1`/`solvent_2` without `solute_1`;
 - two `solute_1` molecules in 10:80:10 v/v
   `solvent_1`/`solvent_2`/`solvent_3`.
 
@@ -40,7 +40,9 @@ The current chemical mapping is retained in `CONFIG` as metadata:
 - binary/ternary `solvent_2`: n-heptane;
 - ternary `solvent_3`: THF.
 
-When two `solute_1` molecules are requested, Packmol places both inside the box
+Set `n_solute=0` for any system that does not need the solute; its
+Packmol structure block is then omitted completely. When two `solute_1`
+molecules are requested, Packmol places both inside the box
 before adding the solvents; they are not fixed at the same coordinates.
 
 Run:

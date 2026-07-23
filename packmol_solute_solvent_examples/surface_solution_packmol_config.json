@@ -1,0 +1,64 @@
+{
+  "workdir": "C:\\Users\\yingkaiwu\\Desktop\\opa_ketone_md_scripts\\packmol_solute_solvent_examples",
+  "packmol": {
+    "tolerance": 2.2,
+    "use_periodic_boundary_conditions": true,
+    "xy_margin_a": 0.0,
+    "surface_gap_a": 2.0,
+    "top_margin_a": 1.0,
+    "generated_structure_dir": "surface_source_xyz",
+    "output_dir": "surface_systems",
+    "packmol_input_template": "{name}.inp",
+    "output_xyz_template": "{name}.xyz",
+    "output_vasp_template": "{name}.vasp"
+  },
+  "runtime": {
+    "packmol_executable": "packmol",
+    "run_packmol": false,
+    "skip_existing": false,
+    "quiet": true,
+    "max_atoms": null
+  },
+  "systems": [
+    {
+      "name": "surface_solution_ex1",
+      "surface_file": "surface.vasp",
+      "surface_top_z_a": 11.0115,
+      "solvents": [
+        {
+          "role": "solvent_1",
+          "chemical_name": "acetone",
+          "structure_file": "Actone.vasp",
+          "density_g_cm3": 0.7845,
+          "volume_fraction": 0.1,
+          "n_molecules": 7,
+          "molar_mass_g_mol": 58.08000000000002,
+          "n_atoms": 10
+        },
+        {
+          "role": "solvent_2",
+          "chemical_name": "n-heptane",
+          "structure_file": "n-heptane.vasp",
+          "density_g_cm3": 0.684,
+          "volume_fraction": 0.9,
+          "n_molecules": 33,
+          "molar_mass_g_mol": 100.20499999999991,
+          "n_atoms": 23
+        }
+      ],
+      "solutes": [
+        {
+          "role": "solute_1",
+          "chemical_name": "OPA",
+          "structure_file": "solute_1.vasp",
+          "n_molecules": 0,
+          "z_min_a": 15.0,
+          "z_max_a": 30.0,
+          "fixed_center_a": null,
+          "n_atoms": 0
+        }
+      ],
+      "solution_top_z_a": 35.0
+    }
+  ]
+}

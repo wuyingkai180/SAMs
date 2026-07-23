@@ -1,0 +1,19 @@
+tolerance 2.2
+filetype xyz
+output surface_systems/surface_solution_ex1.xyz
+pbc 19.62140083 20.95759964 50.00000000
+
+structure surface_source_xyz/surface_solution_ex1_surface_fixed.xyz
+  number 1
+  fixed 0. 0. 0. 0. 0. 0.
+end structure
+
+structure surface_source_xyz/surface_solution_ex1_solvent_1.xyz
+  number 7
+  inside box 0.00000000 0.00000000 13.01150000 19.62140083 20.95759964 35.00000000
+end structure
+
+structure surface_source_xyz/surface_solution_ex1_solvent_2.xyz
+  number 33
+  inside box 0.00000000 0.00000000 13.01150000 19.62140083 20.95759964 35.00000000
+end structure

@@ -1,5 +1,10 @@
 # OPA Multi-Solvent MLIP-MD Workflow
 
+To build a fixed surface with solution added only in the upper vacuum layer,
+use `packmol_solute_solvent_examples/packmol_surface_build.py`; its dedicated
+instructions are in `packmol_solute_solvent_examples/README_surface.md`.
+The insertion height is controlled explicitly by `surface_top_z_a`.
+
 This project builds and simulates five independent OPA + molecule systems:
 
 - `OPA + acetone`
