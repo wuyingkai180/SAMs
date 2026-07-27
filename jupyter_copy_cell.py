@@ -54,11 +54,20 @@ class StructureInput:
     opa_file: str = "opa.vasp"
     solvents: list[SolventInput] = field(
         default_factory=lambda: [
-            SolventInput("acetone", "Actone.vasp", 0.7845),
-            SolventInput("n-heptane", "n-heptane.vasp", 0.684),
-            SolventInput("prol", "prol.vasp", 1.35),
-            SolventInput("thf", "thf.vasp", 0.889),
-            SolventInput("toluene", "Toluene.vasp", 0.867),
+            SolventInput("ethanol", "ethanol.vasp", 0.7893),
+            SolventInput("methanol", "methanol.vasp", 0.7918),
+            SolventInput("acetonitrile", "acetonitrile.vasp", 0.786),
+            SolventInput(
+                "propylene_carbonate",
+                "propylene_carbonate.vasp",
+                1.204,
+            ),
+            SolventInput("isopropanol", "isopropanol.vasp", 0.785),
+            SolventInput("CPME", "CPME.vasp", 0.860),
+            SolventInput("ethyl_acetate", "ethyl_acetate.vasp", 0.902),
+            SolventInput("DMC", "DMC.vasp", 1.069),
+            SolventInput("p-xylene", "p-xylene.vasp", 0.861),
+            SolventInput("cyclohexane", "cyclohexane.vasp", 0.779),
         ]
     )
     n_opa_atoms: int | None = None
@@ -756,7 +765,16 @@ def run_all_systems_md(
 WORKDIR = "."
 BOX_LENGTH_A = 45.0
 SYSTEM_BOX_LENGTH_A = {
-    "prol": 40.0,
+    "ethanol": 48.0,
+    "methanol": 49.0,
+    "acetonitrile": 59.0,
+    "propylene_carbonate": 48.0,
+    "isopropanol": 47.0,
+    "CPME": 46.0,
+    "ethyl_acetate": 50.0,
+    "DMC": 51.0,
+    "p-xylene": 50.0,
+    "cyclohexane": 45.0,
 }
 PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
 
