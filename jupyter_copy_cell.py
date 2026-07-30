@@ -54,8 +54,6 @@ class StructureInput:
     opa_file: str = "opa.vasp"
     solvents: list[SolventInput] = field(
         default_factory=lambda: [
-            SolventInput("ethanol", "ethanol.vasp", 0.7893),
-            SolventInput("methanol", "methanol.vasp", 0.7918),
             SolventInput("acetonitrile", "acetonitrile.vasp", 0.786),
             SolventInput(
                 "propylene_carbonate",
@@ -765,14 +763,12 @@ def run_all_systems_md(
 WORKDIR = "."
 BOX_LENGTH_A = 45.0
 SYSTEM_BOX_LENGTH_A = {
-    "ethanol": 48.0,
-    "methanol": 49.0,
-    "acetonitrile": 59.0,
+    "acetonitrile": 58.0,
     "propylene_carbonate": 48.0,
     "isopropanol": 47.0,
     "CPME": 46.0,
     "ethyl_acetate": 50.0,
-    "DMC": 51.0,
+    "DMC": 50.0,
     "p-xylene": 50.0,
     "cyclohexane": 45.0,
 }
@@ -781,7 +777,7 @@ PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
 RUN_PACKMOL = True
 RUN_MD = True
 RUN_ANALYSIS = True
-SKIP_EXISTING_PACKMOL = False
+SKIP_EXISTING_PACKMOL = True
 SKIP_EXISTING_MD = True
 MD_MAX_ATOMS = 30000
 MD_MAX_ESTIMATED_NEIGHBORS = 1650000
