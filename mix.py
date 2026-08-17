@@ -1,7 +1,7 @@
 # Integrated Jupyter workflow.
 # Copy this whole file into one Jupyter cell.
 # Keep the notebook in the same directory as:
-#   opa.vasp, Actone.vasp, n-heptane.vasp, prol.vasp, thf.vasp, Toluene.vasp
+#   opa.vasp, Actone.vasp, isopropanol.vasp, n-heptane.vasp
 
 from __future__ import annotations
 
@@ -63,36 +63,12 @@ class StructureInput:
     mixtures: list[MixtureInput] = field(
         default_factory=lambda: [
             MixtureInput(
-                "acetone_1_n-heptane_99",
+                "isopropanol_5_n-heptane_95",
                 [
-                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=8, volume_fraction=0.01),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=423, volume_fraction=0.99),
+                    SolventInput("isopropanol", "isopropanol.vasp", 0.785, n_molecules=41, volume_fraction=0.05),
+                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=404, volume_fraction=0.95),
                 ],
                 47.0,
-            ),
-            MixtureInput(
-                "acetone_10_n-heptane_90",
-                [
-                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=90, volume_fraction=0.10),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=409, volume_fraction=0.90),
-                ],
-                48.0,
-            ),
-            MixtureInput(
-                "acetone_20_n-heptane_80",
-                [
-                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=180, volume_fraction=0.20),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=364, volume_fraction=0.80),
-                ],
-                48.0,
-            ),
-            MixtureInput(
-                "acetone_30_n-heptane_70",
-                [
-                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=287, volume_fraction=0.30),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=339, volume_fraction=0.70),
-                ],
-                49.0,
             ),
             MixtureInput(
                 "acetone_40_n-heptane_60",
@@ -101,14 +77,6 @@ class StructureInput:
                     SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=290, volume_fraction=0.60),
                 ],
                 49.0,
-            ),
-            MixtureInput(
-                "acetone_50_n-heptane_50",
-                [
-                    SolventInput("acetone", "Actone.vasp", 0.7845, n_molecules=508, volume_fraction=0.50),
-                    SolventInput("n-heptane", "n-heptane.vasp", 0.684, n_molecules=257, volume_fraction=0.50),
-                ],
-                50.0,
             ),
         ]
     )
@@ -873,22 +841,14 @@ def compare_mixture_opa_motion(
 WORKDIR = "."
 BOX_LENGTH_A = 45.0
 SYSTEM_BOX_LENGTH_A = {
-    "acetone_1_n-heptane_99": 47.0,
-    "acetone_10_n-heptane_90": 48.0,
-    "acetone_20_n-heptane_80": 48.0,
-    "acetone_30_n-heptane_70": 49.0,
+    "isopropanol_5_n-heptane_95": 47.0,
     "acetone_40_n-heptane_60": 49.0,
-    "acetone_50_n-heptane_50": 50.0,
 }
-# Integer counts preserve the requested acetone:n-heptane volume ratios while
+# Integer counts preserve the requested alcohol/ketone:n-heptane volume ratios while
 # keeping the estimated Matlantis/PFP neighbor count below the configured limit.
 SYSTEM_MOLECULE_COUNTS = {
-    "acetone_1_n-heptane_99": {"acetone": 8, "n-heptane": 423},
-    "acetone_10_n-heptane_90": {"acetone": 90, "n-heptane": 409},
-    "acetone_20_n-heptane_80": {"acetone": 180, "n-heptane": 364},
-    "acetone_30_n-heptane_70": {"acetone": 287, "n-heptane": 339},
+    "isopropanol_5_n-heptane_95": {"isopropanol": 41, "n-heptane": 404},
     "acetone_40_n-heptane_60": {"acetone": 383, "n-heptane": 290},
-    "acetone_50_n-heptane_50": {"acetone": 508, "n-heptane": 257},
 }
 PACKMOL_EXECUTABLE = "/home/jovyan/miniconda3/bin/packmol"
 
@@ -901,7 +861,7 @@ MD_MAX_ATOMS = 30000
 MD_MAX_ESTIMATED_NEIGHBORS = 1650000
 QUIET_PACKMOL = True
 
-# None means run all six mixtures. Example: ["acetone_10_n-heptane_90"]
+# None means run both mixtures. Example: ["isopropanol_5_n-heptane_95"]
 SYSTEM_NAMES = None
 
 RESULTS_DIR = "results"
