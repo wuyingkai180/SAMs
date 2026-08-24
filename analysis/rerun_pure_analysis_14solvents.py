@@ -28,7 +28,7 @@ import analyze_opa_displacement_dynamics as add
 import analyze_opa_solvation_structure as aos
 import build_combined_report as bcr
 
-RESULTS_DIR = Path("/Users/internship/Desktop/test/results")
+RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 OUT_DIR = RESULTS_DIR / "pure_components_analysis_14solvents"
 
 NEW_SOLVENTS = ["acetone", "n-heptane", "thf", "toluene"]

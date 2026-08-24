@@ -37,7 +37,14 @@ requirements.txt              # local Python dependencies
 requirements-matlantis.txt    # Matlantis/PFP dependencies
 legacy_scripts/               # archived split-script version
 analysis/                     # post-hoc analysis of results/ (see below)
+results/                      # MD output + generated analysis reports (see results/README.md)
 ```
+
+`results/` lives inside `SAMs/` on purpose: it's covered by `.gitignore`
+(along with `*.traj`) so it never ends up in git history, but moving/copying
+the whole `SAMs/` folder — e.g. to a new machine or account — carries the
+data along with it. `analysis/*.py` locate it via `Path(__file__).resolve().parent.parent / "results"`,
+not a hardcoded absolute path, so both stay portable together.
 
 ## Analysis Scripts
 

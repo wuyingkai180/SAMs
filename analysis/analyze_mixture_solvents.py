@@ -29,7 +29,7 @@ import analyze_opa_solvation_structure as aoss
 import analyze_pure_solvents as aps
 import build_combined_report as bcr
 
-RESULTS_DIR = Path("/Users/internship/Desktop/test/results")
+RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 OUT_DIR = RESULTS_DIR / "mixture_components_analysis"
 
 MIXTURE_NAMES = [

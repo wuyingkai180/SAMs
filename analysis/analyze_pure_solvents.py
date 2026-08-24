@@ -19,7 +19,9 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
-RESULTS_DIR = Path("/Users/internship/Desktop/test/results")
+from _common import GRID, MUTED, TEXT_PRIMARY, TEXT_SECONDARY, pearson
+
+RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 OUT_DIR = RESULTS_DIR / "pure_components_analysis"
 
 # Folders under results/ that hold a single solvent component (no mixture ratio
@@ -59,10 +61,6 @@ KT_EV = KB_EV_K * TEMPERATURE_K
 
 COLOR = "#2a78d6"
 COLOR_DARK = "#3987e5"
-MUTED = "#898781"
-GRID = "#e1e0d9"
-TEXT_PRIMARY = "#0b0b0b"
-TEXT_SECONDARY = "#52514e"
 # (light, dark) pairs for the categorical slots actually used here (<=3 series,
 # validated all-pairs by scripts/validate_palette.js in the dataviz skill).
 CLUSTER_COLORS = [("#2a78d6", "#3987e5"), ("#eb6834", "#d95926"), ("#1baf7a", "#199e70")]
@@ -85,16 +83,6 @@ def mean(xs: list[float]) -> float:
 def stdev(xs: list[float]) -> float:
     m = mean(xs)
     return math.sqrt(sum((x - m) ** 2 for x in xs) / len(xs))
-
-
-def pearson(xs: list[float], ys: list[float]) -> float:
-    mx, my = mean(xs), mean(ys)
-    num = sum((x - mx) * (y - my) for x, y in zip(xs, ys))
-    denx = math.sqrt(sum((x - mx) ** 2 for x in xs))
-    deny = math.sqrt(sum((y - my) ** 2 for y in ys))
-    if denx == 0 or deny == 0:
-        return 0.0
-    return num / (denx * deny)
 
 
 def linear_slope(xs: list[float], ys: list[float]) -> float:

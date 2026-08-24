@@ -37,7 +37,9 @@ from pathlib import Path
 
 import numpy as np
 
-RESULTS_DIR = Path("/Users/internship/Desktop/test/results")
+from _common import GRID, MUTED, TEXT_PRIMARY, TEXT_SECONDARY
+
+RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 OUT_DIR = RESULTS_DIR / "pure_components_analysis"
 
 PURE_SOLVENTS = [
@@ -48,11 +50,6 @@ PURE_SOLVENTS = [
 K_MAX_FRAC = 3  # use lags up to N // K_MAX_FRAC (short-trajectory-safe fraction)
 FIT_MIN_LAG = 2  # skip k=1 in the alpha fit (short-lag/noise dominated)
 VACF_MAX_LAG = 20
-
-MUTED = "#898781"
-GRID = "#e1e0d9"
-TEXT_PRIMARY = "#0b0b0b"
-TEXT_SECONDARY = "#52514e"
 
 
 def read_com(csv_path: Path):

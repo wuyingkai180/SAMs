@@ -38,9 +38,11 @@ from pathlib import Path
 import numpy as np
 from ase.io.trajectory import Trajectory
 
-RESULTS_DIR = Path("/Users/internship/Desktop/test/results")
+from _common import GRID, MUTED, TEXT_PRIMARY, TEXT_SECONDARY
+
+RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 OUT_DIR = RESULTS_DIR / "pure_components_analysis"
-OPA_VASP = Path("/Users/internship/Desktop/test/SAMs/structures/opa.vasp")
+OPA_VASP = Path(__file__).resolve().parent.parent / "structures" / "opa.vasp"
 
 PURE_SOLVENTS = [
     "acetonitrile", "propylene_carbonate", "isopropanol", "CPME",
@@ -59,11 +61,6 @@ RMAX = 12.0
 DR = 0.1
 NBINS = int(RMAX / DR)
 COORD_CUTOFF_A = 4.0  # fixed radius for the head-vs-tail coordination-number comparison
-
-MUTED = "#898781"
-GRID = "#e1e0d9"
-TEXT_PRIMARY = "#0b0b0b"
-TEXT_SECONDARY = "#52514e"
 
 
 def read_opa_vasp(path: Path) -> tuple[list[str], np.ndarray]:

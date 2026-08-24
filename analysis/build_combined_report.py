@@ -28,15 +28,15 @@ characterizes only the pre-adsorption solvation environment.
 from __future__ import annotations
 
 import csv
-import math
 from pathlib import Path
 
 from analyze_pure_solvents import (
     CLUSTER_COLORS, SOLVENT_CLASS, fmt, hbar_chart_svg, scatter_svg,
 )
 from analyze_opa_solvation_structure import compute_all as compute_solvation_profiles
+from _common import pearson
 
-RESULTS_DIR = Path("/Users/internship/Desktop/test/results")
+RESULTS_DIR = Path(__file__).resolve().parent.parent / "results"
 DEFAULT_OUT_DIR = RESULTS_DIR / "pure_components_analysis"
 
 
@@ -54,15 +54,6 @@ def _is_float(v: str) -> bool:
         return True
     except ValueError:
         return False
-
-
-def pearson(xs: list[float], ys: list[float]) -> float:
-    n = len(xs)
-    mx, my = sum(xs) / n, sum(ys) / n
-    num = sum((x - mx) * (y - my) for x, y in zip(xs, ys))
-    denx = math.sqrt(sum((x - mx) ** 2 for x in xs))
-    deny = math.sqrt(sum((y - my) ** 2 for y in ys))
-    return num / (denx * deny) if denx and deny else 0.0
 
 
 def main(
