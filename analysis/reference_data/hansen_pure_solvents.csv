@@ -1,0 +1,15 @@
+system,solvent_name,cas_number,delta_d_MPa05,delta_p_MPa05,delta_h_MPa05,source_key,source_url,note
+acetone,acetone,67-64-1,15.5,10.4,7.0,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+acetonitrile,acetonitrile,75-05-8,15.3,18.0,6.1,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+CPME,cyclopentyl methyl ether,5614-37-9,16.7,4.3,4.3,Jalan2019,https://doi.org/10.3390/ma12233889,Peer-reviewed table; CPME identity expanded
+cyclohexane,cyclohexane,110-82-7,16.8,0.0,0.2,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+DMC,dimethyl carbonate,616-38-6,15.5,3.9,9.7,Jin2021,https://doi.org/10.1039/D1RA07322B,Peer-reviewed HSP comparison table; DMC identity expanded
+ethanol,ethanol,64-17-5,15.8,8.8,19.4,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+ethyl_acetate,ethyl acetate,141-78-6,15.8,5.3,7.2,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+isopropanol,2-propanol,67-63-0,15.8,6.1,16.4,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+methanol,methanol,67-56-1,15.1,12.3,22.3,Hansen2007,https://doi.org/10.1201/9781420006834,Standard Hansen value; some newer tables list delta_d=14.7
+n-heptane,n-heptane,142-82-5,15.3,0.0,0.0,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+p-xylene,p-xylene,106-42-3,17.8,1.0,3.1,Amin2024,https://doi.org/10.1002/cctc.202301393,Peer-reviewed probe-liquid table
+propylene_carbonate,propylene carbonate,108-32-7,20.0,18.0,4.1,Jalan2019,https://doi.org/10.3390/ma12233889,Peer-reviewed table
+thf,tetrahydrofuran,109-99-9,16.8,5.7,8.0,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP
+toluene,toluene,108-88-3,18.0,1.4,2.0,Hansen2007,https://doi.org/10.1201/9781420006834,Standard tabulated HSP

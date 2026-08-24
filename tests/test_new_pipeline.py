@@ -139,7 +139,7 @@ class PipelineTests(unittest.TestCase):
             Path("analysis/literature/sams_solvent_methods.json"),
             dry_run=True,
         )
-        self.assertEqual(summary.system_count, 27)
+        self.assertEqual(summary.system_count, 26)
         self.assertFalse(output.exists())
 
 

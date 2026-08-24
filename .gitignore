@@ -1,6 +1,7 @@
 __pycache__/
 .mypy_cache/
 .ipynb_checkpoints/
+.uv-cache/
 
 workflow_input.json
 packmol_structures/

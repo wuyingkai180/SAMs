@@ -34,10 +34,6 @@ GROUP3_METADATA = {
     "thf_toluene": (
         "alternate-base-composition", "thf", "toluene", 0.05
     ),
-    "ethyl_acetate": ("pure-reference", None, "ethyl_acetate", None),
-    "propylene_carbonate": (
-        "pure-reference", None, "propylene_carbonate", None
-    ),
 }
 
 
