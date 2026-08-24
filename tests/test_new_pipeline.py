@@ -42,6 +42,16 @@ class ReportingTests(unittest.TestCase):
         self.assertIn("<h2>主要结果</h2>", text)
         self.assertNotIn("<pre>", text)
 
+    def test_groupwise_index_explicitly_rejects_cross_group_ranking(self):
+        from analysis.new_solvent_analysis.reporting import build_groupwise_index_markdown
+
+        text = build_groupwise_index_markdown({"group1": 7, "group2": 13, "group3": 7})
+        self.assertIn("不进行跨 Group", text)
+        self.assertIn("每组只在自身实验设计范围内", text)
+        self.assertIn("Group 1", text)
+        self.assertIn("Group 2", text)
+        self.assertIn("Group 3", text)
+
     def test_all_figure_exports_are_nonempty(self):
         from analysis.new_solvent_analysis.reporting import render_group1_figures
 

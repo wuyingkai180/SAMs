@@ -178,7 +178,11 @@ def _iter_rdf_series(
     return series
 
 
-def render_rdf_figure(profiles: pd.DataFrame, out_dir: Path) -> list[Path]:
+def render_rdf_figure(
+    profiles: pd.DataFrame,
+    out_dir: Path,
+    stem_name: str = "combined_representative_rdf",
+) -> list[Path]:
     _configure_style()
     series = _iter_rdf_series(profiles)
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), constrained_layout=True)
@@ -197,10 +201,14 @@ def render_rdf_figure(profiles: pd.DataFrame, out_dir: Path) -> list[Path]:
     _panel_label(axes[0], "a")
     _panel_label(axes[1], "b")
     fig.suptitle("Representative total-solvent radial distributions", fontsize=9)
-    return _save_figure(fig, Path(out_dir) / "combined_representative_rdf")
+    return _save_figure(fig, Path(out_dir) / stem_name)
 
 
-def render_enrichment_figure(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
+def render_enrichment_figure(
+    frame: pd.DataFrame,
+    out_dir: Path,
+    stem_name: str = "combined_cosolvent_enrichment",
+) -> list[Path]:
     """Show molecule-fraction-normalized cosolvent enrichment in mixed systems."""
     _configure_style()
     rows = []
@@ -233,10 +241,15 @@ def render_enrichment_figure(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
     ax.legend(loc="lower right")
     _panel_label(ax, "a")
     fig.suptitle("Preferential cosolvent solvation in mixed systems", fontsize=9)
-    return _save_figure(fig, Path(out_dir) / "combined_cosolvent_enrichment")
+    return _save_figure(fig, Path(out_dir) / stem_name)
 
 
-def render_combined_figure(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
+def render_structure_dynamics_figure(
+    frame: pd.DataFrame,
+    out_dir: Path,
+    stem_name: str,
+    title: str,
+) -> list[Path]:
     _configure_style()
     group_colors = {"group1": COLORS["blue"], "group2": COLORS["teal"], "group3": COLORS["rose"]}
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), constrained_layout=True)
@@ -255,8 +268,18 @@ def render_combined_figure(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
     axes[0].legend()
     _panel_label(axes[0], "a")
     _panel_label(axes[1], "b")
-    fig.suptitle("Structure–dynamics relationships across all systems", fontsize=9)
-    return _save_figure(fig, Path(out_dir) / "combined_structure_dynamics")
+    fig.suptitle(title, fontsize=9)
+    return _save_figure(fig, Path(out_dir) / stem_name)
+
+
+def render_combined_figure(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
+    """Backward-compatible renderer; the groupwise pipeline does not call it."""
+    return render_structure_dynamics_figure(
+        frame,
+        out_dir,
+        "combined_structure_dynamics",
+        "Structure–dynamics relationships across all systems",
+    )
 
 
 def _format_findings(findings: Iterable[str]) -> str:
@@ -406,6 +429,32 @@ def render_group_reports(
     outputs.extend(render_group1_figures(group1, output_root / "figures", block_metrics))
     outputs.extend(render_group2_figures(group2, output_root / "figures"))
     outputs.extend(render_group3_figures(group3, output_root / "figures"))
+    outputs.extend(
+        render_enrichment_figure(
+            group1, output_root / "figures", "group1_cosolvent_enrichment"
+        )
+    )
+    outputs.extend(
+        render_structure_dynamics_figure(
+            group2,
+            output_root / "figures",
+            "group2_structure_dynamics",
+            "Group 2 | Pure-solvent structure–dynamics relationships",
+        )
+    )
+    outputs.extend(
+        render_enrichment_figure(
+            group3, output_root / "figures", "group3_cosolvent_enrichment"
+        )
+    )
+    for group in ("group1", "group2", "group3"):
+        outputs.extend(
+            render_rdf_figure(
+                profiles.loc[profiles["group"] == group],
+                output_root / "figures",
+                f"{group}_representative_rdf",
+            )
+        )
     for group, data in (("group1", group1), ("group2", group2), ("group3", group3)):
         rows = data.sort_values("alpha", ascending=False)
         top = rows.iloc[0]
@@ -421,6 +470,8 @@ def render_group_reports(
             figures = [
                 ("../figures/group1_concentration_response.png", "丙酮浓度与 α、OPA 平均受力的关系"),
                 ("../figures/group1_window_sensitivity.png", "四个时间窗口的轨迹内敏感性"),
+                ("../figures/group1_cosolvent_enrichment.png", "Group 1 内部丙酮的头部/尾部局部富集"),
+                ("../figures/group1_representative_rdf.png", "Group 1 代表性头部与尾部 RDF"),
             ]
         elif group == "group2":
             low_force = data.loc[data["mean_force_eV_A"].idxmin()]
@@ -431,7 +482,8 @@ def render_group_reports(
             )
             figures = [
                 ("../figures/group2_pure_solvent_ranking.png", "13 种纯溶剂的 α 与平均受力排序"),
-                ("../figures/combined_structure_dynamics.png", "全部体系的结构–动力学关系"),
+                ("../figures/group2_structure_dynamics.png", "Group 2 内部结构–动力学关系"),
+                ("../figures/group2_representative_rdf.png", "Group 2 代表性头部与尾部 RDF"),
             ]
         else:
             core = data.loc[data["role"] == "n-heptane-base-composition"]
@@ -444,7 +496,8 @@ def render_group_reports(
             )
             figures = [
                 ("../figures/group3_composition_and_references.png", "Group 3 核心混合物与分层参考体系"),
-                ("../figures/combined_cosolvent_enrichment.png", "混合体系中共溶剂的 OPA 头部/尾部富集"),
+                ("../figures/group3_cosolvent_enrichment.png", "Group 3 内部共溶剂的 OPA 头部/尾部富集"),
+                ("../figures/group3_representative_rdf.png", "Group 3 代表性头部与尾部 RDF"),
             ]
         markdown = f"""# {group} 分析
 
@@ -482,4 +535,33 @@ def render_combined_report(context: dict, output_root: Path) -> list[Path]:
         build_combined_markdown(context),
         Path(output_root) / "reports" / "combined_report",
         figures,
+    )
+
+
+def build_groupwise_index_markdown(system_counts: dict[str, int]) -> str:
+    return f"""# OPA/SAM 溶剂效应：三组独立分析
+
+## 比较原则
+
+本版本不进行跨 Group 的整体排名或相关性分析。每组只在自身实验设计范围内寻找规律，避免把浓度系列、纯溶剂筛选和混合组分筛选直接混为一个总体样本。
+
+## 分组入口
+
+- [Group 1：同组分不同浓度（{system_counts.get('group1', 0)} 个条件）](group1.html)
+- [Group 2：纯溶剂内部比较（{system_counts.get('group2', 0)} 个条件）](group2.html)
+- [Group 3：不同组分及分层参考的组内比较（{system_counts.get('group3', 0)} 个条件）](group3.html)
+
+## 共同解释边界
+
+- 每个条件只有单条短轨迹，只作描述性内部比较。
+- 模拟体系没有显式基底，结果表示单个 OPA 的预吸附动力学和局部溶剂化。
+- 三组的实验问题与组成定义不同，不根据三个 Group 合并后的总体相关性下结论。
+"""
+
+
+def render_groupwise_index(metrics: pd.DataFrame, output_root: Path) -> list[Path]:
+    counts = metrics.groupby("group").size().to_dict()
+    return _write_report(
+        build_groupwise_index_markdown(counts),
+        Path(output_root) / "reports" / "index",
     )

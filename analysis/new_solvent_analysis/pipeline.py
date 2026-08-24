@@ -26,11 +26,8 @@ from .comparisons import (
 from .core_metrics import block_sensitivity, compute_core_metrics
 from .manifest import SystemRecord, build_manifest, write_manifest
 from .reporting import (
-    render_combined_figure,
-    render_combined_report,
-    render_enrichment_figure,
     render_group_reports,
-    render_rdf_figure,
+    render_groupwise_index,
 )
 from .solvation import compute_solvation_metrics
 
@@ -228,8 +225,8 @@ def build_report_context(metrics: pd.DataFrame) -> dict:
             "thf_toluene 的 CSV 为 101 帧而结构轨迹为 60 帧且帧 1 起坐标不一致；保留 CSV 动力学，排除该体系的轨迹 RDF/CN。",
         ],
         "links": {
-            "三组系统指标": "../combined/system_metrics.csv",
-            "RDF 数据": "../combined/rdf_profiles.csv",
+            "三组系统指标": "../tables/system_metrics.csv",
+            "RDF 数据": "../tables/rdf_profiles.csv",
             "文献方法矩阵": "../literature/literature_matrix.csv",
             "Group 1 报告": "group1.md",
             "Group 2 报告": "group2.md",
@@ -309,12 +306,12 @@ def run_analysis(
                 **{column: float("nan") for column in SOLVATION_BASE_COLUMNS},
             }
             profiles = pd.DataFrame(columns=PROFILE_COLUMNS)
-        combined = {**core, **solvation, **asdict(record)}
+        system_metrics = {**core, **solvation, **asdict(record)}
         for key in ("csv_path", "traj_path", "xyz_path"):
-            combined[key] = Path(combined[key]).as_posix()
+            system_metrics[key] = Path(system_metrics[key]).as_posix()
         checkpoint.mkdir(parents=True)
         (checkpoint / "metrics.json").write_text(
-            json.dumps(combined, ensure_ascii=False, allow_nan=True), encoding="utf-8"
+            json.dumps(system_metrics, ensure_ascii=False, allow_nan=True), encoding="utf-8"
         )
         pd.DataFrame(block_sensitivity(record)).to_csv(checkpoint / "blocks.csv", index=False)
         profiles.to_csv(checkpoint / "profiles.csv", index=False)
@@ -330,9 +327,9 @@ def run_analysis(
     metrics["solvent_class"] = metrics["base_solvent"].map(SOLVENT_CLASS).fillna("mixture")
 
     write_manifest(records, temporary / "manifest.csv")
-    _write_frame(metrics, temporary / "combined" / "system_metrics.csv")
-    _write_frame(blocks, temporary / "combined" / "block_metrics.csv")
-    _write_frame(profiles, temporary / "combined" / "rdf_profiles.csv")
+    _write_frame(metrics, temporary / "tables" / "system_metrics.csv")
+    _write_frame(blocks, temporary / "tables" / "block_metrics.csv")
+    _write_frame(profiles, temporary / "tables" / "rdf_profiles.csv")
     for group in ("group1", "group2", "group3"):
         _write_frame(
             metrics.loc[metrics["group"] == group], temporary / "groups" / f"{group}_metrics.csv"
@@ -346,12 +343,13 @@ def run_analysis(
     _write_frame(literature_frame, literature_root / "literature_matrix.csv")
 
     generated = render_group_reports(metrics, profiles, blocks, temporary)
-    generated.extend(render_combined_figure(metrics, temporary / "figures"))
-    generated.extend(render_rdf_figure(profiles, temporary / "figures"))
-    generated.extend(render_enrichment_figure(metrics, temporary / "figures"))
-    context = build_report_context(metrics)
-    report_paths = render_combined_report(context, temporary)
-    generated.extend(report_paths)
+    index_paths = render_groupwise_index(metrics, temporary)
+    generated.extend(index_paths)
+    group_report_paths = [
+        path for path in generated
+        if path.parent.name == "reports" and path.name != "index.md" and path.name != "index.html"
+    ]
+    report_paths = [*index_paths, *group_report_paths]
 
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
     mismatched = metrics.loc[metrics["structural_data_status"] != "matched"]
