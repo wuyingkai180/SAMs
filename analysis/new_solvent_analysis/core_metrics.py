@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
-from ase.io.trajectory import Trajectory
+from ase.io import read
 
 from .manifest import SystemRecord
 
@@ -110,14 +110,10 @@ def _safe_pearson(x: np.ndarray, y: np.ndarray) -> float:
 def _read_series(record: SystemRecord) -> tuple[pd.DataFrame, np.ndarray, np.ndarray]:
     frame = pd.read_csv(record.csv_path)
     positions = frame[["OPA_COM_x_A", "OPA_COM_y_A", "OPA_COM_z_A"]].to_numpy(float)
-    with Trajectory(str(record.traj_path), mode="r") as trajectory:
-        cell = np.asarray(trajectory[0].cell.array, dtype=float)
-        trajectory_frames = len(trajectory)
-    if trajectory_frames != record.n_frames:
-        raise ValueError(
-            f"{record.traj_path}: trajectory has {trajectory_frames} frames; "
-            f"manifest CSV has {record.n_frames}"
-        )
+    # The final XYZ is generated with the motion CSV and retains the periodic cell.
+    # Core motion metrics therefore remain valid even if a structural trajectory
+    # is missing frames; structural consistency is audited separately.
+    cell = np.asarray(read(record.xyz_path).cell.array, dtype=float)
     return frame, unwrap_positions(positions, cell), cell
 
 

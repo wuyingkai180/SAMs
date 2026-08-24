@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import html
+import re
 from pathlib import Path
 from typing import Iterable
 
@@ -12,6 +13,7 @@ mpl.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.lines import Line2D
 
 
 COLORS = {
@@ -120,6 +122,18 @@ def render_group2_figures(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
     axes[1].set(xlabel="Mean force on OPA (eV Å$^{-1}$)")
     _panel_label(axes[0], "a")
     _panel_label(axes[1], "b")
+    present_classes = list(dict.fromkeys(classes))
+    fig.legend(
+        handles=[
+            Line2D(
+                [0], [0], marker="o", linestyle="none", markersize=5,
+                color=class_colors.get(label, COLORS["grey"]), label=label
+            )
+            for label in present_classes
+        ],
+        loc="upper center", bbox_to_anchor=(0.5, 0.94), ncol=len(present_classes),
+        fontsize=7,
+    )
     fig.suptitle("Group 2 | Pure-solvent descriptive ranking", fontsize=9)
     return _save_figure(fig, Path(out_dir) / "group2_pure_solvent_ranking")
 
@@ -151,26 +165,75 @@ def render_group3_figures(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
     return _save_figure(fig, Path(out_dir) / "group3_composition_and_references")
 
 
+def _iter_rdf_series(
+    profiles: pd.DataFrame, max_per_group: int = 2
+) -> list[tuple[str, pd.DataFrame]]:
+    selected = profiles.loc[profiles["species"] == "all"]
+    series: list[tuple[str, pd.DataFrame]] = []
+    for group, group_frame in selected.groupby("group", sort=False):
+        systems = list(dict.fromkeys(group_frame["system"]))[:max_per_group]
+        for system in systems:
+            subset = group_frame.loc[group_frame["system"] == system].sort_values("r_A")
+            series.append((f"{group}/{system}", subset))
+    return series
+
+
 def render_rdf_figure(profiles: pd.DataFrame, out_dir: Path) -> list[Path]:
     _configure_style()
-    selected = profiles.loc[profiles["species"] == "all"]
-    systems = list(dict.fromkeys(selected["system"]))
-    if len(systems) > 8:
-        systems = systems[:8]
+    series = _iter_rdf_series(profiles)
     fig, axes = plt.subplots(1, 2, figsize=(7.2, 3.0), constrained_layout=True)
     cmap = plt.get_cmap("viridis")
-    for index, system in enumerate(systems):
-        subset = selected.loc[selected["system"] == system]
-        color = cmap(index / max(1, len(systems) - 1))
-        axes[0].plot(subset["r_A"], subset["g_head"], color=color, lw=1.0, label=system)
+    for index, (label, subset) in enumerate(series):
+        color = cmap(index / max(1, len(series) - 1))
+        axes[0].plot(subset["r_A"], subset["g_head"], color=color, lw=1.0, label=label)
         axes[1].plot(subset["r_A"], subset["g_tail"], color=color, lw=1.0)
     axes[0].set(xlabel="r (Å)", ylabel="g(r), OPA head")
     axes[1].set(xlabel="r (Å)", ylabel="g(r), terminal tail")
-    axes[0].legend(fontsize=5.5, ncol=1, loc="upper right")
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(
+        handles, labels, fontsize=5.5, ncol=3, loc="lower center",
+        bbox_to_anchor=(0.5, -0.08)
+    )
     _panel_label(axes[0], "a")
     _panel_label(axes[1], "b")
     fig.suptitle("Representative total-solvent radial distributions", fontsize=9)
     return _save_figure(fig, Path(out_dir) / "combined_representative_rdf")
+
+
+def render_enrichment_figure(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
+    """Show molecule-fraction-normalized cosolvent enrichment in mixed systems."""
+    _configure_style()
+    rows = []
+    for row in frame.loc[frame["cosolvent"].notna()].itertuples():
+        suffix = str(row.cosolvent).replace("-", "_")
+        head = getattr(row, f"head_enrichment_4A__{suffix}", float("nan"))
+        tail = getattr(row, f"tail_enrichment_4A__{suffix}", float("nan"))
+        bulk = getattr(row, f"bulk_molecule_fraction__{suffix}", float("nan"))
+        if np.isfinite(head) or np.isfinite(tail):
+            rows.append(
+                {
+                    "label": f"{row.group}: {row.cosolvent} ({100*bulk:.1f} mol%)",
+                    "head": head,
+                    "tail": tail,
+                    "fraction": row.cosolvent_fraction,
+                    "group": row.group,
+                }
+            )
+    data = pd.DataFrame(rows).sort_values(["group", "fraction", "label"]).reset_index(drop=True)
+    y = np.arange(len(data))
+    fig, ax = plt.subplots(figsize=(7.2, max(3.2, 0.29 * len(data))), constrained_layout=True)
+    ax.axvline(1.0, color=COLORS["grey"], lw=0.8, ls="--")
+    ax.scatter(data["head"], y - 0.12, color=COLORS["blue"], s=24, label="OPA head")
+    ax.scatter(data["tail"], y + 0.12, color=COLORS["rose"], s=24, label="terminal tail")
+    ax.set(
+        xlabel="Local enrichment at 4 Å (local fraction / bulk molecule fraction)",
+        yticks=y,
+        yticklabels=data["label"],
+    )
+    ax.legend(loc="lower right")
+    _panel_label(ax, "a")
+    fig.suptitle("Preferential cosolvent solvation in mixed systems", fontsize=9)
+    return _save_figure(fig, Path(out_dir) / "combined_cosolvent_enrichment")
 
 
 def render_combined_figure(frame: pd.DataFrame, out_dir: Path) -> list[Path]:
@@ -236,12 +299,18 @@ def build_combined_markdown(context: dict) -> str:
 
 
 def _markdown_to_html(markdown_text: str, title: str) -> str:
+    escaped = html.escape(markdown_text)
+    escaped = re.sub(
+        r"\[([^\]]+)\]\(([^)]+)\)",
+        lambda match: f'<a href="{html.escape(match.group(2), quote=True)}">{match.group(1)}</a>',
+        escaped,
+    )
     return (
         "<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'>"
         f"<title>{html.escape(title)}</title><style>body{{font-family:Arial,sans-serif;"
         "max-width:980px;margin:40px auto;line-height:1.65;color:#272727}}"
         "pre{white-space:pre-wrap;font-family:inherit} </style></head><body>"
-        f"<pre>{html.escape(markdown_text)}</pre></body></html>"
+        f"<pre>{escaped}</pre></body></html>"
     )
 
 
@@ -293,4 +362,3 @@ def render_group_reports(
 
 def render_combined_report(context: dict, output_root: Path) -> list[Path]:
     return _write_report(build_combined_markdown(context), Path(output_root) / "reports" / "combined_report")
-

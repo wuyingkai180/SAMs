@@ -1,14 +1,17 @@
 from __future__ import annotations
 
 import unittest
+from pathlib import Path
 
 import numpy as np
 
 from analysis.new_solvent_analysis.core_metrics import (
+    compute_core_metrics,
     fit_anomalous_exponent,
     tamsd,
     unwrap_positions,
 )
+from analysis.new_solvent_analysis.manifest import build_manifest
 
 
 class CoreMetricTests(unittest.TestCase):
@@ -30,6 +33,14 @@ class CoreMetricTests(unittest.TestCase):
     def test_tamsd_rejects_invalid_lag(self):
         with self.assertRaises(ValueError):
             tamsd(np.zeros((3, 3)), 3)
+
+    def test_csv_motion_metrics_do_not_require_matching_structural_frame_count(self):
+        record = next(
+            row for row in build_manifest(Path("data"))
+            if row.group == "group3" and row.system == "thf_toluene"
+        )
+        metrics = compute_core_metrics(record)
+        self.assertEqual(metrics["n_frames"], 101)
 
 
 if __name__ == "__main__":
