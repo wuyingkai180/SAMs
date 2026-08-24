@@ -298,28 +298,96 @@ def build_combined_markdown(context: dict) -> str:
 """
 
 
-def _markdown_to_html(markdown_text: str, title: str) -> str:
-    escaped = html.escape(markdown_text)
-    escaped = re.sub(
+def _inline_html(text: str) -> str:
+    escaped = html.escape(text)
+    return re.sub(
         r"\[([^\]]+)\]\(([^)]+)\)",
-        lambda match: f'<a href="{html.escape(match.group(2), quote=True)}">{match.group(1)}</a>',
+        lambda match: (
+            f'<a href="{html.escape(match.group(2), quote=True)}">{match.group(1)}</a>'
+        ),
         escaped,
     )
+
+
+def _markdown_body(markdown_text: str) -> str:
+    parts: list[str] = []
+    in_list = False
+    for raw_line in markdown_text.splitlines():
+        line = raw_line.strip()
+        if not line:
+            if in_list:
+                parts.append("</ul>")
+                in_list = False
+            continue
+        if line.startswith("- "):
+            if not in_list:
+                parts.append("<ul>")
+                in_list = True
+            parts.append(f"<li>{_inline_html(line[2:])}</li>")
+            continue
+        if in_list:
+            parts.append("</ul>")
+            in_list = False
+        if line.startswith("## "):
+            parts.append(f"<h2>{_inline_html(line[3:])}</h2>")
+        elif line.startswith("# "):
+            parts.append(f"<h1>{_inline_html(line[2:])}</h1>")
+        else:
+            parts.append(f"<p>{_inline_html(line)}</p>")
+    if in_list:
+        parts.append("</ul>")
+    return "\n".join(parts)
+
+
+def _markdown_to_html(
+    markdown_text: str,
+    title: str,
+    figures: list[tuple[str, str]] | None = None,
+) -> str:
+    figure_html = ""
+    if figures:
+        cards = "".join(
+            "<figure>"
+            f'<a href="{html.escape(source, quote=True)}"><img src="{html.escape(source, quote=True)}" '
+            f'alt="{html.escape(caption, quote=True)}" loading="lazy"></a>'
+            f"<figcaption>{html.escape(caption)}</figcaption></figure>"
+            for source, caption in figures
+        )
+        figure_html = f"<section class='figures'><h2>分析图件</h2><div class='figure-grid'>{cards}</div></section>"
     return (
         "<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'>"
-        f"<title>{html.escape(title)}</title><style>body{{font-family:Arial,sans-serif;"
-        "max-width:980px;margin:40px auto;line-height:1.65;color:#272727}}"
-        "pre{white-space:pre-wrap;font-family:inherit} </style></head><body>"
-        f"<pre>{escaped}</pre></body></html>"
+        "<meta name='viewport' content='width=device-width,initial-scale=1'>"
+        f"<title>{html.escape(title)}</title><style>"
+        ":root{color-scheme:light}body{font-family:Arial,'Microsoft YaHei',sans-serif;"
+        "max-width:1180px;margin:0 auto;padding:36px 28px 64px;line-height:1.72;color:#272727;"
+        "background:#f5f7fa}main{background:#fff;padding:34px 46px;border-radius:12px;"
+        "box-shadow:0 3px 18px rgba(15,77,146,.08)}h1{font-size:28px;color:#163b66;"
+        "border-bottom:3px solid #0f4d92;padding-bottom:12px}h2{margin-top:30px;font-size:20px;"
+        "color:#0f4d92}p,li{font-size:15px}li{margin:.45em 0}a{color:#0f4d92}"
+        ".figure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:22px}"
+        "figure{margin:0;padding:12px;border:1px solid #dbe3ec;border-radius:9px;background:#fff}"
+        "img{display:block;width:100%;height:auto}figcaption{padding:10px 4px 2px;color:#555;"
+        "font-size:13px}footer{margin-top:38px;padding-top:16px;border-top:1px solid #ddd;"
+        "font-size:12px;color:#777}@media(max-width:640px){body{padding:12px}main{padding:22px 18px}"
+        ".figure-grid{grid-template-columns:1fr}}</style></head><body><main>"
+        f"{_markdown_body(markdown_text)}{figure_html}"
+        "<footer>图件由同一分析流程生成；点击图片可打开原始 PNG。</footer>"
+        "</main></body></html>"
     )
 
 
-def _write_report(markdown_text: str, stem: Path) -> list[Path]:
+def _write_report(
+    markdown_text: str,
+    stem: Path,
+    figures: list[tuple[str, str]] | None = None,
+) -> list[Path]:
     stem.parent.mkdir(parents=True, exist_ok=True)
     markdown_path = stem.with_suffix(".md")
     html_path = stem.with_suffix(".html")
     markdown_path.write_text(markdown_text, encoding="utf-8")
-    html_path.write_text(_markdown_to_html(markdown_text, stem.name), encoding="utf-8")
+    html_path.write_text(
+        _markdown_to_html(markdown_text, stem.name, figures=figures), encoding="utf-8"
+    )
     return [markdown_path, html_path]
 
 
@@ -341,6 +409,43 @@ def render_group_reports(
     for group, data in (("group1", group1), ("group2", group2), ("group3", group3)):
         rows = data.sort_values("alpha", ascending=False)
         top = rows.iloc[0]
+        if group == "group1":
+            ordered = data.sort_values("cosolvent_fraction")
+            alpha_min = ordered.loc[ordered["alpha"].idxmin()]
+            force_r = ordered[["cosolvent_fraction", "mean_force_eV_A"]].corr().iloc[0, 1]
+            interpretation = (
+                f"α 在 20% 丙酮时达到 {top['alpha']:.3f}，在 30% 时降至 "
+                f"{alpha_min['alpha']:.3f}，说明浓度效应非单调。平均受力随浓度总体增加"
+                f"（Pearson r={force_r:.3f}），但单条轨迹不足以建立因果关系。"
+            )
+            figures = [
+                ("../figures/group1_concentration_response.png", "丙酮浓度与 α、OPA 平均受力的关系"),
+                ("../figures/group1_window_sensitivity.png", "四个时间窗口的轨迹内敏感性"),
+            ]
+        elif group == "group2":
+            low_force = data.loc[data["mean_force_eV_A"].idxmin()]
+            interpretation = (
+                f"CPME 和 DMC 的 α 居前；{low_force['system']} 的平均受力最低"
+                f"（{low_force['mean_force_eV_A']:.3f} eV Å⁻¹）。颜色表示人工溶剂类别，"
+                "类别差异仅作描述，不能替代独立重复。"
+            )
+            figures = [
+                ("../figures/group2_pure_solvent_ranking.png", "13 种纯溶剂的 α 与平均受力排序"),
+                ("../figures/combined_structure_dynamics.png", "全部体系的结构–动力学关系"),
+            ]
+        else:
+            core = data.loc[data["role"] == "n-heptane-base-composition"]
+            head_top = core.loc[core["head_coord_number_4A"].idxmax()]
+            interpretation = (
+                f"四个 n-heptane 基混合物中，{head_top['system']} 的 OPA 头部 4 Å 配位数最高"
+                f"（{head_top['head_coord_number_4A']:.3f}）。按实际分子数归一后，THF 和甲苯"
+                "在头部富集，丙酮与异丙醇相对贫化。thf_toluene 因结构轨迹与 CSV 不一致，"
+                "只保留动力学结果。"
+            )
+            figures = [
+                ("../figures/group3_composition_and_references.png", "Group 3 核心混合物与分层参考体系"),
+                ("../figures/combined_cosolvent_enrichment.png", "混合体系中共溶剂的 OPA 头部/尾部富集"),
+            ]
         markdown = f"""# {group} 分析
 
 ## 输入与方法
@@ -352,13 +457,29 @@ def render_group_reports(
 - α 最高条件：{top['system']}（α={top['alpha']:.3f}）。
 - 平均受力范围：{data['mean_force_eV_A'].min():.3f}–{data['mean_force_eV_A'].max():.3f} eV Å⁻¹。
 
+## 图表解读
+
+{interpretation}
+
 ## 解释边界
 
 这些数据反映预吸附溶剂化，不直接等同于 SAM 覆盖率、倾角、缺陷密度或成膜质量。
 """
-        outputs.extend(_write_report(markdown, output_root / "reports" / group))
+        outputs.extend(_write_report(markdown, output_root / "reports" / group, figures))
     return outputs
 
 
 def render_combined_report(context: dict, output_root: Path) -> list[Path]:
-    return _write_report(build_combined_markdown(context), Path(output_root) / "reports" / "combined_report")
+    figures = [
+        ("../figures/group1_concentration_response.png", "Group 1：丙酮/n-heptane 浓度响应"),
+        ("../figures/group2_pure_solvent_ranking.png", "Group 2：纯溶剂动力学与受力排序"),
+        ("../figures/group3_composition_and_references.png", "Group 3：不同组分及参考体系比较"),
+        ("../figures/combined_cosolvent_enrichment.png", "共溶剂在 OPA 头部与尾部的局部富集"),
+        ("../figures/combined_structure_dynamics.png", "全部体系的结构–动力学关系"),
+        ("../figures/combined_representative_rdf.png", "代表性头部与尾部径向分布函数"),
+    ]
+    return _write_report(
+        build_combined_markdown(context),
+        Path(output_root) / "reports" / "combined_report",
+        figures,
+    )

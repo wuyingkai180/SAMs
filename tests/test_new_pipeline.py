@@ -26,6 +26,22 @@ class ReportingTests(unittest.TestCase):
         self.assertIn("单条轨迹", text)
         self.assertNotIn("显著提高 SAM 生长", text)
 
+    def test_combined_html_embeds_figures_and_structured_text(self):
+        from analysis.new_solvent_analysis.reporting import render_combined_report
+
+        context = {
+            "system_count": 27,
+            "headline_findings": ["浓度趋势为非单调。"],
+            "limitations": ["每个条件只有单条轨迹", "模拟描述预吸附溶剂化"],
+        }
+        paths = render_combined_report(context, self.tmpdir)
+        html_path = next(path for path in paths if path.suffix == ".html")
+        text = html_path.read_text(encoding="utf-8")
+        self.assertIn("<img", text)
+        self.assertIn("../figures/group1_concentration_response.png", text)
+        self.assertIn("<h2>主要结果</h2>", text)
+        self.assertNotIn("<pre>", text)
+
     def test_all_figure_exports_are_nonempty(self):
         from analysis.new_solvent_analysis.reporting import render_group1_figures
 
