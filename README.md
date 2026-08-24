@@ -36,7 +36,30 @@ workflow_input.example.json   # editable example config
 requirements.txt              # local Python dependencies
 requirements-matlantis.txt    # Matlantis/PFP dependencies
 legacy_scripts/               # archived split-script version
+analysis/                     # post-hoc analysis of results/ (see below)
 ```
+
+## Analysis Scripts
+
+`analysis/` holds the post-processing scripts that read from `results/` and
+write reports/summaries back into `results/<...>_analysis/`. They are
+independent of the modeling workflow above (`jupyter_copy_cell.py`, `mix.py`)
+and are run directly, e.g. `python3 analysis/analyze_pure_solvents.py`:
+
+```text
+analysis/
+  analyze_pure_solvents.py             # pure solvents: displacement/force stats, PCA + KMeans -> results/pure_components_analysis/
+  analyze_opa_solvation_structure.py   # head/tail RDF + coordination number (needs *_md_300K.traj)
+  analyze_opa_displacement_dynamics.py # TAMSD + anomalous diffusion exponent alpha
+  build_combined_report.py             # merges the three passes above into one literature-informed report
+  analyze_mixture_solvents.py          # same 4-pass method applied to binary mixture systems -> results/mixture_components_analysis/
+  rerun_pure_analysis_14solvents.py    # driver re-running the pure-solvent passes over all 14 solvents -> results/pure_components_analysis_14solvents/
+```
+
+These scripts import each other by module name (e.g. `build_combined_report`
+imports from `analyze_pure_solvents`), so keep them together in this folder;
+each script's `main()`/`run()` accepts `names`/`results_dir`/`out_dir`
+overrides for re-running over a different solvent set or output location.
 
 Generated files are written to `packmol_structures/`, `packmol_systems/`, and
 `results/`.
