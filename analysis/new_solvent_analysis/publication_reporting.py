@@ -196,12 +196,25 @@ def _labelled_scatter(
     y: str,
     xlabel: str,
     ylabel: str,
-    color: str,
+    color,
+    *,
+    point_size: float = 42,
+    annotation_size: float = 6.6,
+    axis_label_size: float | None = None,
+    tick_label_size: float | None = None,
+    label_offsets: dict[str, tuple[float, float]] | None = None,
+    label_systems: set[str] | None = None,
 ) -> None:
-    valid = frame.dropna(subset=[x, y]).reset_index(drop=True)
+    plot_frame = frame.copy()
+    if isinstance(color, str):
+        point_colors = color
+    else:
+        plot_frame["_point_color"] = list(color)
+        point_colors = plot_frame.dropna(subset=[x, y])["_point_color"].tolist()
+    valid = plot_frame.dropna(subset=[x, y]).reset_index(drop=True)
     ax.scatter(
-        valid[x], valid[y], s=42, color=color, edgecolor="#16191C",
-        linewidth=0.65, zorder=3
+        valid[x], valid[y], s=point_size, color=point_colors, edgecolor="#16191C",
+        linewidth=0.8, zorder=3
     )
     x_span = max(float(valid[x].max() - valid[x].min()), 1e-6) if len(valid) else 1.0
     y_span = max(float(valid[y].max() - valid[y].min()), 1e-6) if len(valid) else 1.0
@@ -211,9 +224,14 @@ def _labelled_scatter(
     )
     placed: list[tuple[float, float]] = []
     for index, row in valid.iterrows():
+        system = str(row["system"])
+        if label_systems is not None and system not in label_systems:
+            continue
         x_norm = (float(row[x]) - float(valid[x].min())) / x_span
         y_norm = (float(row[y]) - float(valid[y].min())) / y_span
-        if placed:
+        if label_offsets and system in label_offsets:
+            dx, dy = label_offsets[system]
+        elif placed:
             dx, dy = max(
                 candidates,
                 key=lambda offset: min(
@@ -226,17 +244,20 @@ def _labelled_scatter(
             dx, dy = candidates[index % len(candidates)]
         placed.append((x_norm + dx, y_norm + dy))
         ax.annotate(
-            display_label(str(row["system"])),
+            display_label(system),
             (row[x], row[y]),
             xytext=(row[x] + dx * x_span, row[y] + dy * y_span),
-            fontsize=6.6,
+            fontsize=annotation_size,
             ha="left" if dx > 0 else "right",
             va="bottom" if dy > 0 else "top",
             arrowprops={"arrowstyle": "-", "color": "#5D6267", "lw": 0.45},
             bbox={"boxstyle": "square,pad=0.12", "fc": "white", "ec": "none", "alpha": 0.82},
             zorder=4,
         )
-    ax.set(xlabel=xlabel, ylabel=ylabel)
+    ax.set_xlabel(xlabel, fontsize=axis_label_size)
+    ax.set_ylabel(ylabel, fontsize=axis_label_size)
+    if tick_label_size is not None:
+        ax.tick_params(axis="both", labelsize=tick_label_size)
     ax.margins(x=0.16, y=0.18)
     _boxed_axes(ax)
 
@@ -356,9 +377,17 @@ def _motion_figure(
     ordered = data.sort_values("apparent_net_rate_A_ps").reset_index(drop=True)
     y = np.arange(len(ordered))
     cmap = plt.get_cmap("tab20")
+    # Use well-separated hues first, then the paired hues.  The same solvent
+    # keeps the same color in the trajectories and the TAMSD scatter panel.
+    color_order = (0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 1, 5, 9, 13)
+    systems = [str(value) for value in data["system"]]
+    system_colors = {
+        system: cmap(color_order[index % len(color_order)] / 19)
+        for index, system in enumerate(systems)
+    }
     fig, axes = plt.subplots(2, 2, figsize=(12.0, 8.6), constrained_layout=True)
-    for index, (system, motion) in enumerate(series):
-        color = cmap(index / max(1, len(series) - 1))
+    for system, motion in series:
+        color = system_colors[system]
         label = display_label(system)
         axes[0, 0].plot(
             motion["time_ps"], motion["OPA_disp_norm_A"], color=color, lw=1.05,
@@ -379,7 +408,17 @@ def _motion_figure(
     axes[1, 0].set(xlabel="Apparent net movement rate, final displacement / total time (Å ps$^{-1}$)")
     _labelled_scatter(
         axes[1, 1], data, "alpha_prefactor_A2_ps_alpha", "alpha",
-        "TAMSD prefactor (Å² ps$^{-α}$)", "TAMSD exponent, α", PALETTE["purple"]
+        "TAMSD prefactor (Å² ps$^{-α}$)", "TAMSD exponent, α",
+        [system_colors[str(system)] for system in data["system"]],
+        point_size=72,
+        annotation_size=7.4,
+        axis_label_size=10.5,
+        tick_label_size=9.5,
+        label_offsets={
+            "acetone": (0.060, 0.030),
+            "n-heptane": (-0.045, 0.075),
+        },
+        label_systems={"acetone", "n-heptane"},
     )
     for letter, ax in zip("abcd", axes.flat):
         _boxed_axes(ax)
