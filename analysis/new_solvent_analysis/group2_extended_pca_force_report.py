@@ -16,6 +16,7 @@ from ase.io.trajectory import Trajectory
 from scipy.stats import spearmanr
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
+from thermo import Chemical
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -30,6 +31,40 @@ REPORTS = OUT / "reports"
 EXTERNAL = BASE_TABLES / "group2_external_properties_298K.csv"
 METRICS = RESULT2 / "tables" / "group2_metrics.csv"
 OPA = ROOT / "structures" / "opa.vasp"
+
+DIPOLE_MOMENT_D = {
+    "acetone": 2.88,
+    "acetonitrile": 3.92,
+    "CPME": 1.27,
+    "cyclohexane": 0.00,
+    "DMC": 0.91,
+    "ethanol": 1.44,
+    "ethyl_acetate": 1.78,
+    "isopropanol": 1.58,
+    "methanol": 1.70,
+    "n-heptane": 0.00,
+    "p-xylene": 0.00,
+    "propylene_carbonate": 4.94,
+    "thf": 1.63,
+    "toluene": 0.33,
+}
+
+SYSTEM_TO_CHEMICAL = {
+    "acetone": "acetone",
+    "acetonitrile": "acetonitrile",
+    "CPME": "cyclopentyl methyl ether",
+    "cyclohexane": "cyclohexane",
+    "DMC": "dimethyl carbonate",
+    "ethanol": "ethanol",
+    "ethyl_acetate": "ethyl acetate",
+    "isopropanol": "isopropanol",
+    "methanol": "methanol",
+    "n-heptane": "n-heptane",
+    "p-xylene": "p-xylene",
+    "propylene_carbonate": "propylene carbonate",
+    "thf": "tetrahydrofuran",
+    "toluene": "toluene",
+}
 
 COLORS = {
     "acetone": "#E66101",
@@ -51,9 +86,15 @@ COLORS = {
 FEATURES = [
     "log10_viscosity_mPa_s",
     "dielectric_constant",
+    "onsager_polarity_function",
     "surface_tension_mN_m",
     "molar_mass_g_mol",
     "molar_volume_cm3_mol",
+    "kinetic_collision_radius_A",
+    "dipole_moment_D",
+    "estimated_hydrodynamic_radius_A",
+    "acentric_factor_omega",
+    "normal_boiling_point_K",
     "delta_d_MPa05",
     "delta_p_MPa05",
     "delta_h_MPa05",
@@ -68,9 +109,15 @@ FEATURES = [
 LABELS = {
     "log10_viscosity_mPa_s": "log10 viscosity",
     "dielectric_constant": "Dielectric constant",
+    "onsager_polarity_function": "Onsager polarity f(ε)",
     "surface_tension_mN_m": "Surface tension",
     "molar_mass_g_mol": "Solvent molar mass",
     "molar_volume_cm3_mol": "Molar volume",
+    "kinetic_collision_radius_A": "Kinetic radius σ/2",
+    "dipole_moment_D": "Dipole moment μ",
+    "estimated_hydrodynamic_radius_A": "Volume-equivalent radius",
+    "acentric_factor_omega": "Acentric factor ω",
+    "normal_boiling_point_K": "Normal boiling point",
     "delta_d_MPa05": "HSP δD",
     "delta_p_MPa05": "HSP δP",
     "delta_h_MPa05": "HSP δH",
@@ -85,9 +132,15 @@ LABELS = {
 FEATURE_GROUP = {
     "log10_viscosity_mPa_s": "bulk",
     "dielectric_constant": "bulk",
+    "onsager_polarity_function": "bulk",
     "surface_tension_mN_m": "bulk",
     "molar_mass_g_mol": "bulk",
     "molar_volume_cm3_mol": "bulk",
+    "kinetic_collision_radius_A": "bulk",
+    "dipole_moment_D": "bulk",
+    "estimated_hydrodynamic_radius_A": "bulk",
+    "acentric_factor_omega": "bulk",
+    "normal_boiling_point_K": "bulk",
     "delta_d_MPa05": "hsp",
     "delta_p_MPa05": "hsp",
     "delta_h_MPa05": "hsp",
@@ -196,6 +249,61 @@ def merged_data(force: pd.DataFrame) -> pd.DataFrame:
     data = external.merge(hsp, on="system", validate="one_to_one")
     data = data.merge(metrics, on="system", validate="one_to_one")
     data = data.merge(force, on="system", validate="one_to_one")
+    # Dimensionless Onsager dielectric polarity function. It is a monotonic
+    # transform of epsilon and is retained as an explicitly requested descriptor.
+    epsilon = data["dielectric_constant"]
+    data["onsager_polarity_function"] = 2.0 * (epsilon - 1.0) / (2.0 * epsilon + 1.0)
+    data["polarity_method"] = "Onsager f(epsilon)=2(epsilon-1)/(2epsilon+1)"
+
+    chemical_properties: dict[str, dict[str, float]] = {}
+    for system, chemical_name in SYSTEM_TO_CHEMICAL.items():
+        chemical = Chemical(chemical_name, T=298.15)
+        if chemical.molecular_diameter is None or chemical.omega is None or chemical.Tb is None:
+            raise ValueError(f"Missing diameter, acentric factor, or boiling point for {system}")
+        chemical_properties[system] = {
+            "kinetic_collision_radius_A": float(chemical.molecular_diameter) / 2.0,
+            "acentric_factor_omega": float(chemical.omega),
+            "normal_boiling_point_K": float(chemical.Tb),
+        }
+    data["kinetic_collision_radius_A"] = data["system"].map(
+        {name: values["kinetic_collision_radius_A"] for name, values in chemical_properties.items()}
+    )
+    data["acentric_factor_omega"] = data["system"].map(
+        {name: values["acentric_factor_omega"] for name, values in chemical_properties.items()}
+    )
+    data["normal_boiling_point_K"] = data["system"].map(
+        {name: values["normal_boiling_point_K"] for name, values in chemical_properties.items()}
+    )
+    data["normal_boiling_point_C"] = data["normal_boiling_point_K"] - 273.15
+    data["kinetic_radius_method"] = (
+        "half of estimated Lennard-Jones molecular diameter sigma from chemicals/thermo"
+    )
+    data["acentric_factor_source"] = "thermo 0.6.1 chemical-property database"
+    data["boiling_point_source"] = "thermo 0.6.1 normal boiling point at 101325 Pa"
+    data["dipole_moment_D"] = data["system"].map(DIPOLE_MOMENT_D)
+    data["dipole_moment_source"] = np.where(
+        data["system"].eq("CPME"),
+        "RSC Green Chemistry ESI / Zeon technical value",
+        np.where(
+            data["system"].eq("DMC"),
+            "Raman spectroscopy solvent-property table",
+            np.where(
+                data["system"].eq("propylene_carbonate"),
+                "Published propylene-carbonate property table",
+                "thermo 0.6.1 dipole database (CCCBDB/Muller); cyclohexane set to 0",
+            ),
+        ),
+    )
+    # Volume-equivalent spherical radius. This is a size proxy, not an
+    # experimentally measured Stokes radius from a self-diffusion coefficient.
+    avogadro = 6.02214076e23
+    molecular_volume_A3 = data["molar_volume_cm3_mol"] * 1.0e24 / avogadro
+    data["estimated_hydrodynamic_radius_A"] = (
+        3.0 * molecular_volume_A3 / (4.0 * np.pi)
+    ) ** (1.0 / 3.0)
+    data["hydrodynamic_radius_method"] = (
+        "volume-equivalent sphere from liquid molar volume at 298.15 K; size proxy, not measured Stokes radius"
+    )
     data["log10_K_alpha"] = np.log10(data["alpha_prefactor_A2_ps_alpha"])
     data["whole_force_csv_difference_eV_A"] = (
         data["mean_total_force_eV_A"] - data["mean_force_eV_A"]
@@ -217,7 +325,7 @@ def pca_analysis(data: pd.DataFrame) -> tuple[np.ndarray, np.ndarray, PCA]:
 
 def pca_figure(data: pd.DataFrame, scores: np.ndarray, loadings: np.ndarray, pca: PCA) -> None:
     style()
-    fig, ax = plt.subplots(figsize=(183 / 25.4, 145 / 25.4), constrained_layout=True)
+    fig, ax = plt.subplots(figsize=(183 / 25.4, 158 / 25.4), constrained_layout=True)
     for index, row in data.iterrows():
         ax.scatter(
             scores[index, 0], scores[index, 1], s=61,
@@ -228,10 +336,18 @@ def pca_figure(data: pd.DataFrame, scores: np.ndarray, loadings: np.ndarray, pca
     span = max(np.ptp(scores[:, 0]), np.ptp(scores[:, 1]))
     scale = 0.39 * span
     label_offsets = {
-        "Mean head force": (0.04, -0.05), "Mean tail force": (0.03, 0.16),
-        "Mean total force": (0.03, 0.15), "TAMSD α": (0.02, 0.13),
+        "Mean head force": (-0.05, -0.32), "Mean tail force": (0.03, 0.20),
+        "Mean total force": (-0.05, 0.34), "TAMSD α": (0.02, 0.13),
         "log10 Kα": (0.02, 0.12), "Maximum displacement": (0.03, -0.16),
         "HSP δP": (-0.45, -0.15), "HSP δH": (0.02, -0.10),
+        "Dipole moment μ": (0.03, 0.13),
+        "Solvent molar mass": (0.14, 0.22),
+        "Molar volume": (0.10, -0.18),
+        "Volume-equivalent radius": (0.10, 0.20),
+        "Onsager polarity f(ε)": (-0.08, -0.23),
+        "Kinetic radius σ/2": (-0.08, 0.13),
+        "Acentric factor ω": (-0.05, -0.23),
+        "Normal boiling point": (0.04, 0.16),
     }
     for index, feature in enumerate(FEATURES):
         dx, dy = loadings[index] * scale
@@ -328,6 +444,42 @@ def profile_heatmap(data: pd.DataFrame) -> None:
     save_figure(fig, "group2_extended_standardized_profiles")
 
 
+def added_descriptor_figure(data: pd.DataFrame) -> None:
+    style()
+    ordered = data.sort_values("system").reset_index(drop=True)
+    y = np.arange(len(ordered))
+    fig, axes = plt.subplots(2, 3, figsize=(183 / 25.4, 180 / 25.4), sharey=True,
+                             constrained_layout=True)
+    panels = [
+        ("onsager_polarity_function", "Onsager polarity, f(ε)", "Dielectric polarity"),
+        ("kinetic_collision_radius_A", "Kinetic radius, σ/2 (Å)", "Collision-size radius"),
+        ("dipole_moment_D", "Dipole moment, μ (D)", "Molecular dipole moment"),
+        ("estimated_hydrodynamic_radius_A", "Estimated radius (Å)",
+         "Hydrodynamic-size proxy"),
+        ("acentric_factor_omega", "Pitzer acentric factor, ω", "Molecular non-sphericity/volatility"),
+        ("normal_boiling_point_C", "Normal boiling point (°C)", "Normal boiling point"),
+    ]
+    for ax, (column, xlabel, title) in zip(axes.flat, panels):
+        for index, row in ordered.iterrows():
+            ax.scatter(row[column], index, s=51, color=COLORS[row.system],
+                       edgecolor="#202428", linewidth=0.7, zorder=3)
+        ax.set_xlabel(xlabel)
+        ax.set_title(title, fontsize=9.5, fontweight="bold")
+        ax.grid(True, axis="x", color="#D8DDE1", lw=0.5, alpha=0.7)
+        for spine in ax.spines.values():
+            spine.set_visible(True)
+            spine.set_linewidth(0.8)
+    for ax in (axes[0, 0], axes[1, 0]):
+        ax.set_yticks(y, ordered["system"], fontsize=7.2)
+        for tick, system in zip(ax.get_yticklabels(), ordered["system"]):
+            tick.set_color(COLORS[system])
+            tick.set_fontweight("bold")
+        ax.set_ylabel("Pure solvent")
+    fig.suptitle("Six added solvent descriptors | Group 2 pure solvents", fontsize=11,
+                 fontweight="bold")
+    save_figure(fig, "group2_six_added_solvent_descriptors")
+
+
 def correlations(data: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for left_index, left in enumerate(FEATURES):
@@ -360,12 +512,17 @@ def markdown_table(frame: pd.DataFrame) -> str:
 
 def write_report(data: pd.DataFrame, pca: PCA, corr: pd.DataFrame) -> None:
     selected = data[
-        ["system", "molar_mass_g_mol", "mean_head_force_eV_A",
+        ["system", "molar_mass_g_mol", "onsager_polarity_function",
+         "kinetic_collision_radius_A", "dipole_moment_D",
+         "estimated_hydrodynamic_radius_A", "acentric_factor_omega",
+         "normal_boiling_point_C", "mean_head_force_eV_A",
          "mean_tail_force_eV_A", "mean_total_force_eV_A", "max_disp_A", "alpha",
          "alpha_prefactor_A2_ps_alpha"]
     ].copy()
     selected.columns = [
-        "溶剂", "分子量(g/mol)", "头基平均力(eV/Å)", "尾链平均力(eV/Å)",
+        "溶剂", "分子量(g/mol)", "Onsager极性f(ε)", "动力学/碰撞半径σ/2(Å)",
+        "偶极矩(D)", "体积等效半径(Å)", "偏心率ω", "常压沸点(°C)",
+        "头基平均力(eV/Å)", "尾链平均力(eV/Å)",
         "整体平均力(eV/Å)", "最大位移(Å)", "TAMSD α", "Kα"
     ]
     selected = selected.round(4)
@@ -402,7 +559,7 @@ def write_report(data: pd.DataFrame, pca: PCA, corr: pd.DataFrame) -> None:
 
 **样本：** 14种纯溶剂，每种101帧，0–10 ps。  
 **核心图形：** 逐溶剂固定独立颜色的扩展PCA、头基/尾链/整体受力图、标准化参数热图。  
-**PCA变量：** 5项体相物性、3项HSP、3项受力指标、最大位移、TAMSD α、log10 Kα。
+**PCA变量：** 11项体相/分子物性、3项HSP、3项受力指标、最大位移、TAMSD α、log10 Kα，共20项。
 
 ## 计算定义
 
@@ -412,6 +569,12 @@ def write_report(data: pd.DataFrame, pca: PCA, corr: pd.DataFrame) -> None:
 - 整体平均力与原motion-force CSV逐溶剂核对，最大差值小于10⁻⁶ eV Å⁻¹。
 - 头基、尾部和整体的力模长均值不可直接相加，因为头尾合力矢量存在方向抵消。
 - PCA前所有变量均进行z-score标准化。
+- 溶剂极性采用Onsager介电极性函数：$f(ε)=2(ε-1)/(2ε+1)$；它由介电常数单调变换而来。
+- 动力学/碰撞半径采用Lennard–Jones分子碰撞直径的一半：$r_{{kin}}=σ/2$，属于关联式估算量。
+- 偶极矩μ（Debye）是分子尺度的永久偶极描述符，与体相介电常数不能等同。
+- “分子动力学半径”在本报告中写为体积等效半径：$r_V=(3V_m/4πN_A)^{{1/3}}$。它是尺寸代理量，不是由扩散系数和Stokes–Einstein公式得到的实测Stokes半径。
+- 偏心率ω指Pitzer acentric factor，是描述真实流体相对简单球形流体蒸气压行为偏离程度的无量纲参数，不是几何椭球偏心率。
+- 沸点采用101325 Pa下的正常沸点；PCA使用K，直接比较表和六参量图同时换算为°C便于阅读。
 
 ## 主要结果
 
@@ -429,6 +592,8 @@ def write_report(data: pd.DataFrame, pca: PCA, corr: pd.DataFrame) -> None:
 
 ![标准化特征](../figures/group2_extended_standardized_profiles.png)
 
+![新增六项溶剂参量](../figures/group2_six_added_solvent_descriptors.png)
+
 ## 14种纯溶剂直接比较
 
 {table_md}
@@ -439,7 +604,15 @@ def write_report(data: pd.DataFrame, pca: PCA, corr: pd.DataFrame) -> None:
 
 ## 解释限制
 
-14个溶剂对应14个PCA变量，且头基力、尾部力和整体力彼此相关，PCA结果对变量集合较敏感。TAMSD α表示运动时间标度，Kα表示运动幅度，两者不能互相替代。最大位移为单条短轨迹的极值，可能受偶然事件影响。当前结果适合提出机制假设，不能单独证明SAM成膜质量。
+14个溶剂对应20个PCA变量，变量数超过样本数；介电常数与Onsager极性函数、摩尔体积与体积等效半径存在确定关系，头基力、尾部力和整体力也彼此相关。因此该“总和PCA”有意保留重复信息以便总览，但只适合探索和可视化，不能用于稳定预测或因果推断。TAMSD α表示运动时间标度，Kα表示运动幅度，两者不能互相替代。最大位移为单条短轨迹的极值，可能受偶然事件影响。
+
+## 外部参量来源与方法
+
+- Onsager极性函数：<https://pmc.ncbi.nlm.nih.gov/articles/PMC10254283/>
+- Lennard–Jones分子直径及其估算限制：<https://chemicals.readthedocs.io/chemicals.lennard_jones.html>
+- 等效流体动力学半径定义：<https://goldbook.iupac.org/terms/view/12258>
+- 体积等效半径公式及其与Stokes半径的区别：<https://pmc.ncbi.nlm.nih.gov/articles/PMC12552266/>
+- CPME、DMC和propylene carbonate偶极矩补充来源：<https://www.rsc.org/suppdata/c7/gc/c7gc01688c/c7gc01688c1.pdf>；<https://pmc.ncbi.nlm.nih.gov/articles/PMC6648874/>；<https://pmc.ncbi.nlm.nih.gov/articles/PMC5121653/>
 """
     (REPORTS / "group2_extended_pca_force_report_zh.md").write_text(markdown, encoding="utf-8")
 
@@ -450,13 +623,15 @@ body{font-family:Arial,'Microsoft YaHei',sans-serif;max-width:1180px;margin:28px
 <h1>Group 2纯溶剂扩展PCA与OPA头尾受力报告</h1>
 <p><b>样本：</b>14种纯溶剂，每种101帧，0–10 ps。</p>
 <div class="note">{html.escape(candidate_text)} {html.escape(mobility_text)} 扩展PCA混合外部物性与MD响应，仅用于探索联合规律。</div>
-<h2>计算定义</h2><ul><li>头基：P + 3O + 2个酸性H；尾部：其余55个OPA原子。</li><li>每帧先对组内原子力矢量求和再取模，最后跨101帧平均；误差线表示帧间标准差。</li><li>头、尾与整体力模长均值不可直接相加，因为矢量方向会抵消。</li><li>PCA前全部变量进行z-score标准化。</li></ul>
+<h2>计算定义</h2><ul><li>头基：P + 3O + 2个酸性H；尾部：其余55个OPA原子。</li><li>每帧先对组内原子力矢量求和再取模，最后跨101帧平均；误差线表示帧间标准差。</li><li>头、尾与整体力模长均值不可直接相加，因为矢量方向会抵消。</li><li>极性函数：f(ε)=2(ε−1)/(2ε+1)；动力学/碰撞半径：Lennard–Jones直径σ的一半。</li><li>偶极矩μ为分子尺度永久偶极；体积等效半径为摩尔体积换算的尺寸代理，不是实测Stokes半径；ω为Pitzer偏心因子。</li><li>沸点为101325 Pa下的正常沸点；PCA使用K，表格和直接比较图显示°C。</li><li>PCA前全部20个变量进行z-score标准化。</li></ul>
 <h2>扩展PCA</h2><p>PC1={100*pca.explained_variance_ratio_[0]:.1f}%，PC2={100*pca.explained_variance_ratio_[1]:.1f}%，合计={100*sum(pca.explained_variance_ratio_[:2]):.1f}%。每种溶剂使用固定独立颜色，颜色映射见图例。</p><img src="../figures/group2_extended_pca_biplot.png">
 <h2>头基、碳链尾部及整体平均受力</h2><img src="../figures/group2_head_tail_total_force.png">
 <p>{html.escape(mechanism_text)}</p>
 <h2>全部参数标准化比较</h2><img src="../figures/group2_extended_standardized_profiles.png">
+<h2>新增六项溶剂参量</h2><img src="../figures/group2_six_added_solvent_descriptors.png">
 <h2>直接比较表</h2>{table_html}
-<h2>解释限制</h2><p>该PCA同时含外部物性和MD响应，并且样本量与变量数均为14，属于探索性分析。最大位移为极值；TAMSD α反映运动类型，Kα反映运动幅度。</p>
+<h2>解释限制</h2><p>该PCA同时含外部物性和MD响应，只有14个溶剂但包含20个变量；介电常数与Onsager极性、摩尔体积与体积等效半径还存在确定关系。因此它是总览型探索分析，不用于稳定预测或因果判断。最大位移为极值；TAMSD α反映运动类型，Kα反映运动幅度。</p>
+<h2>外部参量来源与方法</h2><ul><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10254283/">Onsager极性函数</a></li><li><a href="https://chemicals.readthedocs.io/chemicals.lennard_jones.html">Lennard–Jones分子直径及估算限制</a></li><li><a href="https://goldbook.iupac.org/terms/view/12258">IUPAC等效流体动力学半径定义</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12552266/">体积等效半径与Stokes半径的区别</a></li></ul>
 </body></html>"""
     (REPORTS / "group2_extended_pca_force_report_zh.html").write_text(html_report, encoding="utf-8")
 
@@ -470,10 +645,20 @@ def main() -> None:
     pca_figure(data, scores, loadings, pca)
     force_figure(data)
     profile_heatmap(data)
+    added_descriptor_figure(data)
     corr = correlations(data)
 
     force.to_csv(TABLES / "group2_head_tail_total_force_summary.csv", index=False)
     data.to_csv(TABLES / "group2_extended_pca_source_data.csv", index=False)
+    data[["system", "onsager_polarity_function", "polarity_method",
+          "kinetic_collision_radius_A", "kinetic_radius_method",
+          "dipole_moment_D", "dipole_moment_source",
+          "estimated_hydrodynamic_radius_A", "molar_volume_cm3_mol",
+          "hydrodynamic_radius_method", "acentric_factor_omega",
+          "acentric_factor_source", "normal_boiling_point_K",
+          "normal_boiling_point_C", "boiling_point_source"]].to_csv(
+        TABLES / "group2_six_added_solvent_descriptors.csv", index=False
+    )
     pd.DataFrame(
         {"system": data["system"], "PC1": scores[:, 0], "PC2": scores[:, 1],
          "color_hex": [COLORS[name] for name in data["system"]]}
