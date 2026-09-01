@@ -109,10 +109,8 @@ def _panel(ax: plt.Axes, letter: str) -> None:
 
 def _save(fig: plt.Figure, stem: Path) -> list[Path]:
     stem.parent.mkdir(parents=True, exist_ok=True)
-    outputs = [stem.with_suffix(suffix) for suffix in (".png", ".svg", ".pdf")]
+    outputs = [stem.with_suffix(".png")]
     fig.savefig(outputs[0], dpi=600, bbox_inches="tight", facecolor="white")
-    fig.savefig(outputs[1], bbox_inches="tight", facecolor="white")
-    fig.savefig(outputs[2], bbox_inches="tight", facecolor="white")
     plt.close(fig)
     return outputs
 
