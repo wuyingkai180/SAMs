@@ -1,0 +1,12 @@
+system,display_label,time_ps,OPA_disp_norm_A,color_hex
+acetone_5_n-heptane_95,acetone 5% / n-heptane 95%,10.0,4.356893083234796,#8718bf
+acetone_10_n-heptane_90,acetone 10% / n-heptane 90%,10.0,3.794395793084319,#bf5e18
+acetone_20_n-heptane_80,acetone 20% / n-heptane 80%,10.0,3.071413958082365,#2ca314
+toluene_n-heptane,toluene 5% / n-heptane 95%,10.0,3.064594875066951,#bf1879
+isopropanol_5_n-heptane_95,isopropanol 5% / n-heptane 95%,10.0,3.036810237528931,#b44d22
+acetone_30_n-heptane_70,acetone 30% / n-heptane 70%,10.0,2.105166487481709,#b42265
+acetone_40_n-heptane_60,acetone 40% / n-heptane 60%,10.0,1.815901473265309,#25b4e4
+acetone_50_n-heptane_50,acetone 50% / n-heptane 50%,10.0,1.420512658486554,#9a951d
+thf_toluene,THF 5% / toluene 95%,10.0,1.302420970545016,#429a1d
+acetone_1_n-heptane_99,acetone 1% / n-heptane 99%,10.0,1.160688699892435,#4731d8
+thf_n-heptane,THF 5% / n-heptane 95%,10.0,1.084135815812856,#2525e4

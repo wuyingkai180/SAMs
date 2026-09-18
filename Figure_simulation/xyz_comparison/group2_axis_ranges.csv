@@ -1,0 +1,15 @@
+system,axis_min_A,axis_max_A,points_outside_view
+acetone,-4.0,4.0,0
+acetonitrile,-4.0,4.0,0
+CPME,-5.0,5.0,0
+cyclohexane,-4.0,4.0,0
+DMC,-5.5,5.5,0
+ethanol,-4.0,4.0,0
+ethyl_acetate,-4.0,4.0,0
+isopropanol,-4.0,4.0,0
+methanol,-4.0,4.0,0
+n-heptane,-7.5,7.5,0
+p-xylene,-4.0,4.0,0
+propylene_carbonate,-4.0,4.0,0
+thf,-4.0,4.0,0
+toluene,-5.0,5.0,0

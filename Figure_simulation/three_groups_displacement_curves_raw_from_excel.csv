@@ -1,4 +1,4 @@
-﻿group,system,display_label,time_ps,OPA_disp_norm_A,source_workbook,source_sheet
+group,system,display_label,time_ps,OPA_disp_norm_A,source_workbook,source_sheet
 group1,acetone_1_n-heptane_99,acetone 1% / n-heptane 99%,0.0,0.0,group1.xlsx,acetone_1_n-heptane_99
 group1,acetone_1_n-heptane_99,acetone 1% / n-heptane 99%,0.1,0.4379250152996615,group1.xlsx,acetone_1_n-heptane_99
 group1,acetone_1_n-heptane_99,acetone 1% / n-heptane 99%,0.2,0.8144583184275166,group1.xlsx,acetone_1_n-heptane_99
@@ -2322,306 +2322,306 @@ group3,isopropanol_5_n-heptane_95,isopropanol 5% / n-heptane 95%,9.7,3.424107511
 group3,isopropanol_5_n-heptane_95,isopropanol 5% / n-heptane 95%,9.8,3.289750664988563,group3.xlsx,isopropanol_5_n-heptane_95
 group3,isopropanol_5_n-heptane_95,isopropanol 5% / n-heptane 95%,9.9,2.990375954515682,group3.xlsx,isopropanol_5_n-heptane_95
 group3,isopropanol_5_n-heptane_95,isopropanol 5% / n-heptane 95%,10.0,3.036810237528931,group3.xlsx,isopropanol_5_n-heptane_95
-group3,thf_n-heptane,THF / n-heptane,0.0,0.0,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.1,0.4569364497781933,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.2,0.1401193708278296,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.3,0.3184639642559041,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.4,0.4202063044061393,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.5,0.4258382195564444,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.6,0.630422596247245,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.7,1.043093377450172,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.8,1.273376519126854,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,0.9,1.443644806544697,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.0,0.9138461795056517,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.1,0.870695994487471,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.2,0.9280092007000269,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.3,0.7564800612677004,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.4,0.9957354710328316,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.5,0.7061632621728837,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.6,0.8098732849786683,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.7,1.021720544263798,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.8,0.8813993719770379,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,1.9,1.474691789082256,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.0,2.056005568481966,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.1,1.915976366922879,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.2,2.130963899662637,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.3,2.17273435788069,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.4,1.650132241250412,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.5,1.104861551068796,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.6,0.9420327890942812,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.7,1.208423569653814,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.8,1.100051889339424,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,2.9,1.111520612995776,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.0,1.000290087966694,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.1,1.072565298184615,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.2,0.7282517332598993,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.3,0.7608356373879226,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.4,0.55043539072332,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.5,0.8652727128670212,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.6,1.094604215826922,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.7,1.0211878802743,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.8,1.573373257316736,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,3.9,1.018556257388101,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.0,1.095991859048647,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.1,1.098648538092206,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.2,1.03595807397903,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.3,1.361572004348693,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.4,1.213479501957437,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.5,1.013095902722338,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.6,1.039392498654223,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.7,0.9809298461707322,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.8,1.164229568169552,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,4.9,0.7592425386316503,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.0,0.6056957891633059,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.1,0.3610005702457386,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.2,0.6793228230829161,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.3,0.991295386727524,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.4,0.7007027266398224,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.5,0.7699249524329352,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.6,1.119887008346981,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.7,1.123976245111261,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.8,0.7625520441184283,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,5.9,0.7387574786884855,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.0,0.4262324597656556,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.1,0.7043291269561666,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.2,0.8408901463011494,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.3,1.176674548234089,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.4,1.392050370993198,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.5,1.15532409727258,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.6,1.357523511238057,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.7,1.58753778521901,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.8,1.372944497322398,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,6.9,1.442072656407473,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.0,1.581193254176757,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.1,1.566208572297678,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.2,1.686179895988686,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.3,1.288093715722643,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.4,1.188453210951697,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.5,0.9495327098757275,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.6,0.7795758885957245,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.7,0.6278912892422237,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.8,0.5587711796797458,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,7.9,0.8182181515318325,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.0,0.8392921944980648,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.1,0.8513361392207784,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.2,0.6140833697585776,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.3,0.9297692588634843,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.4,0.2203106133033546,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.5,0.46974451706297,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.6,0.7168948963468612,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.7,0.2113531055048689,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.8,0.5597260269071901,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,8.9,0.6239026974980106,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.0,0.4711431394760485,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.1,0.4203577200934381,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.2,0.5387639253178429,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.3,0.4132302674061968,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.4,0.8887993446022653,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.5,1.366927695829359,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.6,1.530943652461754,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.7,1.659910920937256,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.8,1.480752017225886,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,9.9,1.268592027369294,group3.xlsx,thf_n-heptane
-group3,thf_n-heptane,THF / n-heptane,10.0,1.084135815812856,group3.xlsx,thf_n-heptane
-group3,thf_toluene,THF / toluene,0.0,0.0,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.1,0.4188722945000126,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.2,0.8583723723573913,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.3,1.01583656157576,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.4,0.7060583281752075,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.5,0.8405419941320335,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.6,1.208355189859605,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.7,1.311316397961416,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.8,0.9765736409940106,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,0.9,0.5503895531482927,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.0,0.6045977743428358,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.1,0.9698581062674687,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.2,0.8921925993669205,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.3,0.8942602908288024,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.4,0.8564970996810739,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.5,0.4089272351460673,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.6,0.6500450419099312,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.7,0.8602629476035311,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.8,0.9053436014378793,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,1.9,1.591634063498685,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.0,1.080447013534536,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.1,1.315923591020101,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.2,1.368191775931129,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.3,1.494364464704676,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.4,1.624433419812387,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.5,1.695373412147232,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.6,1.662339398493172,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.7,1.73337346669825,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.8,1.766219190504384,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,2.9,1.64535814053862,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.0,1.856303674517982,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.1,1.867490704068652,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.2,1.690025932839518,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.3,1.727501650642459,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.4,1.605996094265578,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.5,1.714067388242218,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.6,2.072313539908542,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.7,1.709586425788671,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.8,1.387009676124698,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,3.9,1.509164193280041,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.0,1.282322275401252,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.1,1.478537691644188,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.2,1.427296059929108,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.3,1.558515925916015,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.4,1.604967576020512,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.5,1.43982075109233,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.6,1.842235879504225,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.7,1.833391874044708,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.8,1.917614761775983,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,4.9,2.261105519827783,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.0,2.137858274947712,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.1,1.740311407604189,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.2,2.102840700885572,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.3,2.337258037640992,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.4,1.952211201854504,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.5,1.783834093153796,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.6,1.845906793407515,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.7,2.448440099250292,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.8,1.97788719793816,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,5.9,1.505844946155013,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.0,1.41436851394724,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.1,1.441515754982829,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.2,1.617974907246057,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.3,2.013305969115357,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.4,1.660629034235076,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.5,1.495923550986519,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.6,1.258605904173042,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.7,0.9309759608909584,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.8,1.136420494376619,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,6.9,1.013079002700718,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.0,1.398767470705673,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.1,1.233316880939795,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.2,0.9733024307912531,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.3,1.188195715769141,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.4,0.8926382505390584,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.5,0.5750921499884308,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.6,0.6316408231537264,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.7,0.4429117934924763,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.8,1.010830686403441,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,7.9,0.8579239458923447,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.0,0.8192169939207112,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.1,0.776880147610862,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.2,1.188566422343581,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.3,1.017796274436558,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.4,1.09395212685312,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.5,1.201151828924226,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.6,1.064076880158308,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.7,0.9827737912902657,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.8,0.7115689526788059,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,8.9,1.299491528502674,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.0,1.45267515620958,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.1,1.045861125367466,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.2,1.548260730554483,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.3,1.68479480984341,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.4,1.625177013909762,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.5,1.869053744182371,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.6,1.589051609278835,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.7,1.716603982948256,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.8,1.58434498947141,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,9.9,1.787787326352092,group3.xlsx,thf_toluene
-group3,thf_toluene,THF / toluene,10.0,1.302420970545016,group3.xlsx,thf_toluene
-group3,toluene_n-heptane,toluene / n-heptane,0.0,0.0,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.1,0.7413231889240769,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.2,0.8953903488375243,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.3,1.274400887176343,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.4,1.694700199406235,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.5,1.56850230750495,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.6,1.557170154628383,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.7,1.348037056174359,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.8,0.7721062365351988,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,0.9,1.17256284434629,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.0,1.174865999950283,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.1,1.182297410689866,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.2,1.249768516815964,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.3,1.341126815945181,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.4,1.253289860373063,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.5,1.403313464132931,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.6,1.761110119021547,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.7,1.820540967022024,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.8,1.97944909515469,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,1.9,1.897227688816714,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.0,2.076483253320106,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.1,1.89080928338155,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.2,1.800406010474598,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.3,2.486903308586336,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.4,2.580194046512265,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.5,2.687865969460929,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.6,2.677806492362939,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.7,2.757555600466988,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.8,2.764356251059673,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,2.9,2.682577562990212,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.0,2.573020613701921,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.1,2.405699808891157,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.2,2.354812976405506,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.3,2.27614516012347,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.4,2.594067230174306,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.5,2.513014083413244,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.6,1.827812621800323,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.7,1.927383306108023,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.8,1.755607541311628,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,3.9,1.67597077895969,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.0,1.567291843806689,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.1,1.60963166233612,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.2,1.7510253290573,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.3,2.029833272949403,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.4,2.184940673558937,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.5,1.802137303896756,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.6,1.648404982795016,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.7,2.173919840667824,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.8,1.968877649975287,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,4.9,1.920647289840142,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.0,2.055612606459229,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.1,1.888774233786914,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.2,1.880046240774615,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.3,2.069824189009491,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.4,1.607564868288057,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.5,1.792912745870477,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.6,1.788178407090404,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.7,2.14991708276478,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.8,2.428843755747268,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,5.9,2.260500390342634,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.0,2.281580816470051,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.1,2.418000377923443,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.2,2.877813221516078,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.3,2.788328079821608,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.4,2.577094171706499,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.5,2.822764288842265,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.6,2.940668453293412,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.7,2.83115795630461,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.8,3.086440583392627,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,6.9,3.444576189964684,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.0,3.186238380640187,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.1,3.190384490086647,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.2,3.300001220622692,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.3,3.116482594966916,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.4,3.434630572542791,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.5,3.149235359295742,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.6,2.930882607225076,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.7,3.318878678623062,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.8,3.235114957579882,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,7.9,3.199555873398426,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.0,3.205684353885739,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.1,2.366755816060417,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.2,2.6554285511376,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.3,2.677604839784559,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.4,2.979561191543885,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.5,2.240529433290526,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.6,2.324594997485792,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.7,2.710077523174514,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.8,2.91276173314454,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,8.9,3.294143580947517,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.0,3.319770386543665,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.1,3.246052542155523,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.2,3.22333428445416,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.3,2.850967724299633,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.4,2.845316808002345,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.5,2.6814050316388,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.6,3.046723636572625,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.7,2.933541899416182,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.8,2.80241527429009,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,9.9,2.845149511143794,group3.xlsx,toluene_n-heptane
-group3,toluene_n-heptane,toluene / n-heptane,10.0,3.064594875066951,group3.xlsx,toluene_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.0,0.0,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.1,0.4569364497781933,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.2,0.1401193708278296,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.3,0.3184639642559041,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.4,0.4202063044061393,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.5,0.4258382195564444,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.6,0.630422596247245,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.7,1.043093377450172,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.8,1.273376519126854,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,0.9,1.443644806544697,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.0,0.9138461795056517,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.1,0.870695994487471,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.2,0.9280092007000269,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.3,0.7564800612677004,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.4,0.9957354710328316,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.5,0.7061632621728837,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.6,0.8098732849786683,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.7,1.021720544263798,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.8,0.8813993719770379,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,1.9,1.474691789082256,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.0,2.056005568481966,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.1,1.915976366922879,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.2,2.130963899662637,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.3,2.17273435788069,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.4,1.650132241250412,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.5,1.104861551068796,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.6,0.9420327890942812,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.7,1.208423569653814,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.8,1.100051889339424,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,2.9,1.111520612995776,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.0,1.000290087966694,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.1,1.072565298184615,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.2,0.7282517332598993,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.3,0.7608356373879226,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.4,0.55043539072332,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.5,0.8652727128670212,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.6,1.094604215826922,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.7,1.0211878802743,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.8,1.573373257316736,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,3.9,1.018556257388101,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.0,1.095991859048647,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.1,1.098648538092206,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.2,1.03595807397903,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.3,1.361572004348693,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.4,1.213479501957437,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.5,1.013095902722338,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.6,1.039392498654223,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.7,0.9809298461707322,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.8,1.164229568169552,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,4.9,0.7592425386316503,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.0,0.6056957891633059,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.1,0.3610005702457386,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.2,0.6793228230829161,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.3,0.991295386727524,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.4,0.7007027266398224,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.5,0.7699249524329352,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.6,1.119887008346981,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.7,1.123976245111261,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.8,0.7625520441184283,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,5.9,0.7387574786884855,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.0,0.4262324597656556,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.1,0.7043291269561666,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.2,0.8408901463011494,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.3,1.176674548234089,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.4,1.392050370993198,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.5,1.15532409727258,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.6,1.357523511238057,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.7,1.58753778521901,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.8,1.372944497322398,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,6.9,1.442072656407473,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.0,1.581193254176757,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.1,1.566208572297678,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.2,1.686179895988686,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.3,1.288093715722643,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.4,1.188453210951697,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.5,0.9495327098757275,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.6,0.7795758885957245,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.7,0.6278912892422237,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.8,0.5587711796797458,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,7.9,0.8182181515318325,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.0,0.8392921944980648,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.1,0.8513361392207784,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.2,0.6140833697585776,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.3,0.9297692588634843,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.4,0.2203106133033546,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.5,0.46974451706297,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.6,0.7168948963468612,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.7,0.2113531055048689,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.8,0.5597260269071901,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,8.9,0.6239026974980106,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.0,0.4711431394760485,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.1,0.4203577200934381,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.2,0.5387639253178429,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.3,0.4132302674061968,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.4,0.8887993446022653,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.5,1.366927695829359,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.6,1.530943652461754,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.7,1.659910920937256,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.8,1.480752017225886,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,9.9,1.268592027369294,group3.xlsx,thf_n-heptane
+group3,thf_n-heptane,THF 5% / n-heptane 95%,10.0,1.084135815812856,group3.xlsx,thf_n-heptane
+group3,thf_toluene,THF 5% / toluene 95%,0.0,0.0,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.1,0.4188722945000126,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.2,0.8583723723573913,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.3,1.01583656157576,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.4,0.7060583281752075,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.5,0.8405419941320335,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.6,1.208355189859605,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.7,1.311316397961416,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.8,0.9765736409940106,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,0.9,0.5503895531482927,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.0,0.6045977743428358,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.1,0.9698581062674687,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.2,0.8921925993669205,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.3,0.8942602908288024,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.4,0.8564970996810739,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.5,0.4089272351460673,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.6,0.6500450419099312,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.7,0.8602629476035311,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.8,0.9053436014378793,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,1.9,1.591634063498685,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.0,1.080447013534536,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.1,1.315923591020101,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.2,1.368191775931129,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.3,1.494364464704676,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.4,1.624433419812387,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.5,1.695373412147232,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.6,1.662339398493172,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.7,1.73337346669825,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.8,1.766219190504384,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,2.9,1.64535814053862,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.0,1.856303674517982,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.1,1.867490704068652,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.2,1.690025932839518,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.3,1.727501650642459,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.4,1.605996094265578,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.5,1.714067388242218,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.6,2.072313539908542,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.7,1.709586425788671,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.8,1.387009676124698,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,3.9,1.509164193280041,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.0,1.282322275401252,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.1,1.478537691644188,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.2,1.427296059929108,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.3,1.558515925916015,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.4,1.604967576020512,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.5,1.43982075109233,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.6,1.842235879504225,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.7,1.833391874044708,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.8,1.917614761775983,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,4.9,2.261105519827783,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.0,2.137858274947712,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.1,1.740311407604189,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.2,2.102840700885572,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.3,2.337258037640992,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.4,1.952211201854504,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.5,1.783834093153796,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.6,1.845906793407515,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.7,2.448440099250292,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.8,1.97788719793816,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,5.9,1.505844946155013,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.0,1.41436851394724,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.1,1.441515754982829,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.2,1.617974907246057,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.3,2.013305969115357,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.4,1.660629034235076,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.5,1.495923550986519,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.6,1.258605904173042,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.7,0.9309759608909584,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.8,1.136420494376619,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,6.9,1.013079002700718,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.0,1.398767470705673,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.1,1.233316880939795,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.2,0.9733024307912531,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.3,1.188195715769141,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.4,0.8926382505390584,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.5,0.5750921499884308,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.6,0.6316408231537264,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.7,0.4429117934924763,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.8,1.010830686403441,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,7.9,0.8579239458923447,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.0,0.8192169939207112,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.1,0.776880147610862,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.2,1.188566422343581,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.3,1.017796274436558,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.4,1.09395212685312,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.5,1.201151828924226,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.6,1.064076880158308,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.7,0.9827737912902657,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.8,0.7115689526788059,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,8.9,1.299491528502674,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.0,1.45267515620958,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.1,1.045861125367466,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.2,1.548260730554483,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.3,1.68479480984341,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.4,1.625177013909762,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.5,1.869053744182371,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.6,1.589051609278835,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.7,1.716603982948256,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.8,1.58434498947141,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,9.9,1.787787326352092,group3.xlsx,thf_toluene
+group3,thf_toluene,THF 5% / toluene 95%,10.0,1.302420970545016,group3.xlsx,thf_toluene
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.0,0.0,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.1,0.7413231889240769,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.2,0.8953903488375243,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.3,1.274400887176343,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.4,1.694700199406235,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.5,1.56850230750495,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.6,1.557170154628383,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.7,1.348037056174359,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.8,0.7721062365351988,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,0.9,1.17256284434629,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.0,1.174865999950283,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.1,1.182297410689866,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.2,1.249768516815964,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.3,1.341126815945181,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.4,1.253289860373063,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.5,1.403313464132931,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.6,1.761110119021547,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.7,1.820540967022024,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.8,1.97944909515469,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,1.9,1.897227688816714,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.0,2.076483253320106,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.1,1.89080928338155,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.2,1.800406010474598,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.3,2.486903308586336,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.4,2.580194046512265,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.5,2.687865969460929,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.6,2.677806492362939,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.7,2.757555600466988,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.8,2.764356251059673,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,2.9,2.682577562990212,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.0,2.573020613701921,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.1,2.405699808891157,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.2,2.354812976405506,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.3,2.27614516012347,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.4,2.594067230174306,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.5,2.513014083413244,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.6,1.827812621800323,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.7,1.927383306108023,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.8,1.755607541311628,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,3.9,1.67597077895969,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.0,1.567291843806689,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.1,1.60963166233612,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.2,1.7510253290573,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.3,2.029833272949403,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.4,2.184940673558937,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.5,1.802137303896756,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.6,1.648404982795016,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.7,2.173919840667824,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.8,1.968877649975287,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,4.9,1.920647289840142,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.0,2.055612606459229,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.1,1.888774233786914,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.2,1.880046240774615,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.3,2.069824189009491,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.4,1.607564868288057,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.5,1.792912745870477,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.6,1.788178407090404,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.7,2.14991708276478,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.8,2.428843755747268,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,5.9,2.260500390342634,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.0,2.281580816470051,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.1,2.418000377923443,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.2,2.877813221516078,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.3,2.788328079821608,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.4,2.577094171706499,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.5,2.822764288842265,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.6,2.940668453293412,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.7,2.83115795630461,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.8,3.086440583392627,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,6.9,3.444576189964684,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.0,3.186238380640187,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.1,3.190384490086647,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.2,3.300001220622692,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.3,3.116482594966916,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.4,3.434630572542791,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.5,3.149235359295742,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.6,2.930882607225076,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.7,3.318878678623062,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.8,3.235114957579882,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,7.9,3.199555873398426,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.0,3.205684353885739,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.1,2.366755816060417,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.2,2.6554285511376,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.3,2.677604839784559,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.4,2.979561191543885,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.5,2.240529433290526,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.6,2.324594997485792,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.7,2.710077523174514,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.8,2.91276173314454,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,8.9,3.294143580947517,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.0,3.319770386543665,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.1,3.246052542155523,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.2,3.22333428445416,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.3,2.850967724299633,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.4,2.845316808002345,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.5,2.6814050316388,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.6,3.046723636572625,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.7,2.933541899416182,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.8,2.80241527429009,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,9.9,2.845149511143794,group3.xlsx,toluene_n-heptane
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,10.0,3.064594875066951,group3.xlsx,toluene_n-heptane

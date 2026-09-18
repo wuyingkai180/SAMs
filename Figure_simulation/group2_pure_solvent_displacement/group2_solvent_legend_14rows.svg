@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="275.8575pt" height="453.52625pt" viewBox="0 0 275.8575 453.52625" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-17T15:38:53.389239</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 453.52625 
+L 275.8575 453.52625 
+L 275.8575 0 
+L 0 0 
+L 0 453.52625 
+z
+" style="fill: none"/>
+  </g>
+  <g id="legend_1">
+   <g id="line2d_1">
+    <path d="M 13.76 21.075625 
+L 38.76 21.075625 
+L 63.76 21.075625 
+" style="fill: none; stroke: #e42555; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="28.075625" transform="rotate(-0 79.76 28.075625)">n-heptane</text>
+   </g>
+   <g id="line2d_2">
+    <path d="M 13.76 52.36625 
+L 38.76 52.36625 
+L 63.76 52.36625 
+" style="fill: none; stroke: #9a1d80; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="59.36625" transform="rotate(-0 79.76 59.36625)">DMC</text>
+   </g>
+   <g id="line2d_3">
+    <path d="M 13.76 83.656875 
+L 38.76 83.656875 
+L 63.76 83.656875 
+" style="fill: none; stroke: #2240b4; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="90.656875" transform="rotate(-0 79.76 90.656875)">CPME</text>
+   </g>
+   <g id="line2d_4">
+    <path d="M 13.76 114.9475 
+L 38.76 114.9475 
+L 63.76 114.9475 
+" style="fill: none; stroke: #14a368; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="121.9475" transform="rotate(-0 79.76 121.9475)">toluene</text>
+   </g>
+   <g id="line2d_5">
+    <path d="M 13.76 146.238125 
+L 38.76 146.238125 
+L 63.76 146.238125 
+" style="fill: none; stroke: #31d870; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="153.238125" transform="rotate(-0 79.76 153.238125)">acetone</text>
+   </g>
+   <g id="line2d_6">
+    <path d="M 13.76 177.52875 
+L 38.76 177.52875 
+L 63.76 177.52875 
+" style="fill: none; stroke: #18bfb1; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="184.52875" transform="rotate(-0 79.76 184.52875)">ethanol</text>
+   </g>
+   <g id="line2d_7">
+    <path d="M 13.76 208.819375 
+L 38.76 208.819375 
+L 63.76 208.819375 
+" style="fill: none; stroke: #a32014; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="215.819375" transform="rotate(-0 79.76 215.819375)">acetonitrile</text>
+   </g>
+   <g id="line2d_8">
+    <path d="M 13.76 240.11 
+L 38.76 240.11 
+L 63.76 240.11 
+" style="fill: none; stroke: #22b429; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="247.11" transform="rotate(-0 79.76 247.11)">methanol</text>
+   </g>
+   <g id="line2d_9">
+    <path d="M 13.76 271.400625 
+L 38.76 271.400625 
+L 63.76 271.400625 
+" style="fill: none; stroke: #d89a31; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="278.400625" transform="rotate(-0 79.76 278.400625)">ethyl acetate</text>
+   </g>
+   <g id="line2d_10">
+    <path d="M 13.76 302.925625 
+L 38.76 302.925625 
+L 63.76 302.925625 
+" style="fill: none; stroke: #c331d8; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="309.925625" transform="rotate(-0 79.76 309.925625)">THF</text>
+   </g>
+   <g id="line2d_11">
+    <path d="M 13.76 334.21625 
+L 38.76 334.21625 
+L 63.76 334.21625 
+" style="fill: none; stroke: #1d619a; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="341.21625" transform="rotate(-0 79.76 341.21625)">p-xylene</text>
+   </g>
+   <g id="line2d_12">
+    <path d="M 13.76 365.74125 
+L 38.76 365.74125 
+L 63.76 365.74125 
+" style="fill: none; stroke: #84e425; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="372.74125" transform="rotate(-0 79.76 372.74125)">cyclohexane</text>
+   </g>
+   <g id="line2d_13">
+    <path d="M 13.76 397.26625 
+L 38.76 397.26625 
+L 63.76 397.26625 
+" style="fill: none; stroke: #a3bf18; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="404.26625" transform="rotate(-0 79.76 404.26625)">propylene carbonate</text>
+   </g>
+   <g id="line2d_14">
+    <path d="M 13.76 428.79125 
+L 38.76 428.79125 
+L 63.76 428.79125 
+" style="fill: none; stroke: #4414a3; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 20px; font-family: 'Arial'; text-anchor: start" x="79.76" y="435.79125" transform="rotate(-0 79.76 435.79125)">isopropanol</text>
+   </g>
+  </g>
+ </g>
+</svg>

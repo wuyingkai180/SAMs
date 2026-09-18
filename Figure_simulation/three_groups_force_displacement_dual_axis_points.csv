@@ -1,4 +1,4 @@
-﻿group,system,display_label,color_hex,marker,mean_force_eV_A,max_disp_A
+group,system,display_label,color_hex,marker,mean_force_eV_A,max_disp_A
 group1,acetone_1_n-heptane_99,acetone 1% / n-heptane 99%,#4731d8,s,0.3970880429398276,2.86048993566022
 group1,acetone_10_n-heptane_90,acetone 10% / n-heptane 90%,#bf5e18,o,0.4799092818695466,3.949019018686989
 group1,acetone_20_n-heptane_80,acetone 20% / n-heptane 80%,#2ca314,^,0.5062904849141945,3.5173375813575527
@@ -20,7 +20,7 @@ group2,n-heptane,n-heptane,#e42555,D,0.4340910736816913,7.127363925937251
 group2,p-xylene,p-xylene,#1d619a,P,0.5378104167932858,2.089050144870105
 group2,propylene_carbonate,propylene carbonate,#a3bf18,X,0.6049072511986678,1.71348370777787
 group2,toluene,toluene,#14a368,<,0.4368200418610099,4.827873487595866
-group3,thf_n-heptane,THF / n-heptane,#2525e4,p,0.5345585814681749,2.17273435788069
-group3,thf_toluene,THF / toluene,#429a1d,h,0.4059122888877715,2.448440099250293
+group3,thf_n-heptane,THF 5% / n-heptane 95%,#2525e4,p,0.5345585814681749,2.17273435788069
+group3,thf_toluene,THF 5% / toluene 95%,#429a1d,h,0.4059122888877715,2.448440099250293
 group3,isopropanol_5_n-heptane_95,isopropanol 5% / n-heptane 95%,#b44d22,>,0.4524177481709493,3.6512837568046144
-group3,toluene_n-heptane,toluene / n-heptane,#bf1879,8,0.4348592718208002,3.444576189964684
+group3,toluene_n-heptane,toluene 5% / n-heptane 95%,#bf1879,8,0.4348592718208002,3.444576189964684

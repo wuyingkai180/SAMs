@@ -30,7 +30,7 @@ GROUP_TITLES = {
 def style():
     mpl.rcParams.update({
         "font.family": "sans-serif", "font.sans-serif": ["Arial", "DejaVu Sans"],
-        "font.size": 8.5, "axes.linewidth": 1.0, "axes.edgecolor": "#202428",
+        "font.size": 12, "axes.labelsize": 14, "xtick.labelsize": 12, "ytick.labelsize": 12, "axes.linewidth": 1.0, "axes.edgecolor": "#202428",
         "svg.fonttype": "none", "pdf.fonttype": 42,
     })
 
@@ -72,7 +72,7 @@ def k_alpha(summary):
                        marker=marker, s=102, edgecolor="#171A1D", linewidth=0.8, zorder=3)
         for row in q.itertuples(index=False):
             ax.annotate(row.display_label, (row.alpha_prefactor_A2_ps_alpha, row.alpha),
-                        xytext=(4, 3), textcoords="offset points", fontsize=7.2,
+                        xytext=(4, 3), textcoords="offset points", fontsize=10.5,
                         arrowprops={"arrowstyle": "-", "color": "#7A8085", "lw": 0.45})
         ax.axhline(1, color="#656A6F", lw=0.9, ls="--")
         ax.set(xlabel=r"TAMSD prefactor, $K_\alpha$ ($\mathrm{\AA^2\,ps^{-\alpha}}$)",
@@ -87,7 +87,7 @@ def k_alpha(summary):
                        marker=marker, s=102, edgecolor="#171A1D", linewidth=0.8, zorder=3)
         for row in q.itertuples(index=False):
             ax.annotate(row.display_label, (row.alpha_prefactor_A2_ps_alpha, row.alpha),
-                        xytext=(3, 2), textcoords="offset points", fontsize=6.2,
+                        xytext=(3, 2), textcoords="offset points", fontsize=10,
                         arrowprops={"arrowstyle": "-", "color": "#7A8085", "lw": 0.4})
         ax.axhline(1, color="#656A6F", lw=0.9, ls="--")
         ax.set(xlabel=r"TAMSD prefactor, $K_\alpha$ ($\mathrm{\AA^2\,ps^{-\alpha}}$)",
@@ -100,10 +100,14 @@ def k_alpha(summary):
 
 
 def paired_points(paired):
-    q = paired.sort_values(["group", "display_label"]).reset_index(drop=True)
+    q = paired.reset_index(drop=True)
+    group1 = q[q.group.eq('group1')].copy()
+    group1['_fraction'] = group1.system.str.extract(r'acetone_(\d+)_')[0].astype(int)
+    q = pd.concat([group1.sort_values('_fraction').drop(columns='_fraction'),
+                   q[~q.group.eq('group1')]], ignore_index=True)
     y = np.arange(len(q))
     labels = [f"{GROUP_NAMES[g]} | {s}" for g, s in zip(q.group, q.display_label)]
-    fig, (left, right) = plt.subplots(1, 2, figsize=(11.2, 11.5), sharey=True,
+    fig, (left, right) = plt.subplots(1, 2, figsize=(14, 11.5), sharey=True,
                                       gridspec_kw={"wspace": 0.06}, constrained_layout=False)
     fig.subplots_adjust(left=0.29, right=0.98, top=0.88, bottom=0.08)
     left.scatter(q.mean_force_eV_A, y, c=q.color_hex, marker="o", s=92,
@@ -113,15 +117,15 @@ def paired_points(paired):
     left.set_yticks(y); left.tick_params(axis="y", labelleft=False); left.invert_yaxis()
     right.tick_params(axis="y", left=False, labelleft=False)
     left.set_xlim(0.35, 0.80); right.set_xlim(0, 8)
-    left.set_xlabel("Mean force magnitude on OPA, |F| (eV Å⁻¹)")
+    left.set_xlabel("Mean force magnitude on OPA\n" + r"$|F|$ (eV Å$^{-1}$)")
     right.set_xlabel("Maximum OPA displacement (Å)")
     left.set_title("Mean force", fontsize=11, fontweight="bold")
     right.set_title("Maximum displacement", fontsize=11, fontweight="bold")
     for ax in (left, right): boxed(ax)
     handles = [Line2D([0], [0], marker="o", color="w", markerfacecolor="#5B6770", markeredgecolor="#202428", markersize=8, label="Mean force"),
                Line2D([0], [0], marker="D", color="w", markerfacecolor="#5B6770", markeredgecolor="#202428", markersize=7, label="Maximum displacement")]
-    fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 0.925), ncol=2,
-               frameon=True, edgecolor="#202428", fontsize=8)
+    fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.5, 0.95), ncol=2,
+               frameon=True, edgecolor="#202428", fontsize=11)
     fig.suptitle("Three groups | aligned comparisons without a correlation fit", fontsize=13, fontweight="bold", y=0.975)
     save(fig, "three_groups_force_displacement_paired_points")
 
@@ -136,9 +140,9 @@ def displacement(motion, summary):
     ax.set_title("All groups | complete OPA displacement trajectories", fontsize=13, fontweight="bold")
     boxed(ax)
     handles, labels = ax.get_legend_handles_labels()
-    fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, -0.02), ncol=4,
-               fontsize=6.1, frameon=True, edgecolor="#202428", fancybox=False)
-    fig.subplots_adjust(bottom=0.23)
+    fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, -0.02), ncol=3,
+               fontsize=10, frameon=True, edgecolor="#202428", fancybox=False)
+    fig.subplots_adjust(bottom=0.32)
     save(fig, "three_groups_all_displacement_curves")
 
 

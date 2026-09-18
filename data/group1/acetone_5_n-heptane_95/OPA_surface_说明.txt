@@ -1,0 +1,30 @@
+当前版本：仅前八个碳高亮，整个体系小幅旋转。
+
+在 OVITO 新会话中打开以下文件，以加载文件内颜色：
+acetone_n-heptane_final_300K_OPA_surface_highlight.xyz
+acetone_n-heptane_md_300K_OPA_surface_highlight.xyz
+
+前 8 个碳（原子 ID 44–51）使用柔和橙色。
+第 9–18 个碳（ID 52–61）使用与体系中普通碳相同的灰色 RGB=(0.565, 0.565, 0.565)。
+后段碳相连的氢（ID 23–43）也恢复普通氢的白色，避免长链尾段继续高亮。
+前八碳段的氢沿用浅暖色；氧、磷沿用元素配色。
+
+所有帧的全部原子与模拟盒一起绕原点先绕 Y 轴旋转 12°，再绕 Z 轴旋转 8°。
+此操作是刚体旋转，保持原子间距离及周期结构；原先 x=0 的展示侧面随之旋转。
+DisplayTranslation 记录旋转前的平移，DisplayRotation 记录随后施加的旋转。
+每个末帧文件为 1 帧，完整轨迹为 101 帧。原始 XYZ 和 traj 未修改。
+
+末帧 final 高亮文件仍保留 18 碳链。md 高亮轨迹已进一步截链并补氢，详见下方更新。
+分子编号和 OPA 属性沿用原文件，OPA == 1 仍会选中原来的整条链。
+仅选前八个碳可使用 ParticleIdentifier >= 44 && ParticleIdentifier <= 51。
+
+使用默认原子球显示。请避免沿用覆盖 Color 的旧修改器；可关闭 Simulation cell 线条。
+不要添加 Wrap at periodic boundaries，以免展示分子跨边界拆开。
+这些文件仅用于可视化，绝对位移及扩散分析请使用原始 traj。
+轨迹截链更新（仅 acetone_n-heptane_md_300K_OPA_surface_highlight.xyz）：
+全部 101 帧已删除原子 ID 52–61 的后十个碳及 ID 23–43 的相连氢。
+在第八个碳（ID 51）朝原第九个碳的断键方向补一个 H，C–H 长度为 1.09 Å；新 H 复用 ID 23。
+分子 1 现为 OPA，C8H19O3P，共 31 个原子；每帧体系总原子数为 10417。
+保留原子的 ID 和坐标、溶剂、模拟盒及已有旋转不变；原子 ID 不连续属于正常情况。
+该轨迹是用于展示的截链结构，未重新进行动力学模拟或几何优化。
+本次未修改 final 高亮文件及原始 traj/XYZ，因此 final 高亮文件不再对应此截链轨迹的最后一帧。

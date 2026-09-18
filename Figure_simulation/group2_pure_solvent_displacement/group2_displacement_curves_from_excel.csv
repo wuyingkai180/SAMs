@@ -1,0 +1,1415 @@
+group,system,display_label,time_ps,OPA_disp_norm_A,source_workbook,source_sheet,color_hex
+group2,acetone,acetone,0.0,0.0,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.1,0.8157104639865743,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.2,0.622015601025942,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.3,0.8251398246699327,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.4,0.9656720931845248,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.5,1.176160848028902,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.6,1.606469281952495,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.7,1.959592595818071,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.8,2.022343404416706,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,0.9,2.245960051282877,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.0,2.435725871457127,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.1,2.280694562497632,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.2,1.989103798277626,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.3,1.918326277671776,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.4,2.305765336381456,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.5,2.026796514081933,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.6,2.136211100647093,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.7,2.21605312981186,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.8,1.860633099105362,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,1.9,2.162313907382362,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.0,2.138384149116506,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.1,2.179067277495875,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.2,2.343732925620851,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.3,2.483780611073369,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.4,2.027327769149246,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.5,2.778272490568048,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.6,2.434364801632967,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.7,2.635538053562779,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.8,2.833253040388993,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,2.9,2.846399240006503,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.0,3.135445914285433,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.1,2.721410239366463,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.2,3.21407165206558,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.3,3.601016563078441,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.4,3.603909074303655,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.5,3.595851205850659,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.6,3.130159545674553,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.7,3.416414714075935,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.8,3.601663726240653,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,3.9,4.062544780020223,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.0,4.290585129036463,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.1,4.068173720140756,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.2,4.351394077786993,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.3,3.800338081379258,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.4,3.861133854268308,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.5,3.967848064383595,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.6,4.093553917089594,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.7,3.712017754575256,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.8,3.725143173123341,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,4.9,3.534311762482095,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.0,3.637297936980333,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.1,3.713011371202251,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.2,3.307126790287317,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.3,3.179540879880044,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.4,3.034459702214185,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.5,3.247072976180244,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.6,3.024673314332685,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.7,2.829922920369459,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.8,2.40798625585643,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,5.9,2.822463131550141,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.0,3.362921035497795,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.1,3.754778443852243,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.2,3.786090182445727,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.3,3.871717260506751,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.4,3.799345670154614,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.5,3.967159517398154,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.6,4.203114721455249,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.7,4.091714155131825,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.8,3.908233317999715,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,6.9,3.48116709310089,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.0,3.435103595152371,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.1,3.744958089923487,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.2,3.706252304466916,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.3,3.818585511342348,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.4,3.868921905209563,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.5,3.811775906483602,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.6,3.993473905862244,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.7,3.689338678913825,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.8,3.564079335064953,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,7.9,3.52700351578215,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.0,3.247392529309382,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.1,3.179712448779231,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.2,3.313624936807469,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.3,3.492326541690147,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.4,3.859697319059479,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.5,3.985348116702674,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.6,4.145602411174946,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.7,4.074024930167454,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.8,4.085479590420804,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,8.9,4.274892794374656,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.0,4.099141774088748,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.1,4.325354544157526,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.2,3.992804395758145,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.3,3.893154717575445,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.4,3.617612076940362,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.5,3.493525298626304,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.6,3.891063048001114,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.7,3.787509120674473,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.8,3.482501593809452,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,9.9,3.349769841853417,group2.xlsx,acetone,#31d870
+group2,acetone,acetone,10.0,3.015136878788349,group2.xlsx,acetone,#31d870
+group2,acetonitrile,acetonitrile,0.0,0.0,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.1,0.8192000599317503,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.2,1.11977728052058,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.3,1.297480945700365,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.4,1.058627622302622,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.5,0.9993756442229486,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.6,1.11641883288037,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.7,1.360203378551275,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.8,1.134365858313461,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,0.9,1.338300867442086,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.0,1.480675698969604,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.1,1.772778009518002,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.2,1.311519354596637,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.3,1.163206764757972,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.4,1.086377794195763,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.5,1.174555715358145,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.6,0.7503177725212613,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.7,1.013033340535755,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.8,0.8171078126167168,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,1.9,0.5795146990310204,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.0,1.185383806104585,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.1,1.669519605262685,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.2,1.844405046246681,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.3,2.010431949652842,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.4,2.207683745820908,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.5,1.908625848289946,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.6,2.109926008183774,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.7,2.238663090262392,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.8,2.381836608448879,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,2.9,2.205344357092026,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.0,2.115252553056203,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.1,2.462530931324087,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.2,2.783517225707262,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.3,2.411768758448495,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.4,2.719259851341111,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.5,2.741717827945306,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.6,2.58635416386965,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.7,2.257554722104381,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.8,2.738870733871027,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,3.9,2.551371522742302,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.0,2.512666189437022,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.1,2.326152146223964,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.2,2.195769759511444,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.3,2.279070317512324,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.4,2.378028196199382,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.5,2.569002659949212,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.6,2.844513322601201,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.7,2.758992960447074,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.8,3.037157238159449,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,4.9,3.031519872803866,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.0,3.205840718402938,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.1,3.374697767064744,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.2,3.289488918836595,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.3,3.329752502007301,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.4,2.900692282335373,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.5,2.899464654018493,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.6,3.215503110857115,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.7,3.145206848402649,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.8,3.315199209226146,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,5.9,3.050943871479025,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.0,3.040656144166311,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.1,2.990627898011568,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.2,2.973350224588641,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.3,3.08128540138238,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.4,3.322871356026619,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.5,3.544587041431357,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.6,3.150900135972413,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.7,3.047679197816397,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.8,2.915125442711707,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,6.9,2.838956509496518,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.0,3.10693049378771,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.1,3.217697921313361,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.2,3.534541139485139,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.3,3.778569244864682,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.4,3.327437499046536,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.5,3.185260062929283,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.6,3.320406706995048,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.7,3.052175959552118,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.8,3.181160586169788,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,7.9,3.067216167732662,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.0,3.166991125515593,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.1,3.106485203032457,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.2,3.406951226858783,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.3,3.262551158247077,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.4,3.188764900782844,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.5,3.571755036371072,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.6,3.192639528657694,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.7,3.661093461523096,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.8,3.641921495615617,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,8.9,3.312587864811135,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.0,3.066823610431704,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.1,3.047017750290212,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.2,2.786765944491624,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.3,2.684941975058683,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.4,2.447184497807429,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.5,2.729194100643798,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.6,2.677691889969699,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.7,2.71715131249083,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.8,2.220764387718051,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,9.9,2.312745497396148,group2.xlsx,acetonitrile,#a32014
+group2,acetonitrile,acetonitrile,10.0,2.626714000548509,group2.xlsx,acetonitrile,#a32014
+group2,CPME,CPME,0.0,0.0,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.1,0.1484718911406467,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.2,0.3814938863556455,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.3,1.23520337279316,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.4,0.991842469564812,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.5,1.066961479030747,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.6,1.753041259917823,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.7,1.695511808968953,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.8,1.473534706328545,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,0.9,1.524125566756866,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.0,1.505844150690294,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.1,1.14763750115801,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.2,1.169748804069914,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.3,1.148491435168568,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.4,0.7283141910464638,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.5,0.8495825033552998,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.6,1.055726885485793,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.7,1.154334310275053,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.8,1.101835342322329,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,1.9,1.088215604904145,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.0,1.329391537622091,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.1,1.49143476386118,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.2,1.691985634938155,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.3,1.83111919692838,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.4,1.962510218178078,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.5,1.761018237596626,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.6,1.600014103858358,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.7,1.79518452683669,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.8,1.787995074228779,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,2.9,1.551567085596168,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.0,1.590413965022469,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.1,1.628517820737961,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.2,2.108343693430097,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.3,2.293947687448928,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.4,1.763559172636471,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.5,1.555914549981069,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.6,1.846384935515864,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.7,2.016831600701936,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.8,2.34068420536314,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,3.9,2.105636709066931,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.0,2.310892631895284,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.1,2.346770249842036,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.2,2.64266751640315,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.3,2.843416160427797,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.4,3.06063491287551,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.5,2.747909494832374,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.6,2.921534445132639,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.7,3.14802474069662,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.8,3.452648604196857,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,4.9,3.772099738347976,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.0,3.616340487835615,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.1,3.927013324861126,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.2,3.998316569763251,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.3,4.455108281355628,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.4,4.413005746970312,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.5,4.305883603203794,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.6,4.566462081839335,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.7,4.260650760695397,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.8,4.278417287580599,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,5.9,4.243609357072155,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.0,4.282145882444111,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.1,4.408893801084998,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.2,4.451495153076101,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.3,4.580417226910033,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.4,4.618932498469721,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.5,4.931374588545951,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.6,4.428943180429829,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.7,4.410942388812263,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.8,4.221065974054705,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,6.9,4.170780917508556,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.0,3.97500084899655,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.1,3.746410308943946,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.2,3.805324505102787,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.3,3.880912205082928,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.4,3.63467413052691,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.5,3.569042499005378,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.6,3.737919148643636,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.7,3.968549640513211,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.8,4.02842831164313,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,7.9,4.049849955925867,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.0,4.218742731760288,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.1,4.069263754201816,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.2,3.917479006085753,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.3,4.48187944544774,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.4,4.313375490022454,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.5,4.236707466577336,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.6,4.617534699835888,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.7,4.73414228840188,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.8,4.684594006821836,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,8.9,4.966504581248684,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.0,5.075232931554171,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.1,4.877654073969883,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.2,5.157328001955016,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.3,5.078816146922455,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.4,5.295745055403115,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.5,5.146162597693559,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.6,4.898510475317721,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.7,5.349184294070722,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.8,5.340263494170032,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,9.9,5.042957793236937,group2.xlsx,CPME,#2240b4
+group2,CPME,CPME,10.0,4.89433444037442,group2.xlsx,CPME,#2240b4
+group2,cyclohexane,cyclohexane,0.0,0.0,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.1,0.5049693650910412,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.2,0.4353144892799548,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.3,0.6064436752434325,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.4,0.9344068112272128,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.5,0.5981513678271428,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.6,0.7688895858569106,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.7,0.651966482927375,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.8,0.8885331408255438,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,0.9,0.9876198285775416,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.0,0.6700911953363958,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.1,0.8301073482504454,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.2,0.9507344730394354,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.3,0.7587644412455308,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.4,0.614973090385882,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.5,0.7822620222805503,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.6,0.62539923581829,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.7,0.884704770569911,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.8,0.6608243131621733,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,1.9,0.6202791859387906,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.0,0.552087582620181,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.1,0.4861144289609436,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.2,0.7348453263966039,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.3,0.8707502448161916,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.4,0.7253195157584008,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.5,1.142541624624035,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.6,0.9514469648045836,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.7,0.8655648802855526,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.8,1.284342013926543,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,2.9,1.289711576082581,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.0,1.679386046333136,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.1,1.531530980538222,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.2,1.759158228885242,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.3,1.662635849194497,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.4,1.233479635468937,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.5,1.075396445718682,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.6,1.258826189625002,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.7,1.33469673812866,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.8,1.129197819959357,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,3.9,0.9932181227757132,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.0,1.310631710296656,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.1,1.205418181692881,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.2,1.078504472533616,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.3,1.08083518639483,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.4,1.304418924950336,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.5,1.854030486287961,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.6,1.933374362462613,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.7,2.23396976109141,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.8,2.068160834780509,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,4.9,2.631498651482704,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.0,2.694372852534677,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.1,2.649229453474751,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.2,2.854874657597128,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.3,2.61458413349218,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.4,2.59869131810196,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.5,2.109511589557414,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.6,2.146121285325638,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.7,2.182559614313746,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.8,2.212248270363574,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,5.9,2.228168569668143,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.0,1.99014176554374,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.1,2.269391646938607,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.2,2.198922643984856,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.3,2.319433853996221,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.4,2.292916078744445,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.5,1.888192331174431,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.6,1.626072372928527,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.7,1.476539144368285,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.8,1.732395205351262,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,6.9,1.263442073159888,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.0,1.215553086831445,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.1,1.359048875451861,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.2,1.268336605709133,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.3,1.428991995368788,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.4,1.777923596425353,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.5,1.697760514573647,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.6,1.957874109230398,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.7,2.272828866982274,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.8,2.216227467014753,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,7.9,2.277563492695686,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.0,2.113072194328292,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.1,2.014836883808468,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.2,1.858841161906657,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.3,1.954409876190707,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.4,2.210199703465384,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.5,2.281830493201792,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.6,1.909321843029678,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.7,2.238463643891612,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.8,2.193560161313136,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,8.9,1.65082679725602,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.0,1.401040886342164,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.1,1.659435230483029,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.2,1.471310245735498,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.3,1.504306106871734,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.4,1.570540292550707,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.5,1.293931865984989,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.6,1.597617226858138,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.7,1.209465275803153,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.8,1.2490273104196,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,9.9,1.307547545738838,group2.xlsx,cyclohexane,#84e425
+group2,cyclohexane,cyclohexane,10.0,1.520775067159629,group2.xlsx,cyclohexane,#84e425
+group2,DMC,DMC,0.0,0.0,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.1,0.1683008794715926,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.2,0.534698001106623,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.3,0.3362489718606339,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.4,0.6356609686472442,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.5,0.7168234823037082,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.6,1.485923055903932,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.7,1.73084682452848,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.8,2.000688723775864,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,0.9,2.12723634746366,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.0,1.868441002208013,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.1,2.173346522068406,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.2,2.182800481459332,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.3,2.468100281760308,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.4,2.090882832082888,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.5,2.457263903232795,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.6,2.216362232625305,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.7,2.440005327306165,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.8,2.35088531123718,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,1.9,2.125372039197117,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.0,2.039413999052609,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.1,2.015593569376305,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.2,2.535251427275464,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.3,2.341526711417202,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.4,2.350418254990214,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.5,2.280026604113441,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.6,1.875918310025728,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.7,1.702554372673502,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.8,1.83833785631173,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,2.9,2.027141431316568,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.0,1.880137491067588,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.1,2.143146642943998,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.2,2.215381429931054,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.3,2.08861690849699,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.4,2.165390271821972,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.5,2.337710978823006,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.6,2.604084067342233,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.7,2.436144217935883,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.8,2.405302881483887,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,3.9,2.644540549377505,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.0,2.396746632348121,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.1,2.160843415156061,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.2,2.600032485892803,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.3,2.614842591032661,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.4,2.568051250168093,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.5,2.722514035699048,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.6,2.696267773344723,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.7,2.812339982227565,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.8,3.224619361456801,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,4.9,3.742458915143438,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.0,3.774278185558808,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.1,3.515550904885615,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.2,3.517526764705494,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.3,3.615283888736559,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.4,3.700140875291118,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.5,3.719740939585818,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.6,3.623490661032948,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.7,3.98270656163931,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.8,4.251395999094334,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,5.9,4.25804160600947,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.0,4.284020596128254,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.1,4.842356181404367,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.2,4.859448654728107,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.3,5.122724016650266,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.4,5.206874602240717,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.5,5.020077360393239,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.6,5.121047924902371,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.7,4.928573627702007,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.8,4.979133233541043,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,6.9,4.743057359449201,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.0,4.627437512333779,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.1,4.64138131665253,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.2,4.715306135547991,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.3,4.743801796922295,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.4,4.829295562001583,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.5,4.309233053471075,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.6,4.422798269340228,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.7,4.384848841356545,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.8,4.685657092745764,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,7.9,4.431205646376376,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.0,4.651292187468572,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.1,4.26200663205174,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.2,4.659199855402801,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.3,5.074470593639555,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.4,4.81235813228801,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.5,4.252639449195105,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.6,4.657907367490986,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.7,4.88834222083173,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.8,4.452824937096975,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,8.9,4.594403737508215,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.0,4.543626095608514,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.1,4.704922784890872,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.2,5.265582035978024,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.3,5.306819378026463,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.4,5.035252687461091,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.5,4.784623499405008,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.6,5.067092155583707,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.7,4.937629234813235,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.8,4.720906455207605,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,9.9,5.227749638585014,group2.xlsx,DMC,#9a1d80
+group2,DMC,DMC,10.0,5.044415296754916,group2.xlsx,DMC,#9a1d80
+group2,ethanol,ethanol,0.0,0.0,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.1,0.2050374748416295,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.2,0.7368076697327788,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.3,0.8394210502363019,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.4,0.8679362187177267,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.5,0.582060753046695,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.6,0.7006117006320528,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.7,1.168365370724799,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.8,1.180288113569229,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,0.9,0.9886827160731166,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.0,1.031539648097837,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.1,0.7644254874622971,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.2,0.9933343125354762,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.3,0.849115316845392,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.4,0.926980191855266,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.5,1.054370337233807,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.6,0.9937434823338972,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.7,0.7318766712047442,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.8,0.8963782125596687,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,1.9,0.5344956282129208,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.0,0.1954232969562107,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.1,0.2076602474013073,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.2,0.4268895870840716,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.3,0.2940362786807484,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.4,0.5627618892023455,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.5,0.3428061164216158,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.6,1.07464336315011,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.7,0.931003848479836,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.8,0.7232549807771208,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,2.9,0.6964374110615745,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.0,1.297799265791169,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.1,1.418493393888922,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.2,1.248085408961644,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.3,1.270015361344521,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.4,1.393601429133615,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.5,1.18561937186747,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.6,0.8744616759531072,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.7,0.9200693630734952,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.8,0.844057393242467,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,3.9,0.878384822387253,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.0,1.169743775262303,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.1,1.190078030741296,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.2,0.7320666143305882,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.3,0.6837619522788138,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.4,1.149246391706453,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.5,1.051197806527872,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.6,1.154198050373285,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.7,1.395315629391273,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.8,1.40940624620481,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,4.9,1.901947906739036,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.0,2.232172217165493,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.1,1.484240372262048,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.2,1.731993569470712,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.3,1.11760980966517,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.4,1.261877317015129,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.5,1.205784640001519,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.6,1.251309285529991,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.7,1.351473447319175,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.8,1.734068525549123,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,5.9,1.622231249680195,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.0,1.859436552837603,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.1,2.081799680118825,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.2,2.140959372790441,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.3,2.160727646856266,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.4,2.018798815114131,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.5,2.216586284367678,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.6,2.336083648652526,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.7,2.1032693206239,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.8,2.220880201734822,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,6.9,2.180659799479037,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.0,2.338685039208626,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.1,2.200405023306848,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.2,2.068788243865609,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.3,2.241646110046922,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.4,2.744842886295485,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.5,2.468723280667743,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.6,1.892406543842433,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.7,2.000384408484813,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.8,2.317329410577786,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,7.9,2.281626845304332,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.0,2.358715139111517,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.1,2.653518563051275,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.2,2.882335542677218,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.3,3.698906019191003,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.4,3.716642856292872,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.5,3.123420103768658,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.6,3.355876123914779,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.7,2.989234582627343,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.8,2.813287883328877,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,8.9,2.618722672917091,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.0,2.952236757704979,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.1,2.677613154240857,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.2,2.348801944416513,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.3,2.348592367724368,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.4,2.662553107903221,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.5,2.879720990427582,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.6,3.248319152738583,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.7,3.186151669393981,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.8,3.143468900651651,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,9.9,3.066763448985976,group2.xlsx,ethanol,#18bfb1
+group2,ethanol,ethanol,10.0,2.924078848151761,group2.xlsx,ethanol,#18bfb1
+group2,ethyl_acetate,ethyl acetate,0.0,0.0,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.1,0.4209499252137046,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.2,0.8005081373248181,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.3,0.9338328028025874,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.4,0.8223292186624945,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.5,0.8152057974164926,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.6,0.5518738993593206,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.7,0.589056812144416,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.8,0.657704879840886,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,0.9,0.5263401995626592,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.0,0.4064059666154273,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.1,0.4267513254691609,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.2,0.5836188707219567,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.3,0.7885491895585443,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.4,0.4335845461521075,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.5,0.3769513313211437,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.6,0.6361485100046289,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.7,0.2682610381460067,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.8,0.1465713212444926,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,1.9,0.5952077268600211,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.0,0.5982636843265902,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.1,0.6844917476677832,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.2,0.9202678690105548,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.3,0.6373717729961565,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.4,0.8301657636103651,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.5,1.070457263636443,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.6,1.114456170150971,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.7,0.9101706986377932,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.8,0.5705891452993548,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,2.9,0.5976926297760968,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.0,0.2817315714154225,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.1,0.1576560356652158,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.2,0.4613779578438764,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.3,0.7773223737677323,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.4,0.9662829209638076,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.5,0.8088131833028964,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.6,0.9780747571247164,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.7,0.8945913080701754,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.8,0.1033868123863798,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,3.9,0.2619729788018951,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.0,0.7251340421368263,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.1,1.334468308833461,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.2,1.224059830111475,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.3,0.8245814141184075,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.4,0.7105429417605188,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.5,0.963316682750489,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.6,0.9686184282538596,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.7,1.164507070577928,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.8,0.9809779755854094,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,4.9,0.9287955879146644,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.0,1.019474233256227,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.1,1.136107155883323,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.2,1.175582741079138,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.3,1.228357316146756,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.4,1.378852337476725,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.5,1.287228029924745,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.6,1.440666160188374,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.7,1.116937856551448,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.8,1.138731434220161,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,5.9,1.40329191067571,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.0,1.487335384719429,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.1,1.417964576415715,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.2,1.324543582984318,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.3,1.145265981494066,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.4,0.94929785482969,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.5,1.428263015228685,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.6,1.479726080115646,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.7,1.436372670841122,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.8,1.374227055040983,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,6.9,1.137743827877959,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.0,1.097209400245412,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.1,1.330469036039476,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.2,1.434994900326045,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.3,1.175840509760236,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.4,1.603690556060722,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.5,1.5706759736949,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.6,1.710482670089134,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.7,2.226123058219389,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.8,1.812453959701454,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,7.9,1.780950739062605,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.0,2.053230260924054,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.1,2.171855088003198,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.2,1.971077067412668,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.3,1.820740326124884,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.4,1.215458056315672,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.5,1.442174094987076,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.6,1.325665241806803,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.7,1.265476839221205,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.8,1.682940968170421,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,8.9,1.558281711795935,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.0,1.572378896313154,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.1,1.767150609151813,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.2,1.658760088867934,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.3,1.740502356440903,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.4,1.847217283428162,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.5,2.203180885388467,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.6,1.965754397375142,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.7,2.12134654380065,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.8,2.186168250949746,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,9.9,2.242025400971561,group2.xlsx,ethyl_acetate,#d89a31
+group2,ethyl_acetate,ethyl acetate,10.0,2.34936848637441,group2.xlsx,ethyl_acetate,#d89a31
+group2,isopropanol,isopropanol,0.0,0.0,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.1,0.540095009171644,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.2,0.4112791378986435,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.3,0.4066730682671082,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.4,0.6158804502574471,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.5,0.4000097826661082,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.6,0.633203944328087,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.7,0.8574541196287494,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.8,1.351943140111066,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,0.9,1.508913753407287,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.0,1.314999957597722,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.1,1.361562161471748,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.2,1.654110610075509,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.3,1.595016515856396,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.4,2.032374940996248,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.5,1.904411971073873,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.6,2.262472929684014,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.7,2.5900573909705,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.8,1.959296693625057,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,1.9,1.764960429772682,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.0,1.565328530654117,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.1,1.489342865951152,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.2,1.874800287546545,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.3,2.057679741679219,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.4,1.678736611388762,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.5,1.74071640772913,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.6,1.882298672795977,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.7,1.565361529723223,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.8,1.364222773963693,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,2.9,1.509702355271718,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.0,1.934459688916574,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.1,2.335807014799384,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.2,2.534818448871854,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.3,2.369640484348036,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.4,1.745939407787088,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.5,1.538251823187319,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.6,1.653784483268999,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.7,1.730712451449597,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.8,1.583622700339935,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,3.9,1.791710684360832,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.0,1.886987411521712,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.1,2.101149350476765,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.2,2.131608734347723,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.3,1.897429163163158,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.4,1.818476427953463,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.5,1.935361924089123,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.6,2.051749074173895,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.7,2.077446377073232,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.8,1.621018096019335,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,4.9,1.448296857996736,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.0,1.52230301529291,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.1,1.694914787621285,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.2,1.881335774498493,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.3,2.246034688270067,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.4,1.651751463538673,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.5,2.099169047300419,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.6,2.220961170909617,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.7,1.971205510439812,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.8,1.541576965697718,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,5.9,1.118498892642382,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.0,0.7900453352712831,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.1,1.037549634952191,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.2,1.127201799306724,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.3,0.8684378219154487,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.4,1.071574612904473,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.5,1.130920016780149,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.6,0.6105808190007903,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.7,0.7067542352055702,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.8,1.047317701149478,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,6.9,0.6085280412614982,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.0,0.8465065192850051,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.1,0.8237372303251678,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.2,0.7016110649597131,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.3,0.7916103517328764,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.4,0.946244103239152,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.5,0.9086879785565074,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.6,0.6541676465088926,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.7,0.9744114023421218,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.8,0.4464502795972517,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,7.9,0.6095929556872081,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.0,0.4597414156326925,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.1,0.7821157994821218,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.2,0.3270870178253223,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.3,0.4474551695392945,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.4,0.6765974166811064,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.5,1.150538180300487,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.6,0.7672225972190768,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.7,0.4990843095523044,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.8,0.2782455277149118,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,8.9,0.1682124270969928,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.0,0.9229874474384068,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.1,0.7106937349595537,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.2,0.4485077316829683,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.3,0.7185692910836358,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.4,0.8560120633615611,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.5,0.5924784209004081,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.6,0.4224924855454131,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.7,0.2988780627424638,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.8,0.6485838295138103,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,9.9,0.8757160663429574,group2.xlsx,isopropanol,#4414a3
+group2,isopropanol,isopropanol,10.0,0.6470600775905196,group2.xlsx,isopropanol,#4414a3
+group2,methanol,methanol,0.0,0.0,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.1,0.4931377315312663,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.2,0.5549814456235885,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.3,0.7622885705456817,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.4,1.121907413956507,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.5,0.8681546295674547,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.6,1.111947241287597,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.7,0.8173370755035476,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.8,1.141016523547532,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,0.9,0.8351711212390115,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.0,0.8178980406291112,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.1,1.154408882508656,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.2,1.29042381890771,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.3,1.085829827577595,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.4,1.041810943221997,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.5,0.938300585309014,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.6,0.6584494247241928,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.7,0.936036138031496,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.8,1.026429591053815,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,1.9,0.6755729216457048,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.0,0.8792402290036877,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.1,0.6464621954740063,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.2,0.4952086345382846,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.3,0.5012655332785587,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.4,0.7756830246711606,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.5,0.7625352889470749,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.6,0.7666754573852642,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.7,1.168195759721704,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.8,1.361427185438471,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,2.9,1.016300667785131,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.0,1.040316337945433,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.1,0.9634292816145008,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.2,0.9016455622048416,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.3,0.8251813080461964,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.4,1.345164453743522,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.5,1.458379700713557,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.6,1.508716384408849,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.7,1.103698364233839,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.8,0.9946761157974396,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,3.9,1.064711596700126,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.0,0.9848200085306896,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.1,0.5416223880725686,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.2,0.8008760935209848,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.3,0.7263542006584262,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.4,0.8857371126330823,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.5,0.7991656080007707,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.6,0.6259569732203375,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.7,0.6562914509383783,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.8,0.6423916599917046,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,4.9,0.625333143583679,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.0,0.4536555639613424,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.1,0.5553316416649705,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.2,0.4528165262266745,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.3,0.9350842126586868,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.4,0.8974470302331778,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.5,0.2682005850110107,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.6,0.7145543015936879,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.7,0.5526502536154024,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.8,0.5352467850773316,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,5.9,0.7199982285760576,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.0,0.2588840690023631,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.1,0.2405479234177447,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.2,0.1946452628653464,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.3,0.4655902970049474,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.4,0.9370809045819598,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.5,0.9710709099843764,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.6,0.8214832799328906,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.7,0.7283163462306644,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.8,1.163156180281023,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,6.9,1.052182438525179,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.0,0.8583044884361818,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.1,1.002053517921113,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.2,1.235163877811017,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.3,1.359890996260255,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.4,1.495064580930866,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.5,1.301732276120072,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.6,0.9567390208111904,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.7,0.7747254415695816,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.8,0.9240122135650228,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,7.9,1.229385716346585,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.0,1.210089203926573,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.1,0.982327131963274,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.2,0.6739302921377781,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.3,0.8275221435154293,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.4,0.6900756015302535,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.5,0.7653829906615933,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.6,0.3887316059855875,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.7,0.6792187187728516,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.8,0.8287196232976783,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,8.9,0.9142828932699248,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.0,1.128316319152475,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.1,1.201852008188094,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.2,1.728084847434549,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.3,2.107792254214931,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.4,2.134285885212591,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.5,1.944021869324216,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.6,1.919308627086847,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.7,1.815716225417632,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.8,2.19260778328336,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,9.9,2.323571832728045,group2.xlsx,methanol,#22b429
+group2,methanol,methanol,10.0,2.49087950304573,group2.xlsx,methanol,#22b429
+group2,n-heptane,n-heptane,0.0,0.0,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.1,0.7230615834022394,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.2,1.044201189447237,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.3,1.262500270648339,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.4,1.417923986481872,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.5,1.46512444619026,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.6,1.65455797401183,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.7,2.325235357602069,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.8,2.408228968525575,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,0.9,1.944319066925003,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.0,2.032608531384336,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.1,2.249421597429019,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.2,2.340601550845891,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.3,2.819411862447868,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.4,2.719140439920895,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.5,2.966323802000358,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.6,3.474716392696539,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.7,3.527792874203301,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.8,3.915338208469612,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,1.9,3.778060330270929,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.0,3.977804480358497,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.1,3.898846178943977,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.2,3.764443545947515,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.3,3.79560676844786,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.4,4.329642678939315,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.5,4.745785329110313,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.6,4.654243663205307,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.7,4.564050558919567,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.8,4.047074992351292,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,2.9,4.264694256904649,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.0,4.455182060799472,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.1,4.441229661092907,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.2,4.358351112035717,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.3,4.341212197639369,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.4,4.217861059774527,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.5,4.007752112053958,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.6,4.21917685992274,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.7,3.667980345041062,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.8,3.71467359595531,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,3.9,4.353747700866646,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.0,4.065622545988154,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.1,4.346711221677195,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.2,4.115776059699605,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.3,4.198218250611378,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.4,4.095917393105053,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.5,4.060476673738437,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.6,3.72152401416338,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.7,3.439801381942306,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.8,3.773281381059534,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,4.9,3.849112648011692,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.0,4.260904996180072,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.1,4.464473546022888,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.2,4.720775517810817,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.3,5.144560105733681,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.4,4.924469775315206,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.5,4.890091661255382,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.6,5.342552220987185,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.7,5.300761356730764,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.8,5.469249430231708,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,5.9,5.229226011833663,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.0,4.745036035991069,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.1,4.940479224234978,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.2,4.972267384664195,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.3,4.756074410169054,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.4,4.927935956605614,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.5,4.718751434594617,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.6,4.550678597305829,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.7,4.956050300513721,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.8,5.220571624387222,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,6.9,5.421397767556585,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.0,5.237392096671925,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.1,4.881875595846267,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.2,5.317931533576715,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.3,4.678830876221177,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.4,4.839355485628827,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.5,5.357447717611006,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.6,5.488950962234503,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.7,5.567981253275934,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.8,5.589515997491435,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,7.9,5.544678896384125,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.0,5.592271740160409,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.1,5.536710215528113,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.2,5.584590323564447,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.3,6.26046870526403,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.4,6.639734187939121,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.5,6.490774229671229,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.6,6.414402388874635,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.7,6.510739551653921,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.8,7.127363925937251,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,8.9,6.20090168102577,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.0,6.240641291041739,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.1,6.285576388269795,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.2,6.361910952966687,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.3,5.557025171107945,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.4,5.888284748562356,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.5,5.731351733756989,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.6,5.983401528930263,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.7,6.375612281184621,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.8,6.447447518395858,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,9.9,6.264502066912244,group2.xlsx,n-heptane,#e42555
+group2,n-heptane,n-heptane,10.0,6.063310214380672,group2.xlsx,n-heptane,#e42555
+group2,p-xylene,p-xylene,0.0,0.0,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.1,0.615317417512003,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.2,0.5974481550916263,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.3,0.4357075205683315,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.4,0.7439764829826813,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.5,0.751800773153334,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.6,0.876811845641051,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.7,0.4748129949740029,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.8,0.596842083099535,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,0.9,0.4859343054251475,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.0,0.2403510289505281,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.1,0.3492862247243341,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.2,0.5782866844231189,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.3,0.5576278762050466,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.4,0.5596841241234972,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.5,0.9242433668606682,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.6,1.071409366491591,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.7,0.9897336594058804,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.8,1.245587255602565,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,1.9,1.002654596930277,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.0,1.155193328139019,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.1,1.531583060504932,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.2,1.79992050530084,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.3,1.459291118414289,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.4,1.916558861334815,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.5,1.378016557360179,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.6,1.202699413985672,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.7,1.460178471879234,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.8,1.568141025557954,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,2.9,1.445157378210813,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.0,1.385075531962998,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.1,1.329851076226925,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.2,1.458823869053612,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.3,1.53145065518191,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.4,1.420208933939137,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.5,1.125887887209389,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.6,0.7383711399420978,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.7,0.5486146394901011,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.8,0.7169757810335229,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,3.9,0.817216453729098,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.0,1.127166951449055,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.1,0.989096304879013,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.2,1.134917902440381,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.3,0.9776126097715356,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.4,0.9490624856050066,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.5,0.8295249666394374,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.6,1.020567308451071,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.7,0.4888610854879873,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.8,1.260654483305085,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,4.9,1.037141040044346,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.0,1.062628553038097,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.1,1.132748047579323,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.2,0.9729408615610988,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.3,1.032454259363151,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.4,1.084135377990985,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.5,1.293130092642305,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.6,1.413996244081693,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.7,1.305427481281757,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.8,1.285123848216148,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,5.9,1.240278391285997,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.0,1.067730497649723,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.1,1.127035691083451,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.2,1.337897491918215,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.3,1.154451963159713,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.4,1.061292145104557,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.5,1.139984114167372,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.6,1.382317436160523,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.7,1.161183288037867,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.8,1.153379417606128,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,6.9,1.292145444217353,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.0,1.083596205832192,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.1,1.063922894517418,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.2,0.8988200909317354,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.3,1.133060238223759,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.4,1.160011543040272,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.5,1.121269283414468,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.6,1.147703473008562,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.7,1.311663039872839,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.8,1.117578891642373,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,7.9,1.455831180488035,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.0,1.523841316307716,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.1,1.454108878475675,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.2,1.633235962771568,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.3,1.893193874477382,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.4,1.603152514820724,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.5,1.241762538328341,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.6,1.181540569791197,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.7,1.779867012068048,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.8,1.661855808766537,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,8.9,1.222533753874127,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.0,1.448409117117995,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.1,1.565745446038863,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.2,1.851357107653798,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.3,2.089050144870105,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.4,1.995988787944499,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.5,1.84067119289845,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.6,1.77008252279547,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.7,1.816990610965742,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.8,1.691513533618389,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,9.9,1.659868661008836,group2.xlsx,p-xylene,#1d619a
+group2,p-xylene,p-xylene,10.0,1.948596457284713,group2.xlsx,p-xylene,#1d619a
+group2,propylene_carbonate,propylene carbonate,0.0,0.0,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.1,0.7864818035178132,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.2,1.180699181642159,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.3,1.019521391695381,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.4,1.004671112798464,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.5,0.9821974282231384,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.6,0.8494996642597155,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.7,0.5399328081857147,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.8,0.6894455021967387,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,0.9,0.7804925060836675,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.0,0.5161895875761122,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.1,0.4343112487070038,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.2,0.4083688846503161,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.3,0.4557657024796146,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.4,0.2827027616767141,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.5,0.5573005289288493,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.6,0.4058122468112286,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.7,0.4162749208248411,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.8,0.5811705899881218,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,1.9,0.6196190963240925,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.0,0.6359656389776014,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.1,0.8180740915207949,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.2,0.883165991097845,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.3,0.7627356739785691,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.4,0.8458603829432524,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.5,1.087594344764362,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.6,1.385748486174889,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.7,0.8439489070335678,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.8,1.104046057141796,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,2.9,0.9094847353960316,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.0,1.091716757861571,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.1,1.296795587874551,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.2,1.186643002058684,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.3,0.8112206998348516,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.4,0.8410521685509444,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.5,0.9077708401217596,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.6,1.165366933204329,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.7,1.098863758549632,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.8,1.163428228126675,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,3.9,1.410894187285932,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.0,1.522146312980241,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.1,1.422773981146725,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.2,1.37167903526165,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.3,1.051566180281599,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.4,0.9022100534890998,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.5,1.054796054738497,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.6,0.8632358096987365,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.7,0.4017187582302019,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.8,0.3792011767834575,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,4.9,0.4174988874066789,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.0,0.7040631913103973,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.1,0.5075469861959355,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.2,0.6301117454499753,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.3,0.670356274893508,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.4,1.04536855877672,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.5,0.6596360113006504,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.6,0.7668921848029594,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.7,0.659080526981214,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.8,1.080683984140849,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,5.9,1.229463032418436,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.0,1.097315406964909,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.1,1.109418449887795,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.2,1.005676400042788,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.3,0.8710624457733064,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.4,1.282341403377665,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.5,1.314216154080447,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.6,1.23088480816519,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.7,1.194803275916787,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.8,1.264520862493187,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,6.9,1.191580965381347,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.0,1.16723565978813,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.1,1.71348370777787,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.2,1.408278939773149,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.3,1.225124234062535,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.4,1.126524736425264,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.5,1.420068530117283,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.6,1.441276118481622,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.7,1.550217391230253,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.8,1.110390872928734,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,7.9,1.316977929291495,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.0,1.196525867452777,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.1,1.324266891874101,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.2,1.076231869336397,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.3,1.054577512367205,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.4,0.7580852278728447,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.5,1.275273834257328,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.6,1.178622499485893,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.7,1.265711646005611,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.8,1.237548963615378,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,8.9,1.226180583751529,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.0,1.288775750088947,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.1,1.233222929890053,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.2,0.8910491087913954,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.3,1.094336754642006,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.4,1.127262624698824,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.5,1.10173604696608,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.6,1.11975707996804,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.7,1.194797676939758,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.8,0.8588674060928908,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,9.9,0.6865065246036804,group2.xlsx,propylene_carbonate,#a3bf18
+group2,propylene_carbonate,propylene carbonate,10.0,1.129311199362276,group2.xlsx,propylene_carbonate,#a3bf18
+group2,thf,THF,0.0,0.0,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.1,0.5372325506803174,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.2,0.8588512688099819,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.3,0.6371690450012186,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.4,0.6141587327063528,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.5,0.7903464580266787,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.6,0.450652330293223,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.7,0.4547448896134352,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.8,0.1662166665184718,group2.xlsx,thf,#c331d8
+group2,thf,THF,0.9,0.6665734095291732,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.0,1.211909804027373,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.1,0.7339242994619537,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.2,0.7108490277105357,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.3,0.7638632436105938,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.4,0.6173898126936201,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.5,0.5751951692087377,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.6,0.811211238893667,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.7,0.3592397748044492,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.8,0.768001586498911,group2.xlsx,thf,#c331d8
+group2,thf,THF,1.9,0.7248964389272337,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.0,1.594236768350181,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.1,1.372463816750802,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.2,1.175051324552825,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.3,1.189400042497488,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.4,0.7043763559661488,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.5,1.047716238662026,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.6,1.338613580116759,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.7,1.520989622896777,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.8,1.053277364855008,group2.xlsx,thf,#c331d8
+group2,thf,THF,2.9,1.1585471576704,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.0,0.9085876269631172,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.1,1.035379235998962,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.2,0.981153658986107,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.3,1.134008839279787,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.4,1.260113161532324,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.5,1.318058937803703,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.6,1.431850830259321,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.7,1.617136765084398,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.8,1.52271541190183,group2.xlsx,thf,#c331d8
+group2,thf,THF,3.9,1.618547766898036,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.0,1.847914008824501,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.1,1.450223000028387,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.2,1.212689919207797,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.3,1.460078219379235,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.4,1.332990303822087,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.5,1.307126602486814,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.6,1.403239737707476,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.7,1.092445395862325,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.8,1.173251722479495,group2.xlsx,thf,#c331d8
+group2,thf,THF,4.9,0.8403729289757369,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.0,0.6300736246530195,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.1,0.5361689518159038,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.2,0.838481971492398,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.3,0.8591623049099189,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.4,0.2230132851774937,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.5,0.3016316240157281,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.6,0.1762716160903113,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.7,0.3523750065449398,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.8,0.4538569153955743,group2.xlsx,thf,#c331d8
+group2,thf,THF,5.9,0.2787710965641255,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.0,0.7028306408793419,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.1,1.288071517336756,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.2,1.141870027451494,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.3,0.4631804427870283,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.4,0.7244726657012641,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.5,0.5719077633989712,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.6,0.2812547358850842,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.7,0.6623231557819311,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.8,0.911625925209777,group2.xlsx,thf,#c331d8
+group2,thf,THF,6.9,0.6512054193011286,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.0,0.5650190787547716,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.1,0.692978950862162,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.2,1.176724693649137,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.3,0.4828400096948959,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.4,0.3638279479973917,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.5,0.3638773126823788,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.6,0.8239287368808649,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.7,0.7699624987847488,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.8,1.111781113779732,group2.xlsx,thf,#c331d8
+group2,thf,THF,7.9,1.030654142779174,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.0,1.006223384690843,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.1,1.153955776033138,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.2,1.269831709587729,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.3,1.02295430228528,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.4,1.033629122711662,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.5,1.181787519659865,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.6,1.266877986291878,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.7,1.569008812918097,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.8,1.35587837972914,group2.xlsx,thf,#c331d8
+group2,thf,THF,8.9,1.523750273936503,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.0,1.075584760646763,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.1,1.241634750008653,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.2,1.625444420727949,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.3,1.767084483039841,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.4,1.980932283162785,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.5,2.12720842279923,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.6,2.186709539702745,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.7,2.03245130700819,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.8,1.909856586099386,group2.xlsx,thf,#c331d8
+group2,thf,THF,9.9,2.036185446471615,group2.xlsx,thf,#c331d8
+group2,thf,THF,10.0,1.997353167415443,group2.xlsx,thf,#c331d8
+group2,toluene,toluene,0.0,0.0,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.1,0.5649865064499954,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.2,0.4410487024461981,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.3,0.8344836721318748,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.4,0.7484887788547202,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.5,1.201251281070572,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.6,1.336174792226432,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.7,1.420315079429413,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.8,1.298153287922357,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,0.9,1.73170970239721,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.0,1.374892133441361,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.1,1.836919486015978,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.2,1.374152979350239,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.3,1.32797511094307,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.4,1.513371897325232,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.5,1.685787951579404,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.6,1.667908071792913,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.7,1.436402117734985,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.8,1.705290207160544,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,1.9,1.901664422791865,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.0,1.549550642052974,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.1,1.522810264001829,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.2,1.45495267634011,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.3,1.17961367699604,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.4,1.326022899402933,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.5,1.253160738121614,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.6,1.317145411020874,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.7,1.308254407378498,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.8,1.014851782554921,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,2.9,1.267105823278891,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.0,1.154028959256736,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.1,1.153254260665628,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.2,1.456120670131173,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.3,1.424308061080007,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.4,1.401748812112521,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.5,1.817407147279556,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.6,1.770053768074959,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.7,1.908557786471138,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.8,1.795374105016661,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,3.9,2.029401951054607,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.0,2.151917326222442,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.1,2.205501031628274,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.2,2.246971230229291,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.3,2.264305933147892,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.4,2.459082781053046,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.5,2.468221992799037,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.6,2.16130100468496,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.7,2.669104084356965,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.8,2.799526166985851,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,4.9,2.98487092745056,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.0,2.421072298402752,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.1,2.538785206472344,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.2,2.523790346218003,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.3,2.599406359578,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.4,2.689539129815136,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.5,2.578711172101902,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.6,2.63664616394657,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.7,2.86069369842076,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.8,2.628901537857872,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,5.9,2.896517631217705,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.0,2.382457725915176,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.1,2.43615569826476,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.2,2.638592882223563,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.3,2.387571898988299,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.4,2.125328390208101,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.5,2.384173748636274,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.6,2.781129950168192,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.7,2.827650831757051,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.8,2.421751888419233,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,6.9,2.598662776624361,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.0,2.202927288015531,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.1,2.482103457772373,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.2,2.540582228766629,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.3,2.411392821950113,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.4,2.588989950555499,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.5,2.850292882285732,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.6,2.785455169965569,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.7,3.389638668526682,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.8,3.483039643899116,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,7.9,3.805258710222936,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.0,3.9877369043647,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.1,3.853645674336558,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.2,3.895521542803039,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.3,3.969409882712636,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.4,4.054680428642554,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.5,4.255063533575938,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.6,4.184795905018366,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.7,4.195145405301411,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.8,4.455659314037212,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,8.9,4.537357575980052,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.0,4.498413225305819,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.1,4.348595552971691,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.2,4.316358172429617,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.3,4.258746163750444,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.4,4.381041995783269,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.5,4.16233524608869,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.6,4.369026088518656,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.7,4.309902929832579,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.8,4.644515350754722,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,9.9,4.658254660880951,group2.xlsx,toluene,#14a368
+group2,toluene,toluene,10.0,4.827873487595864,group2.xlsx,toluene,#14a368

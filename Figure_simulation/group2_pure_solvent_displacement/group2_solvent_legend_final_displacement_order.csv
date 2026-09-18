@@ -1,0 +1,15 @@
+system,display_label,time_ps,OPA_disp_norm_A,color_hex
+n-heptane,n-heptane,10.0,6.063310214380672,#e42555
+DMC,DMC,10.0,5.044415296754916,#9a1d80
+CPME,CPME,10.0,4.89433444037442,#2240b4
+toluene,toluene,10.0,4.827873487595864,#14a368
+acetone,acetone,10.0,3.015136878788349,#31d870
+ethanol,ethanol,10.0,2.924078848151761,#18bfb1
+acetonitrile,acetonitrile,10.0,2.626714000548509,#a32014
+methanol,methanol,10.0,2.49087950304573,#22b429
+ethyl_acetate,ethyl acetate,10.0,2.34936848637441,#d89a31
+thf,THF,10.0,1.997353167415443,#c331d8
+p-xylene,p-xylene,10.0,1.948596457284713,#1d619a
+cyclohexane,cyclohexane,10.0,1.520775067159629,#84e425
+propylene_carbonate,propylene carbonate,10.0,1.129311199362276,#a3bf18
+isopropanol,isopropanol,10.0,0.6470600775905196,#4414a3
